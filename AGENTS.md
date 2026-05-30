@@ -1,22 +1,26 @@
+# Proyecto: Hackathon Build With AI 2026
 
-este es el repositorio de nuestro proyecto para el hackaton
+Este repositorio contiene nuestro proyecto para la Hackathon Build With AI 2026, un evento intensivo de innovación tecnológica enfocado en crear soluciones reales basadas en Inteligencia Artificial.
 
-La  Hackathon  Build  With  AI  2026  es  un  evento  intensivo  de  innovación 
-tecnológica enfocado en la creación de soluciones reales basadas en 
-Inteligencia Artificial.
+## Instrucción obligatoria
 
-empezamos el 2026-05-29 y tenemos que tener todo listo para el 2026-05-31
+Antes de trabajar en el proyecto, revisa y alinea tus decisiones con:
 
+- `docs\Build_With_AI_2026_Lineamientos_CompletosV1.md`
 
-CRITERIOS DE EVALUACIÓN 
-●Impacto y relevancia del problema – 20 puntos 
-●Calidad técnica de la IA – 20 puntos 
-●Innovación y creatividad – 15 puntos 
-●Integració n de API, agentes de IA, librerı́as – 15 puntos 
-●Aplicación de FODA, PESTEL y Lean Canvas – 10 puntos 
-●Escalabilidad y sostenibilidad – 10 puntos 
-●Calidad del pitch y presentación – 10 puntos
+## Plazo del proyecto
 
-siempre revisa y alineate con los archivos:
-- docs\Build_With_AI_2026_Lineamientos_CompletosV1.md
+- Inicio: `2026-05-29`
+- Entrega final: `2026-05-31`
 
+## Criterios de evaluación
+
+| Criterio | Puntaje |
+| --- | ---: |
+| Impacto y relevancia del problema | 20 puntos |
+| Calidad técnica de la IA | 20 puntos |
+| Innovación y creatividad | 15 puntos |
+| Integración de API, agentes de IA y librerías | 15 puntos |
+| Aplicación de FODA, PESTEL y Lean Canvas | 10 puntos |
+| Escalabilidad y sostenibilidad | 10 puntos |
+| Calidad del pitch y presentación | 10 puntos |
