@@ -1,4 +1,4 @@
-# Design System: GreenSpark ⚡🌱
+# Design System: GreenSpark 🌿✨
 
 **Proyecto:** GreenSpark · **Mención:** ENERGÍA · **Equipo:** HackHeroes  
 **Lugar:** Santa Cruz de la Sierra, Bolivia  
@@ -6,156 +6,178 @@
 
 ---
 
-## 1. Visual Theme & Atmosphere: *"Bio-Cibernética Cruceña"*
+## 1. Visual Theme & Atmosphere: *"Elegancia Verde Cruceña"*
 
-La identidad visual de **GreenSpark** se define como una fusión de laboratorio de datos y selva tropical electrificada. No es una estética ecológica convencional de tonos tierra apagados y tipografías artesanales — es **ciencia de frontera, matemática optimizada e innovación radical**, envuelta en la vitalidad verde y la calidez humana de Santa Cruz de la Sierra.
+La identidad visual de **GreenSpark** se inspira directamente en la bandera de Santa Cruz de la Sierra — **verde, blanco, verde** — y en la luminosidad natural del oriente boliviano. No es una estética oscura ni agresivamente tecnológica; es **claridad, confianza y sofisticación**, como una brisa fresca que atraviesa los llanos cruceños al amanecer.
 
-El mood general es **denso, inmersivo y bioluminiscente**:
+El mood general es **luminoso, sereno y refinado**:
 
-*   **Densidad Cibernética:** Fondos profundos, casi abisales, que evocan la interfaz de un centro de control energético o la consola de un sistema de deep learning en ejecución. El espacio negativo no es vacío — es el silencio antes del dato.
-*   **Bioluminiscencia Eléctrica:** El residuo orgánico no es desecho: es energía latente. Visualizamos esa energía con un verde neón que simula la descarga de electrones en celdas microbianas — una luz que nace de la materia orgánica misma, no de una bombilla decorativa.
-*   **Cercanía Cruceña:** Conectamos la vegetación densa del Urubó y la exuberancia del llano con el crecimiento urbano exponencial de la metrópoli. El resultado es tecnología de altísimo nivel, pero con un carácter accesible, transparente y profundamente local para ciudadanos, empresas, universidades y socios institucionales.
+*   **Claridad como Confianza:** Fondos blancos amplios y generosos que transmiten transparencia institucional. Un sistema que no tiene nada que ocultar se presenta con la luz encendida. El espacio en blanco no es vacío — es respiro, orden y profesionalismo.
+*   **Verde Institucional Cruceño:** El verde de la bandera departamental (`#006600`) representa la riqueza vegetal y los bosques de la región. Lo elevamos a un verde más contemporáneo y suave que mantiene la dignidad del símbolo cívico sin perder frescura: un verde que evoca las copas de los árboles del Urubó bajo la luz del mediodía.
+*   **Suavidad Elegante:** Cada elemento tiene bordes redondeados, transiciones delicadas y sombras apenas perceptibles. La interfaz se siente como tocar seda — todo fluye sin fricción. La tecnología de IA más avanzada, presentada con la calidez y cercanía del carácter cruceño.
 
-> **Palabras clave de la atmósfera:** Inmersivo · Bioluminiscente · Científico · Premium · Accesible · Orgullosamente Cruceño.
+> **Palabras clave de la atmósfera:** Luminoso · Limpio · Suave · Elegante · Premium · Orgullosamente Cruceño.
 
 ---
 
 ## 2. Color Palette & Roles
 
-La paleta cromática está construida sobre tres pilares — **verde tecnológico, blanco puro y tonalidades oscuras** — que en conjunto proyectan una imagen de ciencia, innovación y vanguardia sin perder la calidez de marca.
+La paleta cromática nace de la tricolor cruceña — **verde, blanco, verde** — y se expande con tonalidades derivadas que mantienen la armonía visual. La sensación general es de frescura vegetal, limpieza institucional y sofisticación silenciosa.
 
 ```mermaid
 graph TD
-    classDef volt fill:#00FF87,stroke:#00A859,stroke-width:2px,color:#000000;
-    classDef navy fill:#0A0F1D,stroke:#00FF87,stroke-width:1px,color:#FFFFFF;
-    classDef obsidian fill:#05070A,stroke:#1E293B,stroke-width:1px,color:#FFFFFF;
-    classDef white fill:#FFFFFF,stroke:#E2E8F0,stroke-width:2px,color:#000000;
-    classDef accent fill:#00E5FF,stroke:#00838F,stroke-width:1px,color:#000000;
+    classDef primary fill:#1B7A3D,stroke:#145C2E,stroke-width:2px,color:#FFFFFF;
+    classDef light fill:#E8F5EC,stroke:#B8DFC5,stroke-width:1px,color:#1B5E2F;
+    classDef white fill:#FFFFFF,stroke:#E2E8E4,stroke-width:2px,color:#1A1A1A;
+    classDef text fill:#1A2E22,stroke:#2D4A38,stroke-width:1px,color:#FFFFFF;
+    classDef accent fill:#2E9E5E,stroke:#1B7A3D,stroke-width:1px,color:#FFFFFF;
 
-    V["Green Spark Volt<br>#00FF87"]:::volt
-    N["Cyber Navy<br>#0A0F1D"]:::navy
-    O["Obsidian Black<br>#05070A"]:::obsidian
-    W["Pure Spark White<br>#FFFFFF"]:::white
-    A["Bioluminescent Cyan<br>#00E5FF"]:::accent
+    P["Verde Cruceño<br>#1B7A3D"]:::primary
+    L["Rocío de Hoja<br>#E8F5EC"]:::light
+    W["Blanco Puro<br>#FFFFFF"]:::white
+    T["Verde Profundo<br>#1A2E22"]:::text
+    A["Verde Vivo<br>#2E9E5E"]:::accent
 
-    V --> |Acentos y Energía| W
-    N --> |Fondo Principal| O
-    A --> |Datos y Fluidez| N
+    P --> |Acciones Primarias| W
+    L --> |Fondos Suaves| W
+    A --> |Acentos Secundarios| P
+    T --> |Tipografía| W
 ```
 
 ### 2.1. Colores Primarios
 
 | Token de Diseño | Color | Hex | HSL | Rol Funcional |
 |---|---|---|---|---|
-| **Green Spark Volt** | Verde neón bioluminiscente con un leve matiz cian | `#00FF87` | 152°, 100%, 50% | Acciones primarias, botones CTA, estados activos, efectos de resplandor luminoso (*glow*), acentos tipográficos de máxima jerarquía visual. Es la "chispa" de la marca — el electrón visible. |
-| **Cyber Navy** | Azul marino abismal, al borde del negro profundo | `#0A0F1D` | 225°, 48%, 8% | Fondos principales de la plataforma web, paneles laterales, contenedores estructurados (*cards*), y todo lienzo digital donde los datos cobran vida. Evoca la consola de un laboratorio de IA. |
-| **Pure Spark White** | Blanco absoluto, de máximo contraste | `#FFFFFF` | 0°, 0%, 100% | Tipografía principal en interfaces dark mode, fondos de papelería física institucional, áreas de respiro visual. Es la claridad contra la profundidad. |
+| **Verde Cruceño** | Verde bosque institucional, inspirado en la bandera departamental, modernizado con un toque más cálido y luminoso | `#1B7A3D` | 146°, 63%, 29% | Acciones primarias, botones CTA, encabezados de sección, iconografía activa, bordes de elementos seleccionados. Es el corazón de la identidad cruceña — dignidad y naturaleza. |
+| **Blanco Puro** | Blanco absoluto, limpio como algodón fresco | `#FFFFFF` | 0°, 0%, 100% | Fondo principal de toda la interfaz, superficie de tarjetas, espacio de respiro. El lienzo donde todo respira y los datos se presentan con claridad total. |
+| **Verde Profundo** | Verde oscuro casi negro, con la densidad de un bosque al anochecer | `#1A2E22` | 150°, 28%, 14% | Tipografía principal, títulos, textos de alta jerarquía. Reemplaza al negro puro para mantener la cohesión cromática verde-blanco sin la dureza del negro absoluto. |
 
 ### 2.2. Colores Secundarios y de Apoyo
 
 | Token de Diseño | Color | Hex | HSL | Rol Funcional |
 |---|---|---|---|---|
-| **Obsidian Black** | Negro casi total con un susurro de azul frío | `#05070A` | 220°, 33%, 3% | Fondo de la página web completa en dark mode para crear una ilusión de profundidad infinita detrás del Cyber Navy. Es la capa más profunda del universo visual. |
-| **Bioluminescent Cyan** | Cian eléctrico, vibrante como un arco voltaico | `#00E5FF` | 186°, 100%, 50% | Gráficas de generación de energía (kWh), trazado de rutas logísticas de recolección en mapas, indicadores de rendimiento de IA, y datos secundarios que necesitan diferenciarse del verde primario. |
-| **Eco-Fibre Gray** | Gris neutro ultra-claro con frialdad sutil | `#F1F5F9` | 210°, 40%, 96% | Fondos exclusivos para correspondencia física impresa (sobres, cartas, reportes ejecutivos) en papel ecológico. Nunca se usa en interfaces digitales. |
-| **Slate Border** | Gris azulado apagado, casi invisible | `#1E293B` | 217°, 33%, 17% | Bordes sutiles de tarjetas y contenedores en la interfaz digital. Separadores visuales que estructuran sin competir con los colores luminosos. |
+| **Rocío de Hoja** | Verde ultra-claro, como la condensación matutina sobre una hoja de motacú | `#E8F5EC` | 136°, 38%, 93% | Fondos de secciones alternas, fondos de tarjetas secundarias, áreas de contenido destacado, tooltips. Es la respiración verde del diseño — presente pero nunca invasivo. |
+| **Verde Vivo** | Verde medio vibrante, fresco y energético | `#2E9E5E` | 148°, 55%, 40% | Estados hover de botones primarios, indicadores de éxito, badges de estado activo, progreso positivo. Complementa al Verde Cruceño con más luminosidad para interacciones. |
+| **Niebla de Pradera** | Gris verdoso ultra-suave, apenas perceptible | `#F5F8F6` | 140°, 18%, 96% | Fondo general de la página web detrás de las tarjetas blancas. Da una profundidad sutil sin alejarse del blanco — como una neblina matutina sobre los campos del oriente. |
+| **Borde Sereno** | Gris verdoso pálido, elegante y discreto | `#D4DDD7` | 140°, 12%, 85% | Bordes de tarjetas, separadores horizontales, líneas divisorias. Estructura la interfaz con la delicadeza de un trazo de lápiz — organiza sin competir. |
+| **Texto Secundario** | Gris medio con un matiz verde, amable a la vista | `#5A7265` | 148°, 12%, 40% | Subtítulos, captions, textos descriptivos, labels de formularios. Textos que acompañan sin exigir atención — la voz baja y cálida del sistema. |
+| **Alerta Ámbar Cálido** | Ámbar dorado suave, como la luz del atardecer cruceño | `#D4930A` | 41°, 91%, 44% | Alertas de precaución, advertencias del sistema, indicadores de datos que requieren atención sin urgencia crítica. |
+| **Alerta Coral Suave** | Rojo-coral amable, sin agresividad | `#C94C4C` | 0°, 51%, 54% | Estados de error, alertas críticas, validaciones negativas. Comunica urgencia sin gritar. |
 
 ### 2.3. Gradientes del Sistema
 
 | Nombre | Valores | Uso |
 |---|---|---|
-| **Deep Ocean** | `linear-gradient(180deg, #0A0F1D, #070B14)` | Interior de tarjetas y contenedores (*cards*) — un degradado oscuro casi imperceptible que genera profundidad tridimensional sin recurrir a sombras pesadas. |
-| **Volt Glow** | `radial-gradient(circle, rgba(0,255,135,0.15), transparent 70%)` | Halo ambiental detrás de elementos de datos críticos y KPIs — simula la bioluminiscencia irradiando desde el dato mismo. |
-| **Horizon Fade** | `linear-gradient(180deg, #05070A 0%, #0A0F1D 50%, #0D1525 100%)` | Transición de fondos de página completa — la mirada viaja de la oscuridad absoluta a la profundidad estructurada del Cyber Navy. |
+| **Amanecer Verde** | `linear-gradient(135deg, #1B7A3D, #2E9E5E)` | Fondos de botones CTA premium, banners hero, encabezados de secciones importantes — un degradado que evoca el paso del verde profundo del bosque a la frescura de las hojas nuevas. |
+| **Brisa de Hoja** | `linear-gradient(180deg, #FFFFFF 0%, #F5F8F6 50%, #E8F5EC 100%)` | Transición de fondos de página completa — la mirada viaja del blanco puro a un susurro verde que sugiere naturaleza sin imponerse. |
+| **Resplandor Suave** | `radial-gradient(circle, rgba(27,122,61,0.06), transparent 70%)` | Halo ambiental detrás de métricas importantes y KPIs — un resplandor verde casi imperceptible que da importancia visual sin artificio. |
 
 ---
 
 ## 3. Typography Rules
 
-La tipografía comunica **precisión matemática** con **amabilidad digital**. Tres familias tipográficas trabajan en conjunto para cubrir toda la jerarquía de información.
+La tipografía comunica **claridad profesional** con **calidez humana**. Tres familias tipográficas trabajan en armonía para cubrir toda la jerarquía de información con elegancia.
 
 ### 3.1. Familias Tipográficas
 
 | Jerarquía | Familia | Fuente | Justificación |
 |---|---|---|---|
-| **Títulos e Identidad** | `Outfit` | Google Fonts | Sans-serif geométrica con terminaciones limpias y curvas sutiles — proyecta futuro y cercanía al mismo tiempo. Sus formas redondeadas humanizan la precisión técnica. |
-| **Cuerpo de Texto** | `Inter` | Google Fonts | Diseñada específicamente para legibilidad extrema en pantallas digitales a tamaños pequeños. Cada glifo está optimizado para renderizado en píxeles, garantizando claridad en tablas de datos, chats y descripciones técnicas. |
-| **Datos y Código** | `JetBrains Mono` | Google Fonts | Monoespaciada con ligaduras opcionales — acentúa la naturaleza de desarrollo tecnológico y la precisión numérica del proyecto. Diferencia visualmente los datos duros del texto narrativo. |
+| **Títulos e Identidad** | `Outfit` | Google Fonts | Sans-serif geométrica con terminaciones limpias y curvas sutiles — proyecta modernidad y cercanía. Sus formas redondeadas humanizan la información técnica y resuenan con la suavidad general del sistema. |
+| **Cuerpo de Texto** | `Inter` | Google Fonts | Diseñada para legibilidad extrema en pantallas digitales a cualquier tamaño. Cada glifo está optimizado para renderizado nítido, garantizando claridad en tablas de datos, descripciones y texto conversacional. |
+| **Datos y Código** | `JetBrains Mono` | Google Fonts | Monoespaciada con ligaduras opcionales — acentúa la precisión numérica y técnica del proyecto. Diferencia visualmente los datos cuantitativos del texto narrativo. |
 
 ### 3.2. Escala Tipográfica
 
-| Elemento | Familia | Peso | Tamaño | Tracking | Uso |
-|---|---|---|---|---|---|
-| Título Hero (H1) | Outfit | ExtraBold (800) | 48–64px | -0.02em | Landing page, pantallas de presentación |
-| Título de Sección (H2) | Outfit | Bold (700) | 28–36px | -0.01em | Encabezados de módulos del dashboard |
-| Subtítulo (H3) | Outfit | SemiBold (600) | 20–24px | 0em | Subtítulos de tarjetas, nombres de métricas |
-| Cuerpo | Inter | Regular (400) | 14–16px | 0em | Párrafos, descripciones, chat del asesor IA |
-| Caption / Nota | Inter | Medium (500) | 12px | 0.02em | Pies de dato, confiabilidad de predicciones IA |
-| Dato numérico | JetBrains Mono | Medium (500) | 14–32px | 0em | kWh, coordenadas GPS, coeficientes de IA |
+| Elemento | Familia | Peso | Tamaño | Tracking | Color | Uso |
+|---|---|---|---|---|---|---|
+| Título Hero (H1) | Outfit | ExtraBold (800) | 48–64px | -0.02em | Verde Profundo `#1A2E22` | Landing page, pantallas de presentación |
+| Título de Sección (H2) | Outfit | Bold (700) | 28–36px | -0.01em | Verde Profundo `#1A2E22` | Encabezados de módulos del dashboard |
+| Subtítulo (H3) | Outfit | SemiBold (600) | 20–24px | 0em | Verde Cruceño `#1B7A3D` | Subtítulos de tarjetas, nombres de métricas |
+| Cuerpo | Inter | Regular (400) | 14–16px | 0em | Verde Profundo `#1A2E22` | Párrafos, descripciones, chat del asesor IA |
+| Caption / Nota | Inter | Medium (500) | 12px | 0.02em | Texto Secundario `#5A7265` | Pies de dato, confiabilidad de predicciones IA |
+| Dato numérico | JetBrains Mono | Medium (500) | 14–32px | 0em | Verde Cruceño `#1B7A3D` | kWh, coordenadas GPS, coeficientes de IA |
 
 ---
 
 ## 4. Component Stylings
 
-Los componentes de interfaz de GreenSpark siguen una filosofía de **oscuridad como lienzo + luz funcional como señal**. Cada elemento visual justifica su presencia.
+Los componentes de GreenSpark siguen una filosofía de **claridad como lienzo + verde como señal funcional**. Cada elemento visual justifica su presencia con elegancia silenciosa.
 
 ### 4.1. Contenedores y Tarjetas (*Cards*)
 
-*   **Forma:** Esquinas generosamente redondeadas (`border-radius: 12px`) — suavidad geométrica que evita la rigidez industrial sin caer en lo infantil.
-*   **Fondo:** Gradiente **Deep Ocean** (de Cyber Navy `#0A0F1D` a `#070B14`) — una transición oscura casi imperceptible que genera profundidad.
-*   **Borde:** Línea ultra-fina de 1px en **Slate Border** (`#1E293B`) — estructura sin competir.
-*   **Sombra:** Ninguna sombra pesada. En estado activo o seleccionado, se enciende un resplandor perimetral verde de 2px (`box-shadow: 0 0 8px rgba(0, 255, 135, 0.3)`) — la tarjeta "cobra vida" al interactuar.
+*   **Forma:** Esquinas generosamente redondeadas (`border-radius: 16px`) — suavidad que invita a la interacción, como cantos rodados pulidos por el río Piraí.
+*   **Fondo:** **Blanco Puro** (`#FFFFFF`) — limpieza total como superficie de presentación de datos.
+*   **Borde:** Línea ultra-fina de 1px en **Borde Sereno** (`#D4DDD7`) — estructura con delicadeza.
+*   **Sombra:** Sombra difuminada extremadamente suave (`box-shadow: 0 2px 12px rgba(26, 46, 34, 0.06)`) — apenas perceptible, como la sombra de una nube sobre el campo. En estado hover, la sombra se profundiza sutilmente: `box-shadow: 0 4px 20px rgba(27, 122, 61, 0.10)`.
+*   **Padding interno:** 24px en desktop, 16px en mobile — espacio generoso que permite a los datos respirar.
 
 ### 4.2. Botones Primarios (CTA)
 
-*   **Forma:** Esquinas suavemente redondeadas (`border-radius: 8px`) — profesional y moderno.
-*   **Fondo:** Sólido **Green Spark Volt** (`#00FF87`) — el color de máxima energía.
-*   **Tipografía:** `Outfit Bold` en **Obsidian Black** (`#05070A`) — contraste absoluto sobre el verde brillante.
-*   **Comportamiento:** Transición fluida de 300ms (`ease`). Al pasar el cursor, el botón irradia bioluminiscencia con una sombra difuminada pulsante: `box-shadow: 0 0 20px rgba(0, 255, 135, 0.5)`. El efecto comunica *"esta acción tiene energía"*.
+*   **Forma:** Esquinas suavemente redondeadas (`border-radius: 10px`) — moderno y acogedor.
+*   **Fondo:** Gradiente **Amanecer Verde** (`linear-gradient(135deg, #1B7A3D, #2E9E5E)`) — profundidad elegante sin ser plano.
+*   **Tipografía:** `Outfit SemiBold` en **Blanco Puro** (`#FFFFFF`) — legibilidad perfecta sobre verde.
+*   **Comportamiento:** Transición fluida de 250ms (`ease-out`). Al hover, la sombra se expande suavemente: `box-shadow: 0 4px 16px rgba(27, 122, 61, 0.25)` y el botón se eleva 1px (`transform: translateY(-1px)`). El efecto comunica *"esta acción te lleva adelante"* — sin estridencia, con confianza.
 
 ### 4.3. Botones Secundarios
 
-*   **Forma:** Esquinas suavemente redondeadas (`border-radius: 8px`) — consistencia con el primario.
-*   **Fondo:** Transparente con borde de 1px en **Green Spark Volt** (`#00FF87`).
-*   **Tipografía:** `Outfit SemiBold` en **Green Spark Volt** (`#00FF87`).
-*   **Comportamiento:** Al hover, el fondo se llena con `rgba(0, 255, 135, 0.08)` — un verde fantasma que sugiere la acción sin gritar.
+*   **Forma:** Esquinas suavemente redondeadas (`border-radius: 10px`) — consistencia con el primario.
+*   **Fondo:** Transparente con borde de 1.5px en **Verde Cruceño** (`#1B7A3D`).
+*   **Tipografía:** `Outfit SemiBold` en **Verde Cruceño** (`#1B7A3D`).
+*   **Comportamiento:** Al hover, el fondo se llena con **Rocío de Hoja** (`#E8F5EC`) — un verde susurro que confirma la interacción con suavidad.
 
-### 4.4. Campos de Entrada (*Inputs / Forms*)
+### 4.4. Botones Terciarios / Ghost
 
-*   **Fondo:** Ligeramente más claro que la tarjeta contenedora — `rgba(255, 255, 255, 0.04)` sobre el Cyber Navy.
-*   **Borde:** Línea de 1px en **Slate Border** (`#1E293B`) en reposo. Al enfocar, transiciona a **Green Spark Volt** (`#00FF87`) con un resplandor suave.
-*   **Texto de placeholder:** `Inter Regular` en `rgba(255, 255, 255, 0.4)` — susurra la instrucción sin competir con datos reales.
-*   **Esquinas:** Generosamente redondeadas (`border-radius: 8px`) — consistencia total con botones.
+*   **Forma:** Sin fondo ni borde visible — solo texto.
+*   **Tipografía:** `Inter Medium` en **Verde Cruceño** (`#1B7A3D`), subrayado sutil al hover.
+*   **Comportamiento:** Al hover, el texto se oscurece a **Verde Profundo** (`#1A2E22`) con una transición de 200ms. Mínimo impacto visual, máxima funcionalidad.
 
-### 4.5. Mapa de Rutas de Recolección (Google OR-Tools)
+### 4.5. Campos de Entrada (*Inputs / Forms*)
 
-*   **Base cartográfica:** Mosaico oscuro personalizado (*Dark Map Tile*) donde calles y manzanas aparecen en gris carbón sobre fondo Obsidian — el mapa es el lienzo, no la figura.
-*   **Rutas optimizadas por IA:** Trazadas en **Bioluminescent Cyan** (`#00E5FF`) con un trazo de 3px y un resplandor sutil — la ruta "fluye" como energía en un circuito.
-*   **Plantas receptoras de biogás:** Marcadas con pines pulsantes en **Green Spark Volt** (`#00FF87`) que emiten una animación de onda concéntrica cada 2 segundos — simulan un latido energético.
-*   **Generadores de residuo:** Pines estáticos en **Pure Spark White** con opacidad al 80%.
+*   **Fondo:** **Blanco Puro** (`#FFFFFF`) con borde de 1.5px en **Borde Sereno** (`#D4DDD7`).
+*   **Focus:** Al enfocar, el borde transiciona a **Verde Cruceño** (`#1B7A3D`) con un resplandor verde ultra-suave: `box-shadow: 0 0 0 3px rgba(27, 122, 61, 0.12)`. El campo se ilumina con elegancia, como una hoja que recibe la luz del sol.
+*   **Texto de placeholder:** `Inter Regular` en **Texto Secundario** (`#5A7265`) con opacidad al 70% — indica sin competir.
+*   **Esquinas:** Generosamente redondeadas (`border-radius: 10px`) — consistencia total con botones.
+*   **Label:** `Inter Medium` 14px en **Verde Profundo** (`#1A2E22`), posicionado sobre el campo con 6px de separación.
 
-### 4.6. Chat del Asesor de Sostenibilidad IA
+### 4.6. Mapa de Rutas de Recolección (Google OR-Tools)
 
-*   **Burbujas del agente:** Degradado oscuro sutil (variación del **Deep Ocean**), esquinas generosamente redondeadas, texto **Pure Spark White** con tipografía `Inter Regular` de alta legibilidad.
-*   **Burbujas del usuario:** Fondo semitransparente `rgba(0, 255, 135, 0.1)` con borde fino verde — distinción clara sin agresividad visual.
-*   **Indicador "Agente pensando...":** Onda de frecuencia animada en **Green Spark Volt** que pulsa horizontalmente — evoca la actividad cerebral del modelo procesando la consulta.
-*   **Datos citados:** Aparecen en `JetBrains Mono` con fondo `rgba(0, 229, 255, 0.08)` — diferenciación inmediata de datos duros vs. texto conversacional.
+*   **Base cartográfica:** Mosaico claro y limpio (*Light Map Tile*) con calles en gris suave sobre fondo blanco verdoso — el mapa es legible y elegante, no oscuro ni dramático.
+*   **Rutas optimizadas por IA:** Trazadas en **Verde Cruceño** (`#1B7A3D`) con un trazo de 3px y esquinas redondeadas — la ruta se integra naturalmente con la cartografía.
+*   **Plantas receptoras de biogás:** Marcadas con pines circulares en **Verde Vivo** (`#2E9E5E`) con un anillo blanco exterior — limpios, claros, inequívocos.
+*   **Generadores de residuo:** Pines circulares en **Texto Secundario** (`#5A7265`) con centro blanco — identificables sin competir con las plantas.
+*   **Tooltip de mapa:** Tarjeta blanca con esquinas redondeadas y sombra suave, mostrando datos en `JetBrains Mono` verde.
+
+### 4.7. Chat del Asesor de Sostenibilidad IA
+
+*   **Burbujas del agente:** Fondo **Rocío de Hoja** (`#E8F5EC`) con esquinas generosamente redondeadas (16px, con esquina inferior izquierda en 4px), texto **Verde Profundo** (`#1A2E22`) en `Inter Regular`. Limpio, acogedor y distinguible.
+*   **Burbujas del usuario:** Fondo gradiente **Amanecer Verde**, esquinas redondeadas (16px, con esquina inferior derecha en 4px), texto **Blanco Puro** en `Inter Regular`. El usuario siempre se identifica con el color institucional.
+*   **Indicador "Agente pensando...":** Tres puntos pulsantes en **Verde Cruceño** con una animación suave de opacidad (fade in/out secuencial cada 400ms) — calma y confianza mientras el modelo procesa.
+*   **Datos citados:** Aparecen en `JetBrains Mono` con fondo `rgba(27, 122, 61, 0.06)` y borde izquierdo de 3px en **Verde Cruceño** — diferenciación inmediata de datos cuantitativos vs. texto conversacional.
+
+### 4.8. Badges y Estados
+
+| Estado | Fondo | Texto | Borde | Uso |
+|---|---|---|---|---|
+| **Activo / Éxito** | `#E8F5EC` | `#1B7A3D` | ninguno | Procesos completados, datos validados |
+| **En Proceso** | `#FFF8E7` | `#D4930A` | ninguno | Operaciones en curso, datos pendientes |
+| **Error / Crítico** | `#FDE8E8` | `#C94C4C` | ninguno | Fallos, alertas urgentes |
+| **Neutro / Info** | `#F0F2F1` | `#5A7265` | ninguno | Información contextual, metadata |
 
 ---
 
 ## 5. Depth & Elevation
 
-La interfaz de GreenSpark maneja la profundidad con **luz, no con sombra**. El paradigma visual es bioluminiscente: los elementos importantes emiten luz propia en lugar de proyectar sombras sobre capas inferiores.
+La interfaz de GreenSpark maneja la profundidad con **sombras suaves y sutiles**, como la luz natural del oriente boliviano proyectando sombras delicadas bajo un cielo despejado. La elevación es silenciosa y funcional.
 
 | Nivel | Técnica | Ejemplo de Uso |
 |---|---|---|
-| **Nivel 0 — Abismo** | Fondo **Obsidian Black** (`#05070A`), sin decoración | Capa base de la página web completa |
-| **Nivel 1 — Profundidad** | Fondo **Cyber Navy** (`#0A0F1D`), sin sombra | Paneles laterales, barras de navegación |
-| **Nivel 2 — Superficie** | Gradiente **Deep Ocean**, borde **Slate Border** 1px | Tarjetas de contenido, contenedores de datos |
-| **Nivel 3 — Elevado** | Gradiente **Deep Ocean** + resplandor verde perimetral 2px | Tarjetas activas, modales, tooltips expandidos |
-| **Nivel 4 — Flotante** | Fondo con blur de 16px (`backdrop-filter: blur(16px)`) + borde verde brillante | Overlays, menús desplegables, diálogos de confirmación |
+| **Nivel 0 — Base** | Fondo **Niebla de Pradera** (`#F5F8F6`), sin sombra | Capa base de la página web completa |
+| **Nivel 1 — Superficie** | Fondo **Blanco Puro** (`#FFFFFF`), sombra `0 1px 4px rgba(26,46,34,0.04)` | Tarjetas de contenido, paneles de datos |
+| **Nivel 2 — Elevado** | Fondo **Blanco Puro**, sombra `0 2px 12px rgba(26,46,34,0.06)` | Tarjetas interactivas, contenedores principales |
+| **Nivel 3 — Flotante** | Fondo **Blanco Puro**, sombra `0 8px 32px rgba(26,46,34,0.10)` | Dropdowns, tooltips expandidos, modales |
+| **Nivel 4 — Overlay** | Fondo **Blanco Puro** con backdrop `rgba(26,46,34,0.20)` y blur de 8px | Diálogos de confirmación, overlays de carga |
 
-> **Principio rector:** Las sombras clásicas (drop-shadow oscura) están prohibidas en la interfaz. La profundidad se comunica exclusivamente a través de diferencias de luminosidad en los fondos y resplandores (*glows*) en los bordes — como organismos bioluminiscentes en la profundidad del océano.
+> **Principio rector:** Las sombras son siempre difuminadas, suaves y con un leve matiz verde-gris (nunca negro puro). La elevación se comunica como capas de papel apiladas con delicadeza — como hojas de un cuaderno de campo, no como bloques de concreto.
 
 ---
 
@@ -163,36 +185,55 @@ La interfaz de GreenSpark maneja la profundidad con **luz, no con sombra**. El p
 
 ### 6.1. Espaciado y Retícula
 
-*   **Sistema de spacing:** Escala de 4px (`4, 8, 12, 16, 24, 32, 48, 64, 96`). Todo margen, padding y gap entre elementos se alinea a este sistema — precisión matemática en cada pixel.
+*   **Sistema de spacing:** Escala de 4px (`4, 8, 12, 16, 24, 32, 48, 64, 96`). Todo margen, padding y gap entre elementos se alinea a este sistema — orden matemático con resultado visual orgánico.
 *   **Retícula base:** Grid de 12 columnas con gutters de 24px para desktop, colapsando a 4 columnas con gutters de 16px en mobile.
-*   **Márgenes de página:** 32px en desktop, 16px en mobile — suficiente respiro sin desperdiciar el lienzo oscuro.
+*   **Márgenes de página:** 32px en desktop, 16px en mobile — respiro generoso que da importancia al contenido.
+*   **Ancho máximo de contenido:** 1200px centrado — evita que el diseño se estire en pantallas ultrawide, manteniendo la legibilidad y la elegancia.
 
 ### 6.2. Principios de Composición
 
-1.  **Oscuridad como Lienzo:** Todo nace del **Cyber Navy** (`#0A0F1D`). Las interfaces claras o fondos blancos en pantalla están prohibidas para mantener la estética científica y reducir el cansancio visual durante monitoreo constante.
-2.  **Luz Funcional, no Decorativa:** El uso del verde brillante (`#00FF87`) debe estar justificado por la importancia de la acción o dato. Si todo brilla, nada es importante.
+1.  **Blanco como Lienzo:** Todo nace del blanco. La claridad del fondo transmite transparencia institucional y confianza profesional. Las interfaces oscuras están reservadas exclusivamente para contextos de visualización de datos inmersiva (ej. un modo nocturno opcional del dashboard).
+2.  **Verde Funcional, no Decorativo:** El uso del **Verde Cruceño** (`#1B7A3D`) debe estar justificado por la importancia de la acción o dato. Si todo es verde, nada es importante. El verde es un recurso escaso y valioso — como el agua en el Chaco.
 3.  **Trazabilidad Científica:** Cada dato, porcentaje o predicción energética incluye un pie de confiabilidad (ej. *"Predicción IA con ±3% de desviación basada en humedad local"*). Construye confianza con socios e inversionistas.
 4.  **Localismo Orgulloso:** Mapas y ejemplos usan nombres reales de Santa Cruz (Equipetrol, El Trompillo, Plan 3000, la Ramada, el Urubó). Demostramos un entendimiento íntimo del territorio.
 5.  **Transparencia de la IA:** La visualización refleja la inteligencia artificial de forma honesta — sin falsificar funcionalidades ni exagerar capacidades, en línea con las reglas de la Hackathon.
 
 ---
 
-## 7. Corporate Identity & B2B Sales Kit: *"La Revelación Tecnológica"*
+## 7. Iconography & Illustrations
 
-El proceso de incorporación de grandes generadores de residuos (universidades como la UCB, la UPSA o la UAGRM; corporaciones afiliadas a CAINCO y FEGASACRUZ) requiere una presencia física tan innovadora como el software mismo. La papelería institucional es el primer puente tangible del impacto digital de GreenSpark.
+### 7.1. Estilo de Iconografía
 
-### 7.1. El Sobre de Presentación
+*   **Trazo:** Iconos de trazo (*outline*) con peso de 1.5px — delgados, elegantes y legibles.
+*   **Esquinas:** Redondeadas (`round caps`, `round joins`) — consistencia con la suavidad general del sistema.
+*   **Color por defecto:** **Texto Secundario** (`#5A7265`). Cuando están activos o seleccionados: **Verde Cruceño** (`#1B7A3D`).
+*   **Tamaño base:** 20px para interfaz general, 24px para navegación, 16px para elementos compactos.
+*   **Fuente recomendada:** [Lucide Icons](https://lucide.dev/) o [Phosphor Icons](https://phosphoricons.com/) — ambas ofrecen un estilo limpio y consistente alineado con la estética del sistema.
 
-*   **Exterior:** Papel kraft reciclado de fibra de caña de azúcar (insumo icónico de la agroindustria cruceña), prensado de alta densidad, teñido en **Cyber Navy** mate. En el centro, el logotipo de GreenSpark en estampado metálico caliente (*hot stamping*) verde-cian fluorescente. El diseño es minimalista extremo — solo el logo brillando sobre la oscuridad y un patrón geométrico de circuitos integrados que se desvanece en los bordes, sugiriendo la infraestructura tecnológica que contiene.
-*   **Cierre:** Sello circular de sticker holográfico con un código QR funcional y la leyenda: *"Escaneá para medir el impacto latente de tus residuos antes de abrir"*. El QR dirige a una landing page personalizada con una simulación rápida de potencial energético para la institución.
-*   **Interior:** Revestimiento en **Eco-Fibre Gray** (`#F1F5F9`) texturizado, con la siguiente frase en tipografía `Outfit SemiBold` centrada:
+### 7.2. Ilustraciones
+
+*   **Estilo:** Flat con detalles sutiles de línea — evitar 3D realista o ilustraciones infantiles.
+*   **Paleta:** Exclusivamente los verdes del sistema (`#1B7A3D`, `#2E9E5E`, `#E8F5EC`) sobre fondos blancos.
+*   **Uso:** Empty states, onboarding, secciones de error — humanizar momentos donde no hay datos.
+
+---
+
+## 8. Corporate Identity & B2B Sales Kit: *"La Invitación Institucional"*
+
+El proceso de incorporación de grandes generadores de residuos (universidades como la UCB, la UPSA o la UAGRM; corporaciones afiliadas a CAINCO y FEGASACRUZ) requiere una presencia física tan refinada como el software mismo. La papelería institucional es el primer puente tangible del impacto digital de GreenSpark.
+
+### 8.1. El Sobre de Presentación
+
+*   **Exterior:** Papel kraft reciclado de fibra de caña de azúcar (insumo icónico de la agroindustria cruceña), prensado de alta densidad, en su color natural cálido. En el centro, el logotipo de GreenSpark en estampado metálico caliente (*hot stamping*) en **Verde Cruceño**. El diseño es minimalista extremo — solo el logo y un patrón geométrico sutil de hojas estilizadas que se desvanece en los bordes.
+*   **Cierre:** Sello circular con un código QR funcional y la leyenda: *"Escaneá para medir el impacto latente de tus residuos antes de abrir"*. El QR dirige a una landing page personalizada.
+*   **Interior:** Revestimiento en **Blanco Puro** con una franja verde sutil en la parte superior, y la siguiente frase en tipografía `Outfit SemiBold` centrada:
 
     > *"Estás abriendo la puerta a la soberanía energética de Santa Cruz de la Sierra."*
 
-### 7.2. La Carta de Incorporación Institucional
+### 8.2. La Carta de Incorporación Institucional
 
-*   **Material:** Impresa en papel ecológico certificado elaborado con residuo agroindustrial cruceño (bagazo de caña de azúcar de los ingenios del norte integrado). Textura orgánica táctil de alta calidad que el receptor siente al tocarla — la materia prima del papel es la misma que GreenSpark transforma en energía.
-*   **Encabezado:** Logo GreenSpark alineado a la izquierda. A la derecha, en tipografía monoespaciada (`JetBrains Mono`) gris: `RED-SPARK // SOCIO-INNOVADOR // UCB-SCZ-2026`.
+*   **Material:** Impresa en papel ecológico certificado elaborado con residuo agroindustrial cruceño. Textura orgánica táctil de alta calidad.
+*   **Encabezado:** Logo GreenSpark alineado a la izquierda en **Verde Cruceño**. A la derecha, en tipografía monoespaciada (`JetBrains Mono`) gris: `RED-SPARK // SOCIO-INNOVADOR // UCB-SCZ-2026`.
 *   **Destinatario:** *A las Autoridades Académicas / Directores de Sostenibilidad* (personalizado por institución).
 *   **Cuerpo de la carta:**
 
@@ -204,29 +245,29 @@ El proceso de incorporación de grandes generadores de residuos (universidades c
     >
     > *Ustedes ya no son solo un centro educativo; son una celda energética activa de la Santa Cruz del mañana."*
 
-### 7.3. La GreenSpark Circle Key (Token de Acceso Físico)
+### 8.3. La GreenSpark Circle Key (Token de Acceso Físico)
 
-Incrustada en un troquel central de la carta, la **GreenSpark Circle Key** es una tarjeta inteligente premium de bambú oscuro con chip NFC integrado y acabado mate. Al acercar el celular, se abre instantáneamente el portal dinámico de GreenSpark con el dashboard en tiempo real de la institución, mostrando toneladas desviadas del relleno sanitario y kWh generados.
+Incrustada en un troquel central de la carta, la **GreenSpark Circle Key** es una tarjeta inteligente premium de bambú claro con chip NFC integrado y acabado mate. Al acercar el celular, se abre instantáneamente el portal dinámico de GreenSpark.
 
-*   **Material:** Bambú oscuro prensado, grabado láser con el logo y un código QR de respaldo.
+*   **Material:** Bambú claro prensado, grabado láser en **Verde Cruceño** con el logo y un código QR de respaldo.
 *   **Dimensiones:** Formato tarjeta de crédito (85.6 × 53.98 mm).
 *   **Tecnología:** Chip NFC NTAG215 — compatible con iOS y Android sin app adicional.
-*   **Experiencia:** El receptor pasa de sostener un objeto físico premium a visualizar su impacto energético digital en segundos — el puente perfecto entre lo tangible y lo tecnológico.
+*   **Experiencia:** El receptor pasa de sostener un objeto físico premium a visualizar su impacto energético digital en segundos.
 
 ---
 
-## 8. Social Media Identity & Marketing: *"Cercanía de Alto Impacto"*
+## 9. Social Media Identity & Marketing: *"Cercanía Institucional"*
 
-La estrategia en plataformas digitales (Instagram, LinkedIn, TikTok) equilibra la rigurosidad de la IA con la calidez del cruceño, humanizando datos complejos mediante analogías cotidianas y visuales explosivos.
+La estrategia en plataformas digitales equilibra la rigurosidad de la IA con la calidez del cruceño, humanizando datos complejos mediante analogías cotidianas y visuales elegantes.
 
-### 8.1. Identidad Visual en Redes
+### 9.1. Identidad Visual en Redes
 
-*   **Grillas de Contenido:** Diseños con uso intensivo de retícula (*grid system*). Los marcos de las publicaciones emplean líneas delgadas y brillantes en **Green Spark Volt** y **Bioluminescent Cyan** que dividen el espacio con la precisión de un mapa logístico de optimización.
-*   **Tipografía en Imágenes:** Títulos gigantes en `Outfit ExtraBold` blanco con palabras clave resaltadas en `#00FF87` y un sutil efecto de sombra luminosa detrás de las letras para despegarse del fondo oscuro.
-*   **Imágenes de Contraste Extremo:** Fotografías de alta calidad del paisaje cruceño (el verde intenso del Urubó, el bullicio de mercados como el Abasto o la Ramada, campus universitarios) editadas con un filtro de alta fidelidad tecnológica, integrando infografías y elementos digitales 3D superpuestos que parecen flotar en el entorno.
-*   **Paleta en Redes:** Fondos siempre oscuros (**Obsidian Black** o **Cyber Navy**). El blanco se reserva exclusivamente para tipografía de máxima jerarquía. El verde y el cian son los únicos colores de acento — jamás rojo, amarillo u otros que diluyan la identidad.
+*   **Grillas de Contenido:** Diseños limpios con uso intensivo de espacio en blanco. Los marcos emplean acentos sutiles en **Verde Cruceño** que organizan la información con precisión.
+*   **Tipografía en Imágenes:** Títulos en `Outfit ExtraBold` en **Verde Profundo** con palabras clave resaltadas en **Verde Cruceño**. Fondos predominantemente blancos o **Rocío de Hoja** para mantener la elegancia.
+*   **Imágenes de Calidad:** Fotografías del paisaje cruceño (el verde del Urubó, campus universitarios, la vida urbana) editadas con alta luminosidad y contraste suave, integrando infografías limpias superpuestas con la paleta verde-blanco.
+*   **Paleta en Redes:** Fondos predominantemente claros (blanco o Rocío de Hoja). El **Verde Cruceño** es el único color de acento principal — jamás se diluye la identidad con colores ajenos a la paleta.
 
-### 8.2. Formatos por Plataforma
+### 9.2. Formatos por Plataforma
 
 | Plataforma | Formato Estrella | Tono de Voz | Frecuencia |
 |---|---|---|---|
@@ -234,55 +275,45 @@ La estrategia en plataformas digitales (Instagram, LinkedIn, TikTok) equilibra l
 | **LinkedIn** | Artículos técnicos + casos de éxito institucional | Profesional pero accesible, orientado a decisores | 2–3 posts / semana |
 | **TikTok** | Reels educativos de 30–60s sobre IA y residuos | Informal, relajado, sin jerga excesiva | 3–4 videos / semana |
 
-### 8.3. Tácticas de Contenido y Conexión Emocional
+### 9.3. Tácticas de Contenido y Conexión Emocional
 
 #### Táctica 1: La Humanización del kWh — *"¿Qué significa este dato para mí?"*
 
-En lugar de publicar *"Generamos 150 kWh al mes"*, convertimos el dato en una historia visual con contexto cruceño:
-
-*   **Slide 1:** *"¿Qué tienen en común tu almuerzo en Equipetrol y cargar tu celular por un año?"* — Fondo oscuro, foto premium de una hamburguesa cruceña típica con un aura verde brillante.
-*   **Slide 2:** *"Ayer, la zona de Equipetrol desechó 500 kg de residuos orgánicos de restaurantes. Nuestra IA predijo que equivalen a 100 kWh de energía."* — Gráfica cian interactiva superpuesta en el mapa de Equipetrol.
-*   **Slide 3:** *"Esa energía es suficiente para cargar 8.300 smartphones de cruceños de 0% a 100%."* — Ilustración digital de smartphones flotando con cables bioluminiscentes.
-*   **Slide 4:** *"El futuro no se bota, se transforma. Únete a la red."* — Botón CTA limpio en Green Spark Volt.
+*   **Slide 1:** *"¿Qué tienen en común tu almuerzo en Equipetrol y cargar tu celular por un año?"* — Fondo blanco, fotografía premium con acento verde.
+*   **Slide 2:** *"Ayer, la zona de Equipetrol desechó 500 kg de residuos orgánicos. Nuestra IA predijo que equivalen a 100 kWh de energía."* — Gráfica limpia con datos en Verde Cruceño.
+*   **Slide 3:** *"Esa energía es suficiente para cargar 8.300 smartphones de 0% a 100%."* — Ilustración flat elegante.
+*   **Slide 4:** *"El futuro no se bota, se transforma. Únete a la red."* — Botón CTA con gradiente Amanecer Verde.
 
 #### Táctica 2: El Tablero de Honor Universitario — *#RedGreenSpark*
 
-Publicaciones dedicadas a celebrar la integración de universidades locales:
-
-*   Ejemplo: *"La UCB Sede Santa Cruz enciende la innovación"* con fotografía del rector sosteniendo la tarjeta NFC de bambú y capturas elegantes de su dashboard personalizado.
-*   **Objetivo:** Generar sana competencia de sostenibilidad entre universidades (UCB vs. UPSA vs. UAGRM) y activar que los propios estudiantes compartan las publicaciones por orgullo de pertenencia.
+Publicaciones dedicadas a celebrar la integración de universidades locales con un diseño limpio, profesional y orgulloso.
 
 #### Táctica 3: Detrás del Algoritmo — *"Build in Public"*
 
-Videos cortos en formato Reel/TikTok de los desarrolladores de GreenSpark en Santa Cruz explicando cómo funciona scikit-learn o Google OR-Tools para optimizar rutas de recolección de basura por el 4to anillo. Tono cercano, relajado, sin jerga excesiva, mostrando pantallas de código reales con la estética oscura de GreenSpark.
-
-*   **Formato:** 30–60 segundos, subtitulado, con transiciones rápidas.
-*   **Estilo visual:** Fondo real (oficina, campus, calle cruceña) con overlays de la interfaz GreenSpark en esquina.
+Videos cortos mostrando desarrollo real con la estética clara de GreenSpark.
 
 ---
 
-## 9. Brand Ecosystem & Communication Channels
-
-El siguiente diagrama ilustra cómo fluye la identidad de marca a través de todos los canales físicos y digitales, asegurando una experiencia coherente y premium de extremo a extremo:
+## 10. Brand Ecosystem & Communication Channels
 
 ```mermaid
 graph TD
-    classDef main fill:#0A0F1D,stroke:#00FF87,stroke-width:2px,color:#FFFFFF;
-    classDef physical fill:#F1F5F9,stroke:#0A0F1D,stroke-width:2px,color:#000000;
-    classDef digital fill:#05070A,stroke:#00E5FF,stroke-width:2px,color:#FFFFFF;
+    classDef main fill:#1B7A3D,stroke:#145C2E,stroke-width:2px,color:#FFFFFF;
+    classDef physical fill:#E8F5EC,stroke:#1B7A3D,stroke-width:2px,color:#1A2E22;
+    classDef digital fill:#FFFFFF,stroke:#2E9E5E,stroke-width:2px,color:#1A2E22;
 
-    BRAND["Identidad GreenSpark<br>Bio-Cibernética Cruceña"]:::main
+    BRAND["Identidad GreenSpark<br>Elegancia Verde Cruceña"]:::main
 
     %% Canales Físicos
     BRAND --> |Papelería y Presencia B2B| PHYS_MKT["Canal Físico / Corporativo"]:::physical
-    PHYS_MKT --> ENV["Sobre de Alta Costura<br>Cyber Navy + Hot Stamping"]:::physical
+    PHYS_MKT --> ENV["Sobre Institucional<br>Kraft + Stamping Verde"]:::physical
     PHYS_MKT --> LET["Carta de Incorporación<br>Papel de Caña Reciclada"]:::physical
     PHYS_MKT --> KEY["GreenSpark Circle Key<br>Tarjeta NFC de Bambú"]:::physical
 
     %% Canales Digitales
     BRAND --> |Interfaces y Social Media| DIG_MKT["Canal Digital / Aplicaciones"]:::digital
-    DIG_MKT --> WEB["Plataforma Web<br>Dashboard Dark Mode"]:::digital
-    DIG_MKT --> SOC["Redes Sociales<br>Infografías + SparkFacts"]:::digital
+    DIG_MKT --> WEB["Plataforma Web<br>Dashboard Light Mode"]:::digital
+    DIG_MKT --> SOC["Redes Sociales<br>Infografías Elegantes"]:::digital
     DIG_MKT --> CHAT["Asesor IA<br>Chat Inteligente"]:::digital
 
     %% Puntos de Retorno
@@ -293,18 +324,84 @@ graph TD
 
 ---
 
-## 10. Design Principles for New Views
+## 11. Design Principles for New Views
 
 Cuando se diseñen nuevas pantallas, componentes o materiales para GreenSpark, el equipo debe seguir estos **cinco principios irrenunciables**:
 
 | # | Principio | Regla |
 |---|---|---|
-| 1 | **Oscuridad como Lienzo** | Todo nace del Cyber Navy (`#0A0F1D`). Las interfaces claras o blancas en pantalla están prohibidas. El fondo oscuro es el escenario donde los datos brillan. |
-| 2 | **Luz Funcional, no Decorativa** | El verde (`#00FF87`) solo se usa para acciones importantes o datos críticos. Si todo brilla, nada comunica importancia. |
+| 1 | **Blanco como Lienzo** | Todo nace del blanco puro y la Niebla de Pradera. La claridad transmite confianza, transparencia y profesionalismo. El fondo limpio es el escenario donde los datos se presentan con dignidad. |
+| 2 | **Verde Funcional, no Decorativo** | El Verde Cruceño (`#1B7A3D`) solo se usa para acciones importantes o datos críticos. Si todo es verde, nada comunica importancia. Cada uso de verde debe ser intencional. |
 | 3 | **Trazabilidad Científica** | Cada predicción incluye un indicador de confiabilidad del modelo. Esto construye la confianza de socios e inversionistas. |
 | 4 | **Localismo Orgulloso** | Mapas, ejemplos y analogías usan ubicaciones reales de Santa Cruz (Equipetrol, Plan 3000, el Urubó). Demostramos conocimiento íntimo del territorio. |
 | 5 | **Transparencia de la IA** | La visualización refleja la IA de forma honesta, sin falsificar funcionalidades ni exagerar capacidades. |
 
 ---
 
-> **Nota final:** Este documento es la fuente de verdad (*source of truth*) para toda decisión de diseño visual de GreenSpark. Cualquier nueva pantalla, publicación en redes, pieza de papelería o material de presentación debe alinearse con los tokens de color, la tipografía, los principios de composición y la atmósfera definidos aquí.
+## 12. CSS Variables Reference
+
+Para implementación directa, estas son las variables CSS del sistema:
+
+```css
+:root {
+  /* === Colores Primarios === */
+  --color-primary: #1B7A3D;           /* Verde Cruceño */
+  --color-primary-hover: #2E9E5E;     /* Verde Vivo */
+  --color-primary-dark: #145C2E;      /* Verde Cruceño oscurecido */
+  --color-background: #FFFFFF;         /* Blanco Puro */
+  --color-text-primary: #1A2E22;       /* Verde Profundo */
+  
+  /* === Colores Secundarios === */
+  --color-surface: #FFFFFF;            /* Superficie de tarjetas */
+  --color-surface-alt: #E8F5EC;        /* Rocío de Hoja */
+  --color-page-bg: #F5F8F6;           /* Niebla de Pradera */
+  --color-border: #D4DDD7;            /* Borde Sereno */
+  --color-text-secondary: #5A7265;     /* Texto Secundario */
+  
+  /* === Alertas === */
+  --color-warning: #D4930A;            /* Ámbar Cálido */
+  --color-error: #C94C4C;             /* Coral Suave */
+  --color-success: #1B7A3D;           /* Verde Cruceño (reúso) */
+  
+  /* === Gradientes === */
+  --gradient-primary: linear-gradient(135deg, #1B7A3D, #2E9E5E);
+  --gradient-page: linear-gradient(180deg, #FFFFFF 0%, #F5F8F6 50%, #E8F5EC 100%);
+  
+  /* === Sombras === */
+  --shadow-sm: 0 1px 4px rgba(26, 46, 34, 0.04);
+  --shadow-md: 0 2px 12px rgba(26, 46, 34, 0.06);
+  --shadow-lg: 0 8px 32px rgba(26, 46, 34, 0.10);
+  --shadow-hover: 0 4px 20px rgba(27, 122, 61, 0.10);
+  
+  /* === Bordes === */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  /* === Tipografía === */
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* === Espaciado (base 4px) === */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  
+  /* === Transiciones === */
+  --transition-fast: 150ms ease-out;
+  --transition-base: 250ms ease-out;
+  --transition-slow: 400ms ease-out;
+}
+```
+
+---
+
+> **Nota final:** Este documento es la fuente de verdad (*source of truth*) para toda decisión de diseño visual de GreenSpark. Cualquier nueva pantalla, publicación en redes, pieza de papelería o material de presentación debe alinearse con los tokens de color, la tipografía, los principios de composición y la atmósfera definidos aquí. La identidad cruceña — verde, blanco, verde — es el ADN visual inquebrantable del proyecto.
