@@ -115,6 +115,7 @@ npm run dev                  # http://localhost:5173
 | Solución propuesta | [ver](docs/entregables_obligatorios/solucion_propuesto.md) |
 | Aplicación de IA | [ver](docs/entregables_obligatorios/aplicacion_de_ia.md) |
 | Arquitectura tecnológica | [ver](docs/entregables_obligatorios/arquitectura_tecnologica.md) |
+| Manual de Identidad Visual y Sistema de Diseño | [ver](DESIGN.md) |
 | Análisis FODA | [ver](docs/entregables_obligatorios/analisis_foda.md) |
 | Análisis PESTEL | [ver](docs/entregables_obligatorios/analisis_pestel.md) |
 | Lean Canvas | [ver](docs/entregables_obligatorios/lean_canvas.md) |
