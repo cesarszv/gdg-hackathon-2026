@@ -1,12 +1,12 @@
 {
 	"folders": [
 		{
-			"name": "gdg-hackathon-2026",
-			"path": "."
-		},
-		{
 			"name": "Documentation",
 			"path": "docs"
+		},
+		{
+			"name": "gdg-hackathon-2026",
+			"path": "."
 		}
 	],
 	"settings": {}

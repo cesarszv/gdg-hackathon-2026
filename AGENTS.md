@@ -2,6 +2,8 @@
 
 Este repositorio contiene nuestro proyecto para la Hackathon Build With AI 2026, un evento intensivo de innovación tecnológica enfocado en crear soluciones reales basadas en Inteligencia Artificial.
 
+Ten en cuenta que todo debe estar enfocado en `Santa Cruz de la Sierra, Bolivia`
+
 ## Instrucción obligatoria
 
 Antes de trabajar en el proyecto, revisa y alinea tus decisiones con:
@@ -10,7 +12,7 @@ Antes de trabajar en el proyecto, revisa y alinea tus decisiones con:
 
 ## Plazo del proyecto
 
-- Inicio: `2026-05-29`
+- Inicio: `2026-05-30`
 - Entrega final: `2026-05-31`
 
 ## Criterios de evaluación
