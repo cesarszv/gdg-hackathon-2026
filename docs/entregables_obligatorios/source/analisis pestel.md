@@ -1,61 +1,63 @@
-# Análisis PESTEL — GreenSpark
+# GreenSpark: Análisis PESTEL
 
-**Equipo:** HackHeroes · **Mención:** ENERGÍA · **Lugar:** Santa Cruz de la Sierra, Bolivia
+**Equipo:** HackHeroes · **Mención:** Energía · **Lugar:** Santa Cruz de la Sierra, Bolivia
 
-> PESTEL específico para Bolivia y Santa Cruz. Cada factor incluye **implicación** para GreenSpark.
+> Este análisis PESTEL se enfoca en Bolivia y Santa Cruz. Cada factor incluye su implicación para GreenSpark.
 
----
+## 1. Factor político
 
-## 🏛️ Político
+- La gestión de residuos y el aseo urbano dependen del **GAMSC** y de operadores como **EMACRUZ**. El relleno de Normandía es un asunto político y municipal.
+- Bolivia ha suscrito compromisos ambientales internacionales, como el Acuerdo de París y los ODS, que impulsan la economía circular.
+- Existen oportunidades para formar **alianzas público-privadas** y promover incentivos municipales para valorizar residuos.
 
-- Gestión de residuos y aseo urbano dependen del **GAMSC** y operadores como **EMACRUZ**; el relleno de Normandía es asunto político-municipal.
-- Bolivia ha suscrito compromisos ambientales internacionales (Acuerdo de París, ODS) que presionan hacia la economía circular.
-- Posibilidad de **alianzas público-privadas** y de incentivos municipales para valorización de residuos.
-- **Implicación:** el sector público es socio y comprador potencial, pero con ciclos lentos; iniciar por el sector privado formal reduce el riesgo político.
+> **Implicación para GreenSpark:** el sector público es un socio y comprador potencial, pero sus ciclos son lentos. Iniciar con el sector privado formal reduce el riesgo político.
 
-## 💰 Económico
+## 2. Factor económico
 
-- Santa Cruz es el **motor económico** de Bolivia y su polo agroindustrial → alta densidad de generadores formales con capacidad de pago.
-- **Inestabilidad cambiaria** y escasez de dólares: los costos en USD (APIs) son un riesgo; los ingresos serán en **Bs**.
-- Costos crecientes de disposición de residuos = mayor disposición a pagar por alternativas.
-- **Implicación:** tarificar en Bolivianos, mantener costos variables bajos (tiers gratuitos) y enfatizar el **ahorro** como gancho comercial.
+- Santa Cruz es el **motor económico** de Bolivia y su polo agroindustrial. Esto concentra generadores formales con capacidad de pago.
+- La **inestabilidad cambiaria** y la escasez de dólares generan un riesgo: los ingresos serán en **Bs**, pero algunos costos, como las APIs, están en USD.
+- El aumento de los costos de disposición de residuos mejora la disposición a pagar por alternativas.
 
-## 👥 Social
+> **Implicación para GreenSpark:** definir precios en bolivianos, mantener bajos los costos variables mediante planes gratuitos y presentar el **ahorro** como principal argumento comercial.
 
-- **Baja cultura de segregación** en origen y alta informalidad en el reciclaje.
-- Creciente conciencia ambiental en universidades, jóvenes y empresas con marca.
-- Presión social y reputacional para que las empresas demuestren sostenibilidad.
-- **Implicación:** el reporte ESG es un fuerte motivador social/reputacional; el onboarding debe educar y simplificar la segregación.
+## 3. Factor social
 
-## 💻 Tecnológico
+- Existe una **baja cultura de segregación** en origen y una alta informalidad en el reciclaje.
+- Aumenta la conciencia ambiental en universidades, jóvenes y empresas que cuidan su marca.
+- Las empresas enfrentan una mayor presión social y reputacional para demostrar sostenibilidad.
 
-- **IA accesible por API** (DeepSeek, etc.) elimina la barrera de infraestructura.
-- Buena penetración de smartphones e internet en el área urbana de Santa Cruz.
-- Disponibilidad de **librerías abiertas** (scikit-learn, OR-Tools) y datos abiertos (OpenStreetMap, Open-Meteo).
-- **Implicación:** se puede construir y escalar tecnología de punta con costo marginal bajo y sin hardware.
+> **Implicación para GreenSpark:** el reporte ESG es un motivador social y reputacional. El proceso de incorporación debe educar al usuario y simplificar la segregación.
 
-## 🌎 Ambiental (Ecológico)
+## 4. Factor tecnológico
 
-- El orgánico en relleno emite **metano** (~28× CO₂) [DATO: IPCC AR5]; desviarlo tiene impacto climático directo.
-- Santa Cruz enfrenta presión ambiental: deforestación, incendios, gestión de residuos.
-- El **compost** resultante beneficia al suelo agrícola cruceño (cierre del círculo).
-- **Implicación:** el impacto ambiental es cuantificable y vendible (reportes, futuros créditos de carbono).
+- La **IA accesible mediante APIs**, como DeepSeek, reduce la barrera de infraestructura.
+- El área urbana de Santa Cruz tiene una buena penetración de smartphones e internet.
+- Existen **librerías abiertas**, como scikit-learn y OR-Tools, y fuentes de datos abiertas, como OpenStreetMap y Open-Meteo.
 
-## ⚖️ Legal
+> **Implicación para GreenSpark:** es posible construir y escalar una solución tecnológica avanzada, sin hardware y con un costo marginal bajo.
 
-- Marco boliviano: **Ley 755 de Gestión Integral de Residuos** y normativa ambiental (Ley 1333) impulsan el aprovechamiento de residuos.
-- Requisitos sanitarios para manejo de residuos orgánicos y para uso de compost.
-- Protección de datos de los clientes (información operativa).
-- **Implicación:** la Ley 755 es un **viento de cola** legal; debemos cumplir normas sanitarias vía las plantas socias y proteger los datos de clientes.
+## 5. Factor ambiental
 
----
+- Los residuos orgánicos en rellenos sanitarios emiten **metano** (~28× CO₂) [DATO: IPCC AR5]. Desviarlos genera un impacto climático directo.
+- Santa Cruz enfrenta presión ambiental por la deforestación, los incendios y la gestión de residuos.
+- El **compost** resultante beneficia al suelo agrícola cruceño y cierra el ciclo.
 
-## Síntesis: vientos a favor y en contra
+> **Implicación para GreenSpark:** el impacto ambiental puede cuantificarse y convertirse en valor mediante reportes y futuros créditos de carbono.
 
-| A favor (aprovechar) | En contra (mitigar) |
-|---|---|
-| Ley 755 + compromisos ODS | Inestabilidad económica/cambiaria |
+## 6. Factor legal
+
+- La **Ley 755 de Gestión Integral de Residuos** y la normativa ambiental boliviana, como la Ley 1333, impulsan el aprovechamiento de residuos.
+- Existen requisitos sanitarios para manejar residuos orgánicos y utilizar compost.
+- La plataforma debe proteger los datos operativos de sus clientes.
+
+> **Implicación para GreenSpark:** la Ley 755 favorece la propuesta. Las plantas socias deben cumplir las normas sanitarias y la plataforma debe proteger los datos de sus clientes.
+
+## 7. Síntesis: factores a favor y en contra
+
+| Factores a favor | Factores que deben mitigarse |
+| --- | --- |
+| Ley 755 y compromisos ODS | Inestabilidad económica y cambiaria |
 | Presión ESG y reputacional | Baja cultura de segregación |
-| IA barata por API, sin hardware | Ciclos públicos lentos |
-| Polo agroindustrial con capacidad de pago | Marco regulatorio aún en maduración |
-| Precedente Guabirá (biomasa→red) | Informalidad del sector residuos |
+| IA accesible mediante APIs, sin hardware | Ciclos lentos del sector público |
+| Polo agroindustrial con capacidad de pago | Marco regulatorio todavía en desarrollo |
+| Precedente de Guabirá: biomasa convertida en energía para la red | Informalidad del sector de residuos |

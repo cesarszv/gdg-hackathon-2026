@@ -1,33 +1,29 @@
-# Arquitectura Tecnológica — GreenSpark
+# GreenSpark: Arquitectura tecnológica
 
-**Equipo:** HackHeroes · **Mención:** ENERGÍA · **Lugar:** Santa Cruz de la Sierra, Bolivia
+**Equipo:** HackHeroes · **Mención:** Energía · **Lugar:** Santa Cruz de la Sierra, Bolivia
 
-> Principio de diseño: **sin hardware, API-first, tiers gratuitos, construible en 1 día y 100% replicable.**
-
----
+> **Principio de diseño:** sin hardware, orientado a APIs, desplegable en planes gratuitos, construible en un día y completamente replicable.
 
 ## 1. Stack tecnológico
 
 | Capa | Tecnología | Por qué |
-|---|---|---|
-| **Frontend** | React | Portal del generador, dashboard de impacto, mapa y chat del agente |
+| --- | --- | --- |
+| **Frontend** | React | Portal del generador, panel de impacto, mapa y chat del agente. |
 | **Backend** | Python + FastAPI | Rápido de construir, ideal para servir modelos de IA |
-| **Base de datos** | SQLite (MVP) → PostgreSQL (escala) | Cero configuración para el MVP; migración directa al crecer |
-| **IA — predicción** | scikit-learn (Gradient Boosting/RandomForest) | Modelo ligero, corre en CPU, sin GPU |
+| **Base de datos** | SQLite (MVP) → PostgreSQL (escala) | No requiere configuración para el MVP y permite una migración directa al crecer. |
+| **IA — predicción** | scikit-learn (Gradient Boosting / Random Forest) | Modelo ligero, corre en CPU, sin GPU |
 | **IA — optimización** | Google OR-Tools (VRP) | Ruteo de recolección, librería abierta |
 | **IA — agente** | DeepSeek API | LLM por API: sin modelo local, sin hardware |
-| **Clima** | Open-Meteo API | Estacionalidad de Santa Cruz (gratis, sin key) |
-| **Mapa** | Leaflet + OpenStreetMap | Visualización de generadores, plantas y rutas (gratis, sin key) |
-| **Despliegue** | Frontend: Vercel · Backend: Render/Railway | Tiers gratuitos, deploy en minutos |
+| **Clima** | Open-Meteo API | Estacionalidad de Santa Cruz, gratis y sin clave. |
+| **Mapa** | Leaflet + OpenStreetMap | Visualización de generadores, plantas y rutas, gratis y sin clave. |
+| **Despliegue** | Frontend: Vercel · Backend: Render/Railway | Planes gratuitos y despliegue en minutos. |
 
----
+## 2. Flujo de datos
 
-## 2. Diagrama de arquitectura (flujo de datos)
-
-```
+```text
 ┌──────────────────────────────────────────────────────────────┐
 │                     FRONTEND (React)                          │
-│  Portal generador │ Dashboard impacto │ Mapa │ Chat agente    │
+│  Portal generador │ Panel impacto │ Mapa │ Chat agente        │
 └───────────────────────────┬──────────────────────────────────┘
                             │ HTTPS / REST (JSON)
 ┌───────────────────────────▼──────────────────────────────────┐
@@ -48,11 +44,9 @@
                      └──────────────┘
 ```
 
----
-
 ## 3. Modelo de datos (MVP, simplificado)
 
-```
+```text
 Generador(id, nombre, tipo, zona, lat, lng, volumen_diario_kg)
 Planta(id, nombre, tipo, lat, lng, capacidad_t_dia, sustratos_aceptados)
 Residuo(id, generador_id, tipo, kg, fecha, humedad, contaminacion)
@@ -61,39 +55,31 @@ Match(id, generador_id, planta_id, ruta_orden, distancia_km, emisiones_kg)
 ReporteESG(id, generador_id, periodo, texto, kwh_total, co2e_total)
 ```
 
----
-
-## 4. Endpoints principales (API REST)
+## 4. Endpoints principales de la API REST
 
 | Método | Ruta | Función |
-|---|---|---|
+| --- | --- | --- |
 | `POST` | `/residuos` | Registrar un residuo |
 | `POST` | `/predecir` | Predecir rendimiento (modelo IA) |
-| `GET`  | `/impacto/{generador_id}` | Métricas de impacto del generador |
-| `GET`  | `/impacto/ciudad` | Métricas agregadas de ciudad |
+| `GET` | `/impacto/{generador_id}` | Métricas de impacto del generador |
+| `GET` | `/impacto/ciudad` | Métricas agregadas de la ciudad |
 | `POST` | `/optimizar-ruta` | Ruta de recolección óptima (OR-Tools) |
 | `POST` | `/agente` | Pregunta al asesor IA / generar reporte ESG |
 
----
-
-## 5. Flujo de la demo (lo que ocurre técnicamente)
+## 5. Flujo técnico de la demo
 
 1. **React** envía `POST /residuos` con tipo + kg.
-2. **FastAPI** llama al **modelo scikit-learn** → devuelve biogás, kWh, CO₂, valor.
-3. React pinta el resultado y dispara `POST /optimizar-ruta` → **OR-Tools** devuelve la ruta → se dibuja en **Leaflet**.
-4. El usuario pregunta en el chat → `POST /agente` → **DeepSeek** invoca funciones del backend, lee los números reales y responde + redacta el **reporte ESG**.
-5. El **dashboard** consume `/impacto/ciudad` y muestra el agregado.
-
----
+2. **FastAPI** llama al **modelo de scikit-learn** y devuelve biogás, kWh, CO₂ y valor económico.
+3. React muestra el resultado y envía `POST /optimizar-ruta`. **OR-Tools** devuelve la ruta y **Leaflet** la dibuja en el mapa.
+4. El usuario escribe en el chat. `POST /agente` permite que **DeepSeek** invoque funciones del backend, lea los valores reales, responda y redacte el **reporte ESG**.
+5. El **panel** consulta `/impacto/ciudad` y muestra los datos agregados.
 
 ## 6. Seguridad, escalabilidad y sostenibilidad técnica
 
-- **Escalabilidad:** SQLite → PostgreSQL; backend stateless desplegable en múltiples instancias; modelo servido como artefacto versionado.
-- **Costos bajos:** todo el MVP corre en tiers gratuitos; el único costo variable es la API del LLM (centavos por consulta).
-- **Resiliencia:** el núcleo (predicción + ruteo) **no depende del LLM**; si DeepSeek falla, la plataforma sigue entregando números (degradación elegante).
-- **Replicabilidad:** repositorio con `requirements.txt`, `README` e instrucciones de ejecución; cualquiera lo levanta en local.
-
----
+- **Escalabilidad:** migración de SQLite a PostgreSQL, backend sin estado desplegable en múltiples instancias y modelo servido como artefacto versionado.
+- **Costos bajos:** todo el MVP funciona con planes gratuitos. El único costo variable es la API del LLM, de centavos por consulta.
+- **Resiliencia:** el núcleo de predicción y ruteo **no depende del LLM**. Si DeepSeek falla, la plataforma continúa entregando resultados numéricos.
+- **Replicabilidad:** el repositorio incluye `requirements.txt`, `README` e instrucciones de ejecución para levantar el proyecto en un entorno local.
 
 ## 7. Instrucciones de ejecución (resumen)
 
