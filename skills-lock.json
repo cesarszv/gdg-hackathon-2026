@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "Improve Writing": {
+      "source": "cesarszv/skills",
+      "sourceType": "github",
+      "skillPath": "skills/improve writing/SKILL.md",
+      "computedHash": "3e86bf7620f55490b753a6de6821c94eed9ae6202581010553c88ff3b132d5c2"
+    }
+  }
+}
