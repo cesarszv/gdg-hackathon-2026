@@ -1,6 +1,10 @@
 {
 	"folders": [
 		{
+			"name": "Obligatorio",
+			"path": "docs/entregables_obligatorios"
+		},
+		{
 			"name": "Documentation",
 			"path": "docs"
 		},
