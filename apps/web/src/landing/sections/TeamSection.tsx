@@ -4,25 +4,33 @@ const MEMBERS = [
   {
     name: "Cesar Sebastian Zambrana Ventura",
     photo: "/team/cesar-zambrana.jpg",
-    photoPosition: "center 35%",
+    photoPosition: "center 42%",
   },
   {
     name: "Emanuel Justiniano Peralta",
     photo: "/team/emanuel-justiniano.jpeg",
-    photoPosition: "center 18%",
+    photoPosition: "center 16%",
   },
   {
     name: "Fabian Serrano Catari",
     photo: "/team/fabian-serrano.jpg",
-    photoPosition: "center 30%",
+    photoPosition: "center 24%",
   },
   {
     name: "Juan David Mercado Montenegro",
     photo: "/team/juan-mercado.jpg",
-    photoPosition: "center 22%",
+    photoPosition: "center 18%",
   },
-  { name: "Raquel Sahonero Salas" },
-  { name: "Thiago Andre Moreno Velasco" },
+  {
+    name: "Raquel Sahonero Salas",
+    photo: "/team/raquel-sahonero.jpeg",
+    photoPosition: "center 20%",
+  },
+  {
+    name: "Thiago Andre Moreno Velasco",
+    photo: "/team/thiago-moreno.jpg",
+    photoPosition: "center 24%",
+  },
 ];
 
 function initials(name: string): string {

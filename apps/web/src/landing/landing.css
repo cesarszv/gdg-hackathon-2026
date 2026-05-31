@@ -482,8 +482,8 @@
   transform: translateY(-4px);
 }
 .member__avatar {
-  width: 80px;
-  height: 80px;
+  width: 96px;
+  height: 96px;
   margin: 0 auto var(--space-5);
   border-radius: var(--radius-full);
   background: var(--gradient-primary);
