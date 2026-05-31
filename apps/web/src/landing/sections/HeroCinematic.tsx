@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useReducedMotion } from "../../lib/useReducedMotion";
@@ -12,6 +12,8 @@ export function HeroCinematic() {
   const root = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const reduced = useReducedMotion();
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [muted, setMuted] = useState(true);
 
   useLayoutEffect(() => {
     if (reduced || !root.current) return;
@@ -60,18 +62,42 @@ export function HeroCinematic() {
             ref={videoRef}
             className="hero__video"
             src={VIDEO_SRC}
-            muted
+            muted={muted}
             playsInline
             preload="auto"
             autoPlay
             loop
+            onLoadedData={() => setVideoLoaded(true)}
           />
-          <div className="hero__video-placeholder">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="5 3 19 12 5 21 5 3" />
-            </svg>
-            <span>hero.mp4</span>
-          </div>
+          {!videoLoaded && (
+            <div className="hero__video-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3" />
+              </svg>
+              <span>hero.mp4</span>
+            </div>
+          )}
+          {videoLoaded && (
+            <button
+              type="button"
+              className="hero__video-sound"
+              onClick={() => setMuted(!muted)}
+              aria-label={muted ? "Activar sonido" : "Silenciar"}
+            >
+              {muted ? (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                  <line x1="23" y1="9" x2="17" y2="15" />
+                  <line x1="17" y1="9" x2="23" y2="15" />
+                </svg>
+              ) : (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
+                </svg>
+              )}
+            </button>
+          )}
         </div>
       )}
       <div className="hero__title-wrap">
