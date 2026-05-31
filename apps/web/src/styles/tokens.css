@@ -1,0 +1,66 @@
+/* GreenSpark design tokens — copied verbatim from DESIGN.md §12 (source of truth). */
+:root {
+  /* === Colores Primarios === */
+  --color-primary: #1b7a3d; /* Verde Cruceno */
+  --color-primary-hover: #2e9e5e; /* Verde Vivo */
+  --color-primary-dark: #145c2e; /* Verde Cruceno oscurecido */
+  --color-background: #ffffff; /* Blanco Puro */
+  --color-text-primary: #1a2e22; /* Verde Profundo */
+
+  /* === Colores Secundarios === */
+  --color-surface: #ffffff; /* Superficie de tarjetas */
+  --color-surface-alt: #e8f5ec; /* Rocio de Hoja */
+  --color-page-bg: #f5f8f6; /* Niebla de Pradera */
+  --color-border: #d4ddd7; /* Borde Sereno */
+  --color-text-secondary: #5a7265; /* Texto Secundario */
+
+  /* === Alertas === */
+  --color-warning: #d4930a; /* Ambar Calido */
+  --color-warning-bg: #fff8e7;
+  --color-error: #c94c4c; /* Coral Suave */
+  --color-error-bg: #fde8e8;
+  --color-success: #1b7a3d; /* Verde Cruceno (reuso) */
+  --color-info-bg: #f0f2f1;
+
+  /* === Gradientes === */
+  --gradient-primary: linear-gradient(135deg, #1b7a3d, #2e9e5e);
+  --gradient-page: linear-gradient(180deg, #ffffff 0%, #f5f8f6 50%, #e8f5ec 100%);
+  --glow-soft: radial-gradient(circle, rgba(27, 122, 61, 0.06), transparent 70%);
+
+  /* === Sombras === */
+  --shadow-sm: 0 1px 4px rgba(26, 46, 34, 0.04);
+  --shadow-md: 0 2px 12px rgba(26, 46, 34, 0.06);
+  --shadow-lg: 0 8px 32px rgba(26, 46, 34, 0.1);
+  --shadow-hover: 0 4px 20px rgba(27, 122, 61, 0.1);
+  --shadow-cta-hover: 0 4px 16px rgba(27, 122, 61, 0.25);
+
+  /* === Bordes === */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* === Tipografia === */
+  --font-display: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* === Espaciado (base 4px) === */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+
+  /* === Transiciones === */
+  --transition-fast: 150ms ease-out;
+  --transition-base: 250ms ease-out;
+  --transition-slow: 400ms ease-out;
+
+  /* === Layout === */
+  --content-max: 1200px;
+}
