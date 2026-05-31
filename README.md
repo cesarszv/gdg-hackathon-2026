@@ -12,6 +12,9 @@ GreenSpark es una plataforma de simulación asistida por IA que ayuda a universi
 
 El foco está en las celdas de combustible microbianas (MFC): reactores que generan electricidad directamente a partir de materia orgánica usando bacterias. GreenSpark simula distintas configuraciones, compara resultados y recomienda qué experimento conviene validar primero.
 
+[GreenSpark_documento_unificado_renderizado.pdf](https://github.com/user-attachments/files/28438540/GreenSpark_documento_unificado_renderizado.pdf)
+
+
 ---
 
 ## El problema
