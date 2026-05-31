@@ -8,7 +8,7 @@ export function ProblemSection() {
     <section className="section" id="problema">
       <div className="container">
         <Reveal>
-          <p className="section__eyebrow">01 — El problema</p>
+          <p className="section__eyebrow">01 — Problema identificado</p>
           <h2 className="section__title">971 toneladas de energia organica se pudren cada dia en Santa Cruz</h2>
           <p className="section__lead">
             Mientras universidades, colegios y restaurantes pagan facturas de luz crecientes, casi

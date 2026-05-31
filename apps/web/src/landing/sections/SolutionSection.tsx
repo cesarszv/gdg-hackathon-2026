@@ -59,7 +59,7 @@ export function SolutionSection() {
     <section className="section section--alt" id="solucion" ref={root}>
       <div className="solution__pin">
         <div className="container">
-          <p className="section__eyebrow">02 — La solucion</p>
+          <p className="section__eyebrow">03 — Enfoque de solución</p>
           <h2 className="section__title">Una consola de IA que investiga antes de invertir</h2>
           <p className="section__lead">
             GreenSpark es una plataforma que usa inteligencia artificial para simular reactores

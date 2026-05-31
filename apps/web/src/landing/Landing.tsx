@@ -5,19 +5,20 @@ import { Nav } from "./components/Nav";
 import { ScrollProgress } from "./components/ScrollProgress";
 import { HeroCinematic } from "./sections/HeroCinematic";
 import { ProblemSection } from "./sections/ProblemSection";
+import { UserSection } from "./sections/UserSection";
 import { SolutionSection } from "./sections/SolutionSection";
-import { AiSection } from "./sections/AiSection";
+import { DemoSection } from "./sections/DemoSection";
+import { TechSection } from "./sections/AiSection";
 import { ImpactSection } from "./sections/ImpactSection";
+import { NextStepsSection } from "./sections/NextStepsSection";
 import { TeamSection } from "./sections/TeamSection";
 import { CtaSection } from "./sections/CtaSection";
 import "./landing.css";
 
 export function Landing() {
   const reduced = useReducedMotion();
-  // Smooth scroll only when motion is welcome; native scroll otherwise.
   useLenis(!reduced);
 
-  // Start at the top (cinematic intro) regardless of prior scroll position.
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -30,9 +31,12 @@ export function Landing() {
       <main id="main-content" tabIndex={-1}>
         <HeroCinematic />
         <ProblemSection />
+        <UserSection />
         <SolutionSection />
-        <AiSection />
+        <DemoSection />
+        <TechSection />
         <ImpactSection />
+        <NextStepsSection />
         <TeamSection />
         <CtaSection />
       </main>
@@ -42,8 +46,8 @@ export function Landing() {
           Cruz de la Sierra, Bolivia
         </p>
         <p style={{ marginTop: 8, opacity: 0.7 }}>
-          Mencion Energia &middot; Resultados de simulacion etiquetados como SIMULADO /
-          META_EXPLORATORIA.
+          Mención Energía &middot; Resultados de simulación etiquetados como [SIMULADO] /
+          [META_EXPLORATORIA].
         </p>
       </footer>
     </div>
