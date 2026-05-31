@@ -9,6 +9,7 @@ def test_health_reports_ok_and_table_counts(client):
     body = res.json()
     assert body["status"] == "ok"
     assert body["database"]["scenario"] == 8
+    assert body["database"]["sensor_reading"] == 192
 
 
 def test_catalog_lists_seeded_institutions(client):
@@ -126,14 +127,43 @@ def test_create_report_persists_and_lists(client):
 # --- agent (LLM optional, fallback in tests) ----------------------------------
 
 def test_agent_explains_with_deterministic_fallback(client):
-    res = client.post("/agente", json={"scenario_id": 3})
+    res = client.post(
+        "/agente",
+        json={"question": "Resume el escenario seleccionado.", "scenario_id": 3},
+    )
     assert res.status_code == 200
     body = res.json()
     assert body["source"] == "fallback"
     assert "MFC-SCZ-003" in body["explanation"]
 
 
+def test_agent_answers_free_form_question_from_sqlite(client):
+    res = client.post(
+        "/agente",
+        json={
+            "question": "¿Que muestra la telemetria y que escenario conviene validar primero?",
+            "scenario_id": 3,
+        },
+    )
+    assert res.status_code == 200
+    body = res.json()
+    assert body["source"] == "fallback"
+    assert "MFC-SCZ-003" in body["explanation"]
+    assert "24 lecturas" in body["explanation"]
+    assert "SIMULADO" in body["explanation"]
+    assert any("sensores fisicos" in warning for warning in body["warnings"])
+
+
 # --- telemetry (phase 2 ingestion) --------------------------------------------
+
+def test_seeded_telemetry_is_simulated_and_has_hourly_series(client):
+    res = client.get("/telemetria/3")
+    assert res.status_code == 200
+    readings = res.json()
+    assert len(readings) == 24
+    assert all(row["evidence_state"] == "SIMULADO" for row in readings)
+    assert all(row["device_id"] == "simulator-mfc-scz-003" for row in readings)
+
 
 def test_telemetry_ingests_reading_and_lists(client):
     payload = {

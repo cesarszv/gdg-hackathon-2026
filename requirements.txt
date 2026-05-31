@@ -15,7 +15,7 @@ SQLAlchemy>=2.0.0
 numpy>=2.0.0
 pandas>=2.2.0
 
-# Optional LLM gateway (DeepSeek, OpenAI-compatible) — called via httpx
+# Optional OpenAI advisor gateway called via httpx
 httpx>=0.27.0
 
 # Testing

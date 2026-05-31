@@ -63,6 +63,28 @@ INSERT INTO prediction (scenario_id, projected_voltage_v, projected_current_ma, 
     (7, 0.42, 2.0, 0.840, 168.0, 'media', 'muy_baja', 'Meta exploratoria para piloto escolar. Baseline basado en literatura.', 'META_EXPLORATORIA: No hay medicion. Objetivo sujeto a validacion.', 'baseline-v0.1', 'literature-2025-v1', datetime('now')),
     (8, 0.36, 1.7, 0.612, 122.4, 'media', 'muy_baja', 'Meta exploratoria para piloto restaurante. Baseline basado en literatura.', 'META_EXPLORATORIA: No hay medicion. Objetivo sujeto a validacion.', 'baseline-v0.1', 'literature-2025-v1', datetime('now'));
 
+-- Simulated telemetry (24 hourly readings per scenario).
+-- These rows prepare the read-only advisor flow for future physical sensors.
+-- They are deliberately labeled SIMULADO and must never be shown as measurements.
+WITH RECURSIVE hour_offsets(hour_offset) AS (
+    SELECT 0
+    UNION ALL
+    SELECT hour_offset + 1 FROM hour_offsets WHERE hour_offset < 23
+)
+INSERT INTO sensor_reading (scenario_id, reading_datetime, voltage_v, current_ma, ph, temperature_c, device_id, evidence_state)
+SELECT
+    s.scenario_id,
+    datetime('2026-05-31 00:00:00', printf('+%d hours', h.hour_offset)),
+    round(p.projected_voltage_v * (0.96 + ((h.hour_offset % 5) * 0.02)), 3),
+    round(p.projected_current_ma * (0.95 + ((h.hour_offset % 6) * 0.02)), 3),
+    round(s.ph + (((h.hour_offset % 5) - 2) * 0.03), 2),
+    round(s.temperature_c + (((h.hour_offset % 7) - 3) * 0.12), 2),
+    printf('simulator-mfc-scz-%03d', s.scenario_id),
+    'SIMULADO'
+FROM scenario s
+JOIN prediction p ON p.scenario_id = s.scenario_id
+CROSS JOIN hour_offsets h;
+
 -- Recommendations
 INSERT INTO recommendation (scenario_id, prediction_id, priority, explanation, assumptions, warnings, method, created_at) VALUES
     (3, 3, 1, 'La cachaza de ingenio presenta el mayor rendimiento proyectado (1.456 mW) con estabilidad alta. Es el primer experimento recomendado para validar con medicion local.', 'COD alto favorece produccion. Temperatura de 32C es adecuada para actividad microbiana mesofilica.', 'Requiere acceso a ingenio azucarero. Pretratamiento puede ser necesario. Valores simulados, no garantizados.', 'baseline_comparison', datetime('now')),

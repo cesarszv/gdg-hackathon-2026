@@ -75,9 +75,9 @@ export const api = {
       method: "POST",
       body: JSON.stringify({ inputs, persist: false }),
     }),
-  explainScenario: (scenarioId: number) =>
+  askAgent: (question: string, scenarioId?: number) =>
     request<AgentResult>("/agente", {
       method: "POST",
-      body: JSON.stringify({ scenario_id: scenarioId }),
+      body: JSON.stringify({ question, scenario_id: scenarioId }),
     }),
 };

@@ -14,7 +14,7 @@ C:\Users\Emanuel Justiniano\gdg-hackathon-2026
 - npm: `11.13.0`
 - Dependencias del frontend: `apps\web\node_modules` ya instalado
 - Base SQLite con datos de demo: `database\greenspark.db`
-- Archivo `.env`: no es necesario para la demo
+- Archivo `.env`: preparado para OpenAI; la key puede quedar vacia para usar fallback
 
 Sin `.env`, el asesor de IA usa el fallback determinista. Esta es la opción recomendada durante la presentación porque evita depender de una API externa o de la conexión a internet.
 
@@ -149,12 +149,25 @@ Ctrl+C
 
 ## Nota sobre el agente de IA
 
-Para la demo estable, dejar el archivo `.env` sin crear. El flujo principal, las predicciones y el asesor siguen funcionando con respuesta determinista.
+Para la demo estable, el flujo principal, las predicciones y el asesor siguen funcionando aunque `OPENAI_API_KEY` quede vacio. El fallback consulta el resumen SQLite de solo lectura.
 
-Solo si se desea probar DeepSeek antes de la presentación, crear `.env` desde la plantilla y completar `AI_PROVIDER_API_KEY`:
+Para habilitar OpenAI `gpt-5.4-mini`, crear `.env` desde la plantilla y completar `OPENAI_API_KEY` localmente:
 
 ```powershell
 Set-Location 'C:\Users\Emanuel Justiniano\gdg-hackathon-2026'
 Copy-Item '.env.example' '.env'
 notepad '.env'
 ```
+
+La configuracion esperada es:
+
+```env
+OPENAI_API_KEY=
+AI_MODEL=gpt-5.4-mini
+AI_BASE_URL=https://api.openai.com/v1
+AI_TIMEOUT_SECONDS=30
+```
+
+No pegar la key en el frontend, la documentacion ni Git. La base local incluye
+`192` lecturas ficticias etiquetadas `SIMULADO`; preparan el flujo para sensores
+futuros pero no deben presentarse como mediciones fisicas.

@@ -49,8 +49,8 @@ class ReportCreate(BaseModel):
 
 
 class AgentRequest(BaseModel):
+    question: str = Field(min_length=3, max_length=600)
     scenario_id: Optional[int] = None
-    context: Optional[dict[str, Any]] = None
 
 
 class TelemetryCreate(BaseModel):
