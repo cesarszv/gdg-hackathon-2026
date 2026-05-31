@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-/** Minimal sticky top nav. Gains a surface + shadow once the user scrolls past
- *  the cinematic hero. */
 export function Nav() {
   const [solid, setSolid] = useState(false);
 
@@ -20,9 +18,6 @@ export function Nav() {
           <span className="nav__spark" aria-hidden>&#9889;</span> GreenSpark
         </a>
         <div className="nav__links">
-          <a href="#problema" className="btn btn-ghost">Problema</a>
-          <a href="#solucion" className="btn btn-ghost">Solucion</a>
-          <a href="#equipo" className="btn btn-ghost">Equipo</a>
           <Link to="/app" className="btn btn-primary">Abrir consola</Link>
         </div>
       </div>

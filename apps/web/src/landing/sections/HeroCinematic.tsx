@@ -13,7 +13,8 @@ export function HeroCinematic() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const reduced = useReducedMotion();
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const [muted, setMuted] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [muted, setMuted] = useState(false);
 
   useLayoutEffect(() => {
     if (reduced || !root.current) return;
@@ -22,7 +23,7 @@ export function HeroCinematic() {
         scrollTrigger: {
           trigger: root.current,
           start: "top top",
-          end: "+=220%",
+          end: "+=200%",
           scrub: 0.6,
           pin: true,
         },
@@ -48,6 +49,55 @@ export function HeroCinematic() {
     return () => ctx.revert();
   }, [reduced]);
 
+  useLayoutEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const onEnded = () => {
+      gsap.to(".hero__video-wrap", {
+        opacity: 0,
+        scale: 0.96,
+        duration: 0.6,
+        overwrite: true,
+      });
+      gsap.fromTo(
+        ".hero__title-wrap",
+        { opacity: 0, scale: 0.86, filter: "blur(8px)" },
+        { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1, delay: 0.3 },
+      );
+      gsap.fromTo(
+        ".hero__tagline",
+        { opacity: 0, y: 18 },
+        { opacity: 1, y: 0, duration: 0.8, delay: 0.6 },
+      );
+      setIsPlaying(false);
+    };
+    video.addEventListener("ended", onEnded);
+    return () => video.removeEventListener("ended", onEnded);
+  }, []);
+
+  const handlePlay = () => {
+    if (!videoRef.current) return;
+    gsap.to(".hero__presents", { opacity: 0, duration: 0.3, overwrite: true });
+    gsap.fromTo(
+      ".hero__video-wrap",
+      { opacity: 0, scale: 0.92 },
+      { opacity: 1, scale: 1, duration: 0.6, overwrite: true },
+    );
+    videoRef.current.muted = false;
+    videoRef.current.play().catch(() => {
+      videoRef.current!.muted = true;
+      setMuted(true);
+      videoRef.current!.play();
+    });
+    setIsPlaying(true);
+  };
+
+  const toggleMute = () => {
+    if (!videoRef.current) return;
+    videoRef.current.muted = !muted;
+    setMuted(!muted);
+  };
+
   return (
     <header className="hero" id="hero" ref={root}>
       <div className="hero__glow" aria-hidden="true" style={{ opacity: reduced ? 1 : undefined }} />
@@ -62,11 +112,10 @@ export function HeroCinematic() {
             ref={videoRef}
             className="hero__video"
             src={VIDEO_SRC}
-            muted={muted}
+            muted
             playsInline
             preload="auto"
-            autoPlay
-            loop
+            loop={false}
             onLoadedData={() => setVideoLoaded(true)}
           />
           {!videoLoaded && (
@@ -77,11 +126,26 @@ export function HeroCinematic() {
               <span>hero.mp4</span>
             </div>
           )}
-          {videoLoaded && (
+          {videoLoaded && !isPlaying && (
+            <button
+              type="button"
+              className="hero__video-play"
+              onClick={handlePlay}
+              aria-label="Reproducir video con sonido"
+            >
+              <div className="hero__play-circle">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="6 3 20 12 6 21 6 3" />
+                </svg>
+              </div>
+              <span className="hero__play-label">Click para reproducir con sonido</span>
+            </button>
+          )}
+          {isPlaying && (
             <button
               type="button"
               className="hero__video-sound"
-              onClick={() => setMuted(!muted)}
+              onClick={toggleMute}
               aria-label={muted ? "Activar sonido" : "Silenciar"}
             >
               {muted ? (
@@ -105,7 +169,7 @@ export function HeroCinematic() {
           Green<span className="spark">Spark</span>
         </h1>
         <p className="hero__tagline">
-          IA que convierte los residuos bioorganicos de Santa Cruz de la Sierra en decisiones energeticas medibles.
+          Plataforma de IA que convierte los residuos bioorganicos de Santa Cruz de la Sierra en decisiones energeticas medibles.
         </p>
       </div>
       <ScrollHint />
