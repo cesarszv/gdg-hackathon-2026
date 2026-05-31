@@ -6,11 +6,11 @@ import { ScrollHint } from "../components/ScrollHint";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/** Cinematic intro: "HackHeroes presenta..." resolves into the Green Spark title.
- *  The whole section is pinned and the reveal is scrubbed to scroll. With reduced
- *  motion it is a static, centered title (both lines visible, no pin). */
+const VIDEO_SRC = "/video/hero.mp4";
+
 export function HeroCinematic() {
   const root = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const reduced = useReducedMotion();
 
   useLayoutEffect(() => {
@@ -20,7 +20,7 @@ export function HeroCinematic() {
         scrollTrigger: {
           trigger: root.current,
           start: "top top",
-          end: "+=140%",
+          end: "+=220%",
           scrub: 0.6,
           pin: true,
         },
@@ -28,10 +28,17 @@ export function HeroCinematic() {
       tl.fromTo(".hero__presents", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 1 })
         .to(".hero__presents", { opacity: 0, y: -24, duration: 1 }, ">0.4")
         .fromTo(
+          ".hero__video-wrap",
+          { opacity: 0, scale: 0.92 },
+          { opacity: 1, scale: 1, duration: 1 },
+          ">0.2",
+        )
+        .to(".hero__video-wrap", { opacity: 0, scale: 0.96, duration: 1 }, ">1.5")
+        .fromTo(
           ".hero__title-wrap",
           { opacity: 0, scale: 0.86, filter: "blur(8px)" },
           { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1.4 },
-          "<0.2",
+          ">0.2",
         )
         .fromTo(".hero__tagline", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 1 }, ">-0.2")
         .to(".hero__glow", { opacity: 1, duration: 1.4 }, 0);
@@ -47,13 +54,32 @@ export function HeroCinematic() {
           <b>HackHeroes</b>&nbsp; presenta&hellip;
         </p>
       )}
+      {!reduced && (
+        <div className="hero__video-wrap" aria-hidden="true">
+          <video
+            ref={videoRef}
+            className="hero__video"
+            src={VIDEO_SRC}
+            muted
+            playsInline
+            preload="auto"
+            autoPlay
+            loop
+          />
+          <div className="hero__video-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            <span>hero.mp4</span>
+          </div>
+        </div>
+      )}
       <div className="hero__title-wrap">
         <h1 className="hero__title">
           Green<span className="spark">Spark</span>
         </h1>
         <p className="hero__tagline">
-          Inteligencia Artificial que convierte los residuos bioorganicos de Santa Cruz de la
-          Sierra en decisiones energeticas medibles.
+          IA que convierte los residuos bioorganicos de Santa Cruz de la Sierra en decisiones energeticas medibles.
         </p>
       </div>
       <ScrollHint />

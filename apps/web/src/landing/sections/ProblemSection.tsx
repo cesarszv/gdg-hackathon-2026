@@ -9,10 +9,11 @@ export function ProblemSection() {
       <div className="container">
         <Reveal>
           <p className="section__eyebrow">01 — El problema</p>
-          <h2 className="section__title">Santa Cruz desperdicia una mina de energia organica</h2>
+          <h2 className="section__title">971 toneladas de energia organica se pudren cada dia en Santa Cruz</h2>
           <p className="section__lead">
-            Cada dia la ciudad genera casi dos mil toneladas de residuos, y mas de la mitad es
-            materia organica compostable que hoy no se aprovecha como recurso energetico.
+            Mientras universidades, colegios y restaurantes pagan facturas de luz crecientes, casi
+            mil toneladas de materia organica se van al vertedero sin que nadie pueda medir
+            cuanta energia se esta perdiendo. No faltan residuos: faltan datos para decidir.
           </p>
         </Reveal>
 

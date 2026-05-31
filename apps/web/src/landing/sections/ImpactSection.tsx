@@ -1,19 +1,19 @@
 import { Reveal } from "../components/Reveal";
 
 const BEFORE = [
-  "Decisiones energeticas basadas en supuestos generales.",
-  "Residuos tratados unicamente como descarte.",
-  "Porcentajes de ahorro dificiles de defender.",
-  "Sostenibilidad comunicada de forma generica.",
-  "Escalamiento prematuro y riesgoso.",
+  "Instituciones que quieren ser sostenibles pero no saben por donde empezar.",
+  "Residuos organicos que se van al vertedero sin que nadie mida su potencial.",
+  "Decisiones energeticas basadas en supuestos, no en datos locales.",
+  "Inversiones en infraestructura verde sin evidencia de retorno.",
+  "Estudiantes sin herramientas reales para investigar economia circular.",
 ];
 
 const AFTER = [
-  "Escenarios comparables con supuestos visibles.",
-  "Sustratos registrados como oportunidad de valorizacion.",
-  "Metas separadas de las mediciones reales.",
-  "Reportes institucionales trazables.",
-  "Inversion sujeta a evidencia.",
+  "Una consola donde simulas escenarios MFC antes de invertir un peso.",
+  "Cada sustrato registrado como oportunidad de valorizacion energetica.",
+  "La IA explica resultados en lenguaje claro: cualquier persona entiende.",
+  "Reportes trazables que defienden la decision ante un consejo o inversionista.",
+  "Universidades que investigan con datos reales de Santa Cruz, no de papers lejanos.",
 ];
 
 /** Before / after the research phase — two columns wipe in on scroll. */
@@ -23,10 +23,11 @@ export function ImpactSection() {
       <div className="container">
         <Reveal>
           <p className="section__eyebrow">04 — El impacto</p>
-          <h2 className="section__title">De la intuicion a la evidencia</h2>
+          <h2 className="section__title">De no saber que hacer a decidir con datos</h2>
           <p className="section__lead">
-            El impacto inmediato no es una cifra ficticia de electricidad: es mejorar la calidad de
-            las decisiones de universidades, colegios, restaurantes y agroindustrias.
+            El impacto no es una cifra inventada de kilowatts: es que universidades, colegios,
+            restaurantes y agroindustrias de Santa Cruz tomen decisiones energeticas con evidencia
+            real, no con supuestos.
           </p>
         </Reveal>
 

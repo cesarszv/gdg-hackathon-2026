@@ -1,4 +1,7 @@
 
+esto es un repositorio de un proyecto de hackaton
+
+---
 
 C:\Users\Emanuel Justiniano\gdg-hackathon-2026\docs\entregables_obligatorios\markdown
 

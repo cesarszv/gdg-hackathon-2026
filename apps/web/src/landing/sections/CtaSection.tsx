@@ -7,13 +7,13 @@ export function CtaSection() {
     <section className="cta">
       <div className="container">
         <Reveal>
-          <h2>Entra a la consola y simula tu primer escenario</h2>
+          <h2>Mira la IA en accion: simula tu primer escenario MFC</h2>
           <p>
-            Explora escenarios MFC reales, corre una prediccion en vivo y deja que el asesor de IA
-            te lo explique — con datos de Santa Cruz de la Sierra.
+            Entra a la Spark Console, elige un sustrato de Santa Cruz, corre una prediccion en
+            vivo y deja que el agente de IA te explique el resultado en lenguaje claro.
           </p>
           <Link to="/app" className="btn">
-            Abrir la Spark Console &rarr;
+            Probar la Spark Console &rarr;
           </Link>
         </Reveal>
       </div>

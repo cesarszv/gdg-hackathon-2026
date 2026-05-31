@@ -47,7 +47,8 @@ export function TeamSection() {
           <p className="section__eyebrow">05 — El equipo</p>
           <h2 className="section__title">HackHeroes</h2>
           <p className="section__lead">
-            Seis personas construyendo economia circular medible para Santa Cruz de la Sierra.
+            Seis personas de Santa Cruz de la Sierra usando IA para convertir residuos en
+            decisiones energeticas medibles.
           </p>
         </Reveal>
 

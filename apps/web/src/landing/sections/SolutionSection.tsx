@@ -8,21 +8,21 @@ gsap.registerPlugin(ScrollTrigger);
 const PHASES = [
   {
     num: "Fase 1",
-    name: "Investigacion",
+    name: "Investigacion con IA",
     goal: "hasta 10%",
-    desc: "Universidades financian el diseno y la simulacion de reactores MFC con IA.",
+    desc: "Universidades simulan reactores MFC en la Spark Console: la IA compara sustratos, estima potencia y recomienda el primer experimento.",
   },
   {
     num: "Fase 2",
-    name: "Pilotos",
+    name: "Pilotos reales",
     goal: "hasta 10%",
-    desc: "Colegios, restaurantes e industrias prueban modulos MFC instrumentados.",
+    desc: "Colegios, restaurantes y agroindustrias prueban modulos MFC instrumentados con datos reales que alimentan el modelo.",
   },
   {
     num: "Fase 3",
     name: "Escalamiento",
     goal: "hasta 20%",
-    desc: "Biodigestores o soluciones hibridas cuando la evidencia lo justifique.",
+    desc: "Biodigestores o soluciones hibridas solo cuando la evidencia medida lo justifique, sin promesas vacias.",
   },
 ];
 
@@ -60,10 +60,11 @@ export function SolutionSection() {
       <div className="solution__pin">
         <div className="container">
           <p className="section__eyebrow">02 — La solucion</p>
-          <h2 className="section__title">Una ruta circular por fases, no una promesa</h2>
+          <h2 className="section__title">Una consola de IA que investiga antes de invertir</h2>
           <p className="section__lead">
-            GreenSpark no salta a la infraestructura: investiga, valida y escala solo cuando los
-            datos lo respaldan.
+            GreenSpark es una plataforma que usa inteligencia artificial para simular reactores
+            MFC, comparar sustratos y recomendar experimentos. No saltamos a la infraestructura:
+            investigamos, validamos y escalamos solo cuando los datos lo respaldan.
           </p>
 
           <div className="phases">
