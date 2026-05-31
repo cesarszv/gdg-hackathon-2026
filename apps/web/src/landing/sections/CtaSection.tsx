@@ -4,7 +4,7 @@ import { Reveal } from "../components/Reveal";
 /** Closing call to action into the live Spark Console. */
 export function CtaSection() {
   return (
-    <section className="cta">
+    <section className="cta" id="cta">
       <div className="container">
         <Reveal>
           <h2>Mira la IA en accion: simula tu primer escenario MFC</h2>
