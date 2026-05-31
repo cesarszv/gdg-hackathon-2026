@@ -70,21 +70,27 @@ export function HeroCinematic() {
   }, []);
 
   const handlePlay = () => {
-    if (!videoRef.current) return;
+    const video = videoRef.current;
+    if (!video) return;
     gsap.to(".hero__presents", { opacity: 0, duration: 0.3, overwrite: true });
     gsap.fromTo(
       ".hero__video-wrap",
       { opacity: 0, scale: 0.92 },
       { opacity: 1, scale: 1, duration: 0.6, overwrite: true },
     );
-    videoRef.current.muted = false;
-    videoRef.current.play().catch(() => {
-      videoRef.current!.muted = true;
-      setMuted(true);
-      videoRef.current!.play();
-    });
-    setIsPlaying(true);
-    setMuted(false);
+    video.muted = false;
+    video
+      .play()
+      .then(() => {
+        setIsPlaying(true);
+        setMuted(false);
+      })
+      .catch(() => {
+        video.muted = true;
+        video.play();
+        setIsPlaying(true);
+        setMuted(true);
+      });
   };
 
   const toggleMute = () => {
