@@ -53,7 +53,7 @@ def create_report(payload: ReportCreate, db: Session = Depends(get_db)):
         narration = explain(
             {"scenario_code": payload.title, "assumptions": content,
              "evidence_state": "SIMULADO", "warnings": []},
-            api_key=settings.ai_provider_api_key,
+            api_key=settings.openai_api_key,
             model=settings.ai_model,
             base_url=settings.ai_base_url,
             timeout=settings.ai_timeout_seconds,

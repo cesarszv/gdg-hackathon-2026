@@ -19,11 +19,11 @@ class Settings(BaseSettings):
     app_env: str = "development"
     database_url: str = "sqlite:///./database/greenspark.db"
 
-    # Optional LLM gateway (DeepSeek by default; OpenAI-compatible).
-    ai_provider_api_key: str | None = None
-    ai_model: str = "deepseek-chat"
-    ai_base_url: str = "https://api.deepseek.com"
-    ai_timeout_seconds: float = 20.0
+    # Optional OpenAI advisor. Without a key, the deterministic fallback stays active.
+    openai_api_key: str | None = None
+    ai_model: str = "gpt-5.4-mini"
+    ai_base_url: str = "https://api.openai.com/v1"
+    ai_timeout_seconds: float = 30.0
 
     # Comma-separated list of allowed CORS origins ("*" allows all).
     cors_origins: str = "*"
