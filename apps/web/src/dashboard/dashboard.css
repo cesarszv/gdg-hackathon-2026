@@ -406,7 +406,7 @@
   margin-top: var(--space-4);
 }
 
-/* ---- Agent chat (DESIGN.md §4.7 — Glassmorphic Redesign) ---- */
+/* ---- Agent chat (Redesigned UX) ---- */
 .agent-panel__eyebrow {
   margin-bottom: var(--space-2);
   color: var(--color-primary);
@@ -416,21 +416,37 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
-.agent-ledger {
+.agent-steps {
   display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: var(--space-4);
 }
-.agent-ledger span {
-  padding: 7px 10px;
-  color: var(--color-primary);
-  background: rgba(232, 245, 236, 0.58);
-  border: 1px solid rgba(27, 122, 61, 0.12);
+.agent-step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: rgba(232, 245, 236, 0.5);
+  border: 1px solid rgba(27, 122, 61, 0.1);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+.agent-step__number {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  background: var(--color-primary);
+  color: #fff;
   border-radius: var(--radius-full);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.03em;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.agent-step__text {
+  font-weight: 500;
 }
 .agent-workbench {
   overflow: hidden;
@@ -439,47 +455,58 @@
     radial-gradient(circle at top right, rgba(232, 245, 236, 0.82), transparent 38%),
     rgba(255, 255, 255, 0.92);
 }
-.agent-suggestions {
-  padding-bottom: var(--space-4);
-  border-bottom: 1px solid rgba(27, 122, 61, 0.1);
-}
-.agent-suggestions__label {
-  display: block;
-  margin-bottom: var(--space-2);
+.agent-sim-banner {
+  padding: var(--space-3) var(--space-4);
   color: var(--color-text-secondary);
+  background: rgba(255, 248, 231, 0.68);
+  border: 1px solid rgba(212, 147, 10, 0.16);
+  border-left: 3px solid var(--color-warning);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: var(--space-4);
+}
+.agent-sim-banner strong {
+  color: var(--color-warning);
   font-family: var(--font-mono);
   font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
-.agent-suggestions__list {
+.agent-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.agent-card {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.agent-suggestion {
-  padding: 8px 11px;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5) var(--space-4);
   color: var(--color-primary);
-  background: rgba(255, 255, 255, 0.76);
-  border: 1px solid rgba(27, 122, 61, 0.16);
-  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1.5px solid rgba(27, 122, 61, 0.14);
+  border-radius: var(--radius-md);
   cursor: pointer;
   font-family: var(--font-body);
-  font-size: 12px;
-  line-height: 1.35;
-  text-align: left;
-  transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+  text-align: center;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
 }
-.agent-suggestion:hover:not(:disabled),
-.agent-suggestion:focus-visible {
+.agent-card:hover:not(:disabled),
+.agent-card:focus-visible {
   background: rgba(232, 245, 236, 0.9);
-  border-color: rgba(27, 122, 61, 0.42);
+  border-color: rgba(27, 122, 61, 0.4);
+  box-shadow: var(--shadow-hover);
   outline: none;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
-.agent-suggestion:disabled {
+.agent-card:disabled {
   cursor: wait;
   opacity: 0.55;
+}
+.agent-card__title {
+  font-size: 14px;
+  font-weight: 600;
 }
 .chat {
   display: flex;
@@ -566,18 +593,91 @@
   margin-bottom: 25px;
   white-space: nowrap;
 }
-.agent-simulation-note {
-  padding: var(--space-3) var(--space-4);
-  color: var(--color-text-secondary);
-  background: rgba(255, 248, 231, 0.68);
-  border: 1px solid rgba(212, 147, 10, 0.16);
-  border-left: 3px solid var(--color-warning);
-  border-radius: var(--radius-sm);
-  font-size: 12px;
-  line-height: 1.6;
+.bubble__markdown {
+  font-size: 15px;
+  line-height: 1.65;
 }
-.agent-simulation-note strong {
+.bubble__markdown h1,
+.bubble__markdown h2,
+.bubble__markdown h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+  line-height: 1.3;
+}
+.bubble__markdown h1 { font-size: 20px; }
+.bubble__markdown h2 { font-size: 17px; }
+.bubble__markdown h3 { font-size: 15px; }
+.bubble__markdown h1:first-child,
+.bubble__markdown h2:first-child,
+.bubble__markdown h3:first-child {
+  margin-top: 0;
+}
+.bubble__markdown p {
+  margin: 0 0 var(--space-3);
+}
+.bubble__markdown p:last-child {
+  margin-bottom: 0;
+}
+.bubble__markdown ul,
+.bubble__markdown ol {
+  margin: var(--space-2) 0 var(--space-3);
+  padding-left: var(--space-5);
+}
+.bubble__markdown li {
+  margin-bottom: var(--space-1);
+}
+.bubble__markdown strong {
+  font-weight: 700;
+}
+.bubble__markdown code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: rgba(27, 122, 61, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.bubble__markdown pre {
+  background: rgba(26, 46, 34, 0.06);
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  margin: var(--space-3) 0;
+}
+.bubble__markdown pre code {
+  background: none;
+  padding: 0;
+}
+.agent-transparency {
+  margin-top: var(--space-3);
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+.agent-transparency summary {
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--color-text-secondary);
+  padding: var(--space-2) 0;
+  user-select: none;
+}
+.agent-transparency summary:hover {
   color: var(--color-text-primary);
+}
+.agent-transparency__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding-top: var(--space-2);
+}
+.agent-transparency__content span {
+  padding: 4px 10px;
+  background: rgba(240, 242, 241, 0.8);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 11px;
 }
 @media (max-width: 940px) {
   .agent-composer {
