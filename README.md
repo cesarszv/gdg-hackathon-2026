@@ -2,7 +2,8 @@
 
 **Equipo:** HackHeroes &nbsp;·&nbsp; **Hackathon:** Build With AI 2026 &nbsp;·&nbsp; **Mención:** Energía &nbsp;·&nbsp; **Santa Cruz de la Sierra, Bolivia**
 
-https://github.com/user-attachments/assets/df5e491f-eab9-418e-adce-8c7149b2ef67
+
+https://github.com/user-attachments/assets/2c433b2f-e7cf-4985-b9a2-fa3e3978e09a
 
 ---
 
