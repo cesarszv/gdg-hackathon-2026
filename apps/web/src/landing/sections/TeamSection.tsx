@@ -1,12 +1,28 @@
 import { Reveal } from "../components/Reveal";
 
 const MEMBERS = [
-  "Cesar Sebastian Zambrana Ventura",
-  "Emanuel Justiniano Peralta",
-  "Fabian Serrano Catari",
-  "Juan David Mercado Montenegro",
-  "Raquel Sahonero Salas",
-  "Thiago Andre Moreno Velasco",
+  {
+    name: "Cesar Sebastian Zambrana Ventura",
+    photo: "/team/cesar-zambrana.jpg",
+    photoPosition: "center 35%",
+  },
+  {
+    name: "Emanuel Justiniano Peralta",
+    photo: "/team/emanuel-justiniano.jpeg",
+    photoPosition: "center 18%",
+  },
+  {
+    name: "Fabian Serrano Catari",
+    photo: "/team/fabian-serrano.jpg",
+    photoPosition: "center 30%",
+  },
+  {
+    name: "Juan David Mercado Montenegro",
+    photo: "/team/juan-mercado.jpg",
+    photoPosition: "center 22%",
+  },
+  { name: "Raquel Sahonero Salas" },
+  { name: "Thiago Andre Moreno Velasco" },
 ];
 
 function initials(name: string): string {
@@ -28,10 +44,21 @@ export function TeamSection() {
         </Reveal>
 
         <Reveal stagger={0.1} className="team__grid">
-          {MEMBERS.map((name) => (
+          {MEMBERS.map(({ name, photo, photoPosition }) => (
             <div className="member" key={name}>
-              <div className="member__avatar" aria-hidden>
-                {initials(name)}
+              <div className={`member__avatar ${photo ? "member__avatar--photo" : ""}`}>
+                {photo ? (
+                  <img
+                    className="member__photo"
+                    src={photo}
+                    alt={`Retrato de ${name}`}
+                    loading="lazy"
+                    decoding="async"
+                    style={{ objectPosition: photoPosition }}
+                  />
+                ) : (
+                  <span aria-hidden="true">{initials(name)}</span>
+                )}
               </div>
               <div className="member__name">{name}</div>
               <div className="member__role">Equipo HackHeroes</div>

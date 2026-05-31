@@ -1,4 +1,4 @@
-/** A single numeric KPI rendered in JetBrains Mono (DESIGN.md §3.2 "Dato numerico"). */
+/** A single numeric KPI rendered in JetBrains Mono with tabular-nums and soft forest glow. */
 export function Metric({
   label,
   value,
@@ -11,9 +11,12 @@ export function Metric({
   const display = value === null || value === undefined ? "—" : value;
   return (
     <div className="metric">
-      <div className="metric__value mono">
+      <div className="metric__glow-inner" aria-hidden="true" />
+      <div className="metric__value mono tabular">
         {display}
-        {unit && value !== null && value !== undefined ? <span className="metric__unit"> {unit}</span> : null}
+        {unit && value !== null && value !== undefined ? (
+          <span className="metric__unit"> {unit}</span>
+        ) : null}
       </div>
       <div className="metric__label">{label}</div>
     </div>

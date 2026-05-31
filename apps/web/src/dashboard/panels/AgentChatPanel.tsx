@@ -66,8 +66,8 @@ export function AgentChatPanel() {
         <ErrorState message={scenarios.error} onRetry={() => void scenarios.run()} />
       ) : (
         <div className="card">
-          <div style={{ display: "flex", gap: 12, alignItems: "flex-end", flexWrap: "wrap" }}>
-            <div style={{ flex: 1, minWidth: 220 }}>
+          <div className="chat-controls">
+            <div className="chat-controls__field">
               <Field label="Escenario a explicar" htmlFor="agent-scenario">
                 <select
                   id="agent-scenario"
@@ -83,13 +83,13 @@ export function AgentChatPanel() {
                 </select>
               </Field>
             </div>
-            <button className="btn btn-primary" onClick={ask} disabled={thinking} style={{ marginBottom: 16 }}>
+            <button className="btn btn-primary chat-controls__submit" type="button" onClick={ask} disabled={thinking}>
               {thinking ? "Pensando…" : "Preguntar al agente"}
             </button>
           </div>
 
           <div className="chat">
-            <div className="chat__thread">
+            <div className="chat__thread" aria-live="polite" aria-busy={thinking}>
               {turns.length === 0 && !thinking ? (
                 <div className="bubble bubble--agent">
                   Hola, soy el asesor de GreenSpark. Elige un escenario y te explico su prediccion
@@ -108,8 +108,8 @@ export function AgentChatPanel() {
                 </div>
               ))}
               {thinking ? (
-                <div className="bubble bubble--agent" style={{ padding: 0 }}>
-                  <div className="typing" aria-label="El agente esta pensando">
+                <div className="bubble bubble--agent bubble--typing">
+                  <div className="typing" role="status" aria-label="El agente esta pensando">
                     <span />
                     <span />
                     <span />

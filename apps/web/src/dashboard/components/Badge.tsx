@@ -10,7 +10,12 @@ const TONE_CLASS: Record<Tone, string> = {
 };
 
 export function Badge({ tone = "neutral", children }: { tone?: Tone; children: ReactNode }) {
-  return <span className={`badge ${TONE_CLASS[tone]}`}>{children}</span>;
+  return (
+    <span className={`badge ${TONE_CLASS[tone]}`}>
+      <span className="badge__dot" aria-hidden="true" />
+      {children}
+    </span>
+  );
 }
 
 /** Maps domain states to badge tones per DESIGN.md §4.8. */

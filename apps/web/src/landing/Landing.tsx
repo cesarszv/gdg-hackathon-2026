@@ -24,15 +24,18 @@ export function Landing() {
 
   return (
     <div className="landing">
+      <a className="skip-link" href="#main-content">Saltar al contenido</a>
       <ScrollProgress />
       <Nav />
-      <HeroCinematic />
-      <ProblemSection />
-      <SolutionSection />
-      <AiSection />
-      <ImpactSection />
-      <TeamSection />
-      <CtaSection />
+      <main id="main-content" tabIndex={-1}>
+        <HeroCinematic />
+        <ProblemSection />
+        <SolutionSection />
+        <AiSection />
+        <ImpactSection />
+        <TeamSection />
+        <CtaSection />
+      </main>
       <footer className="landing-footer">
         <p>
           <b>GreenSpark</b> &middot; Equipo HackHeroes &middot; Build With AI 2026 &middot; Santa

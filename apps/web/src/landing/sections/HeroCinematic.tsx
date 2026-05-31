@@ -41,7 +41,7 @@ export function HeroCinematic() {
 
   return (
     <header className="hero" id="hero" ref={root}>
-      <div className="hero__glow" style={{ opacity: reduced ? 1 : undefined }} />
+      <div className="hero__glow" aria-hidden="true" style={{ opacity: reduced ? 1 : undefined }} />
       {!reduced && (
         <p className="hero__presents">
           <b>HackHeroes</b>&nbsp; presenta&hellip;

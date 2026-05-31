@@ -94,7 +94,7 @@ export function SimulatorPanel() {
         <ErrorState message={catalogsError} onRetry={() => { void substrates.run(); void configs.run(); }} />
       ) : (
         <div className="sim-layout">
-          <form className="card" onSubmit={onSubmit}>
+          <form className="card" onSubmit={onSubmit} autoComplete="off">
             <Field label="Sustrato" htmlFor="substrate">
               <select
                 id="substrate"
@@ -138,7 +138,11 @@ export function SimulatorPanel() {
                 <input
                   id="ph"
                   className="input"
-                  type="number"
+                type="number"
+                  name="ph"
+                  inputMode="decimal"
+                  autoComplete="off"
+                  placeholder="Ej. 7.0…"
                   step="0.1"
                   min="0"
                   max="14"
@@ -151,6 +155,10 @@ export function SimulatorPanel() {
                   id="temp"
                   className="input"
                   type="number"
+                  name="temperature"
+                  inputMode="decimal"
+                  autoComplete="off"
+                  placeholder="Ej. 32…"
                   step="1"
                   value={temperature}
                   onChange={(e) => setTemperature(e.target.value)}
@@ -165,13 +173,13 @@ export function SimulatorPanel() {
               </p>
             ) : null}
 
-            <button className="btn btn-primary" type="submit" disabled={submitting} style={{ marginTop: 16, width: "100%" }}>
+            <button className="btn btn-primary sim-submit" type="submit" disabled={submitting}>
               {submitting ? "Simulando…" : "Correr simulacion"}
             </button>
-            {error ? <p className="field__error" style={{ marginTop: 12 }}>{error}</p> : null}
+            {error ? <p className="field__error sim-error" role="alert">{error}</p> : null}
           </form>
 
-          <div className="card">
+          <div className="card" aria-live="polite" aria-atomic="true">
             {result ? (
               <ResultView result={result} />
             ) : (

@@ -46,20 +46,22 @@ export function ScenariosPanel() {
               <button
                 key={s.scenario_id}
                 className={`scenario-item ${s.scenario_id === selectedId ? "scenario-item--active" : ""}`}
+                type="button"
+                aria-pressed={s.scenario_id === selectedId}
                 onClick={() => setSelectedId(s.scenario_id)}
               >
                 <div className="scenario-item__code">{s.scenario_code}</div>
                 <div className="scenario-item__meta">
                   pH {s.ph ?? "—"} &middot; {s.temperature_c ?? "—"} &deg;C
                 </div>
-                <div style={{ marginTop: 8 }}>
+                <div className="scenario-item__badge">
                   <Badge tone={evidenceTone(s.evidence_state)}>{s.evidence_state}</Badge>
                 </div>
               </button>
             ))}
           </div>
 
-          <div className="card">
+          <div className="card" aria-live="polite" aria-busy={detail.loading}>
             {detail.loading ? (
               <Skeleton rows={4} />
             ) : detail.error ? (
@@ -80,8 +82,8 @@ function ScenarioDetailView({ detail }: { detail: ScenarioDetail }) {
   const p = detail.latest_prediction;
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
-        <h3 className="mono" style={{ fontSize: 20 }}>{detail.scenario_code}</h3>
+      <div className="scenario-detail__head">
+        <h3 className="mono scenario-detail__title">{detail.scenario_code}</h3>
         <Badge tone={evidenceTone(detail.evidence_state)}>{detail.evidence_state}</Badge>
       </div>
 
@@ -112,7 +114,7 @@ function ScenarioDetailView({ detail }: { detail: ScenarioDetail }) {
         </div>
       </dl>
 
-      <h4 style={{ marginTop: 24, fontFamily: "var(--font-display)" }}>Ultima prediccion</h4>
+      <h4 className="scenario-detail__subtitle">Ultima prediccion</h4>
       {p ? (
         <>
           <div className="metrics">
@@ -130,7 +132,7 @@ function ScenarioDetailView({ detail }: { detail: ScenarioDetail }) {
           </div>
         </>
       ) : (
-        <p style={{ color: "var(--color-text-secondary)", marginTop: 8, fontSize: 14 }}>
+        <p className="scenario-detail__empty">
           Sin prediccion almacenada. Usa el Simulador para generar una.
         </p>
       )}

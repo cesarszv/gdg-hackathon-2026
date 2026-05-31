@@ -15,8 +15,9 @@ El mood general es **luminoso, sereno y refinado**:
 *   **Claridad como Confianza:** Fondos blancos amplios y generosos que transmiten transparencia institucional. Un sistema que no tiene nada que ocultar se presenta con la luz encendida. El espacio en blanco no es vacío — es respiro, orden y profesionalismo.
 *   **Verde Institucional Cruceño:** El verde de la bandera departamental (`#006600`) representa la riqueza vegetal y los bosques de la región. Lo elevamos a un verde más contemporáneo y suave que mantiene la dignidad del símbolo cívico sin perder frescura: un verde que evoca las copas de los árboles del Urubó bajo la luz del mediodía.
 *   **Suavidad Elegante:** Cada elemento tiene bordes redondeados, transiciones delicadas y sombras apenas perceptibles. La interfaz se siente como tocar seda — todo fluye sin fricción. La tecnología de IA más avanzada, presentada con la calidez y cercanía del carácter cruceño.
+*   **Texturas Bioluminiscentes & Glassmorphic Depths (Premium):** Introducimos capas de cristal translúcido (Glassmorphism) con desenfoque de fondo y bordes hiper-finos que flotan sobre halos suaves de luz verde y una sutil textura de grano orgánico en el fondo general, añadiendo una organicidad analógica espectacular y huyendo de los colores planos que gritan "hecho por IA".
 
-> **Palabras clave de la atmósfera:** Luminoso · Limpio · Suave · Elegante · Premium · Orgullosamente Cruceño.
+> **Palabras clave de la atmósfera:** Luminoso · Glassmorphism · Grano Orgánico · Bioluminiscente · Premium · Orgullosamente Cruceño.
 
 ---
 
@@ -106,10 +107,10 @@ Los componentes de GreenSpark siguen una filosofía de **claridad como lienzo + 
 ### 4.1. Contenedores y Tarjetas (*Cards*)
 
 *   **Forma:** Esquinas generosamente redondeadas (`border-radius: 16px`) — suavidad que invita a la interacción, como cantos rodados pulidos por el río Piraí.
-*   **Fondo:** **Blanco Puro** (`#FFFFFF`) — limpieza total como superficie de presentación de datos.
-*   **Borde:** Línea ultra-fina de 1px en **Borde Sereno** (`#D4DDD7`) — estructura con delicadeza.
-*   **Sombra:** Sombra difuminada extremadamente suave (`box-shadow: 0 2px 12px rgba(26, 46, 34, 0.06)`) — apenas perceptible, como la sombra de una nube sobre el campo. En estado hover, la sombra se profundiza sutilmente: `box-shadow: 0 4px 20px rgba(27, 122, 61, 0.10)`.
-*   **Padding interno:** 24px en desktop, 16px en mobile — espacio generoso que permite a los datos respirar.
+*   **Fondo & Glassmorphism:** Capas translúcidas con desenfoque de fondo (`background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(12px);`) para simular la condensación del rocío de hoja sobre cristal premium.
+*   **Borde:** Línea ultra-fina de 1px en **Borde Sereno** con transparencia táctil (`border: 1px solid rgba(212, 221, 215, 0.6)`) — estructura con extrema delicadeza.
+*   **Sombra & Halo Glow:** Sombra difuminada con matiz de hoja y halo bioluminiscente radial suave (`box-shadow: 0 4px 24px -2px rgba(26, 46, 34, 0.04), 0 0 16px 0 rgba(27, 122, 61, 0.02)`) — flotabilidad impecable. En estado hover, el halo se intensifica con un destello ecológico orgánico y se eleva: `box-shadow: 0 12px 36px -4px rgba(27, 122, 61, 0.08), 0 0 24px 0 rgba(27, 122, 61, 0.05); transform: translateY(-2px); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;`.
+*   **Padding interno:** 24px en desktop, 16px en mobile — espacio generoso que permite a los datos respirar con total soltura.
 
 ### 4.2. Botones Primarios (CTA)
 
