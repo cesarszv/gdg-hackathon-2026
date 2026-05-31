@@ -1,6 +1,10 @@
 {
 	"folders": [
 		{
+			"name": "Raiz",
+			"path": "."
+		},
+		{
 			"name": "Documentation",
 			"path": "docs"
 		},
@@ -11,10 +15,6 @@
 		{
 			"name": "Obligatorio",
 			"path": "docs/entregables_obligatorios"
-		},
-		{
-			"name": "Raiz",
-			"path": "."
 		}
 	],
 	"settings": {}
