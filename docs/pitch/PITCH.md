@@ -1,63 +1,97 @@
-# PITCH — GreenSpark ⚡🌱
+# Pitch: GreenSpark
 
-**Equipo:** HackHeroes · **Mención:** ENERGÍA · Santa Cruz de la Sierra, Bolivia
+**Equipo:** HackHeroes · **Mención:** Energía · **Lugar:** Santa Cruz de la Sierra, Bolivia
 
-> **Frase gancho:** *"Tu residuo orgánico, convertido en energía medible y en un reporte de sostenibilidad — en un clic."*
-
----
+> **Frase gancho:** *"¿Y si antes de botar nuestros residuos bioorgánicos pudiéramos convertirlos en datos, electricidad y una decisión inteligente de inversión?"*
 
 ## Pitch de 30 segundos
 
-> Santa Cruz entierra cada día cientos de toneladas de residuo orgánico que liberan metano —28 veces más contaminante que el CO₂— mientras esa energía se desperdicia. El ingenio Guabirá ya convierte biomasa en electricidad y la vende a la red… pero el residuo de restaurantes, supermercados y universidades queda fuera porque **nadie lo conecta ni lo cuantifica**. **GreenSpark** es la plataforma de IA que predice cuánta energía rinde cada residuo, lo conecta con la planta de biogás más cercana, optimiza su recolección y entrega un reporte de sostenibilidad automático. Convertimos basura en energía, ahorro y datos — **100% software, sin hardware.**
+> Santa Cruz de la Sierra genera aproximadamente **971 toneladas diarias** de residuos orgánicos compostables. Parte de ese flujo todavía se desaprovecha. GreenSpark propone comenzar donde una solución seria debe comenzar: midiendo. Diseñamos y simulamos reactores MFC para que universidades privadas investiguen qué residuos pueden producir electricidad directa, bajo qué condiciones y con qué rendimiento. Nuestra IA compara escenarios, recomienda experimentos y genera métricas de sostenibilidad. Después, escalamos con pilotos para colegios, restaurantes y agroindustrias; y, cuando el volumen lo justifica, evaluamos biodigestores. No prometemos energía ficticia: construimos la ruta para medirla y escalarla.
 
----
+## Problema
 
-## Estructura del pitch (lineamientos)
+- Santa Cruz genera un flujo bioorgánico relevante.
+- Instituciones y negocios necesitan alternativas sostenibles, pero carecen de datos locales para decidir qué implementar.
+- Escalar infraestructura sin medir rendimiento, sustrato y demanda aumenta el riesgo de una mala inversión.
+- Los negocios también necesitan métricas de sostenibilidad comprensibles y trazables.
 
-### Problema identificado
-Santa Cruz entierra ~700–900 t/día de residuo orgánico [ESTIMACIÓN]; en el relleno emite **metano (~28× CO₂)** y desperdicia su valor energético (~200 kWh/t). Los generadores **pagan** por botarlo, las plantas de biogás no tienen sustrato predecible y **nadie conecta, predice ni cuantifica** la oportunidad.
+## Cliente inicial
 
-### Usuario o beneficiario
-- **Cliente que paga:** grandes generadores urbanos — restaurantes, supermercados, **universidades**, hoteles, mercados.
-- **Lado oferta:** plantas de biogás/compost.
-- **Beneficiario:** la ciudad y el medio ambiente.
+> **Universidades privadas** que buscan investigación aplicada, participación estudiantil, visibilidad institucional y una hoja de ruta de sustentabilidad.
 
-### Enfoque de solución
-Plataforma de IA que: ① **predice** energía/CO₂ por residuo, ② **optimiza** la recolección, ③ **conecta** generador ↔ planta y ④ **redacta el reporte ESG** con un agente conversacional. El residuo deja de ser un costo y pasa a ser energía + un activo de sostenibilidad.
+## Solución por fases
 
-### Demo funcional
-La UCB registra su residuo del día → la IA muestra al instante **kWh, m³ de biogás, CO₂ evitado y valor en Bs** → la plataforma la enlaza con la planta más cercana y dibuja la **ruta óptima** en el mapa → el **agente** responde *"¿cuánto ahorra la UCB al mes?"* y genera el reporte ESG.
+| Fase | Qué hacemos | Cliente |
+| --- | --- | --- |
+| **1. Investigación** | Diseño y simulación MFC asistidos por IA. | Universidades privadas. |
+| **2. Piloto** | Módulos MFC instrumentados y reportes medibles. | Colegios privados, restaurantes y agroindustrias. |
+| **3. Escalamiento** | Evaluación de biodigestores o soluciones híbridas. | Actores con suficiente volumen segregado. |
 
-### Tecnología utilizada
-React · FastAPI · SQLite · **scikit-learn** (predicción) · **Google OR-Tools** (ruteo) · **DeepSeek API** (agente) · Open-Meteo · Leaflet/OpenStreetMap. Sin hardware, sin GPU, tiers gratuitos.
+## Tres innovaciones
 
-### Impacto esperado
-Escenario 10% de la ciudad: **~5,8 GWh/año**, **~14.600 t CO₂e/año evitadas**, **~8.760 t/año de compost**. Alineado a los ODS 7, 11, 12 y 13.
+1. **MFC aplicada al contexto cruceño:** estudiar generación eléctrica directa a partir de residuos bioorgánicos locales.
+2. **IA útil:** comparar escenarios y decidir qué experimento conviene realizar primero.
+3. **Economía circular escalable:** evaluar biodigestores, generación distribuida y potencial agronómico únicamente cuando los datos lo permitan.
 
-### Próximos pasos
-1. Piloto con 1 planta + 5–10 generadores reales (1–3 meses).
-2. Reentrenar el modelo con datos primarios.
-3. Ronda semilla (~$20.000).
-4. Expansión a residuo agroindustrial y créditos de carbono.
+## Qué muestra la demo
 
----
+1. Un escenario MFC claramente etiquetado como **[SIMULADO]**.
+2. Variables del sustrato, operación y reactor.
+3. Comparación entre configuraciones.
+4. Recomendación del siguiente experimento.
+5. Reporte institucional de sostenibilidad.
 
-## Guion para el video pitch (máx. 2 min)
+## Metas energéticas
 
-| Tiempo | Qué se dice / muestra |
-|---|---|
-| 0:00–0:20 | **Gancho:** "Cada día Santa Cruz entierra energía y libera metano." Imagen del problema. |
-| 0:20–0:40 | **Problema + dato:** 700–900 t/día de orgánico; nadie lo conecta ni cuantifica. |
-| 0:40–0:55 | **Solución:** presentamos GreenSpark y su propuesta de valor en una frase. |
-| 0:55–1:35 | **Demo en vivo:** registrar residuo → predicción IA → mapa con ruta → agente genera reporte ESG. |
-| 1:35–1:50 | **Impacto + negocio:** GWh y CO₂ evitados; cliente que ya paga; LTV/CAC ~16x. |
-| 1:50–2:00 | **Cierre:** "Convertimos basura en energía, ahorro y datos. GreenSpark." Logo + equipo. |
+- **Fases 1 y 2:** explorar escenarios de hasta **10%** de aporte para cargas eléctricas seleccionadas.
+- **Fase 3:** evaluar escenarios de hasta **20%** para cargas seleccionadas mediante tecnologías de mayor capacidad.
 
----
+> Son metas exploratorias sujetas a validación, no porcentajes garantizados de ahorro total.
 
-## Respuestas a objeciones probables del jurado
+## Modelo de negocio
 
-- **"¿Dónde está el hardware?"** → No lo necesitamos: usamos la capacidad de transformación que **ya existe** (plantas/biodigestores). Nuestro valor es la inteligencia que la activa.
-- **"¿La IA no es solo una regla de tres?"** → No: el modelo ajusta por mezcla, humedad y estacionalidad y **supera medible­mente** al coeficiente fijo (mostramos la métrica).
-- **"¿Hay comprador real?"** → Sí: el generador urbano **ya paga** por desechar y necesita reporte ESG. Ese es el cliente ancla.
-- **"¿Es escalable?"** → Es software SaaS: mismo producto en otras ciudades y en el residuo agroindustrial, con costo marginal bajo.
+- **Fase 1:** convenio de investigación y licencia institucional de simulación.
+- **Fase 2:** diseño, implementación y monitoreo de pilotos MFC.
+- **Fase 3:** prefactibilidad e implementación de soluciones de mayor capacidad.
+- **Valor adicional:** reporte de sostenibilidad para instituciones y negocios.
+
+## Incentivo por actor
+
+| Actor | Por qué participa |
+| --- | --- |
+| **Universidad** | Obtiene investigación visible, datos locales y formación. |
+| **Restaurante** | Convierte residuos frecuentes en una métrica de circularidad. |
+| **Agroindustria** | Evalúa escenarios antes de invertir en infraestructura. |
+| **Sector agropecuario** | Puede evaluar un subproducto caracterizado con potencial agronómico. |
+
+## Normativa
+
+El DS 4477, modificado por los DS 5167 y 5549, reconoce generación distribuida, autoconsumo e inyección regulada de excedentes. Para GreenSpark representa una ruta futura: primero se mide, después se evalúa conexión y retribución.
+
+## Guion para video de máximo 2 minutos
+
+| Tiempo | Mensaje |
+| --- | --- |
+| `0:00–0:20` | Santa Cruz genera aproximadamente 971 t/día de residuos orgánicos compostables. El problema también puede ser una oportunidad energética. |
+| `0:20–0:40` | Presentar a universidades como primer cliente: pagan por investigar, medir y demostrar sustentabilidad. |
+| `0:40–1:10` | Mostrar la simulación MFC y el diseño propuesto: variables, comparación y recomendación de IA. |
+| `1:10–1:30` | Explicar fases: piloto MFC, métricas para negocios y biodigestor al escalar. |
+| `1:30–1:50` | Aclarar metas: hasta 10% y 20% para cargas seleccionadas, sujetas a validación. |
+| `1:50–2:00` | Cierre: *"GreenSpark convierte residuos bioorgánicos en decisiones energéticas medibles."* |
+
+## Respuestas a objeciones
+
+- **"¿Dónde está el reactor físico?"**
+  La fase 1 es investigativa. Presentamos un diseño y una simulación respaldados por literatura. El siguiente paso es construir un piloto universitario instrumentado.
+
+- **"¿Por qué usar IA?"**
+  Porque existen múltiples combinaciones de sustrato, pH, temperatura y configuración. La IA prioriza escenarios y reduce experimentos innecesarios.
+
+- **"¿Realmente ahorran 10% o 20%?"**
+  Todavía no. Son metas exploratorias para cargas seleccionadas. Se validarán con mediciones y costos reales.
+
+- **"¿El residuo restante ya es fertilizante?"**
+  No automáticamente. Es un subproducto con potencial agronómico que requiere caracterización y tratamiento.
+
+- **"¿Cómo ganan dinero antes de producir energía comercial?"**
+  Mediante convenios de investigación, diseño experimental, simulación, pilotos y reportes de sostenibilidad.
