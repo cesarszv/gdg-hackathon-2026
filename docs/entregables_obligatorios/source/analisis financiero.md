@@ -19,7 +19,7 @@
 
 | Nivel | Definición | Estimación |
 | --- | --- | --- |
-| **TAM** | Todos los residuos orgánicos urbanos de Santa Cruz. | ~700–900 t/día [ESTIMACIÓN] |
+| **TAM** | Flujo potencial de residuos orgánicos compostables de Santa Cruz. | ~971 t/día [DATO + CÁLCULO a partir del PMGIRS 2023] |
 | **SAM** | Grandes generadores formales: restaurantes, supermercados, universidades, hoteles y mercados. | Cientos de generadores con capacidad de pago. |
 | **SOM: 3 años** | Generadores que pueden captarse con un equipo pequeño. | ~250 generadores que pagan. |
 

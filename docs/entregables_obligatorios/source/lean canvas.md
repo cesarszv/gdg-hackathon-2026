@@ -6,7 +6,7 @@
 
 | **1. Problema** | **4. Solución** | **3. Propuesta de valor única** | **9. Ventaja especial** | **2. Segmentos de clientes** |
 | --- | --- | --- | --- | --- |
-| Se entierran o queman residuos orgánicos urbanos que podrían generar energía. Los generadores pagan por desecharlos y necesitan reportes ESG. Las plantas no reciben un flujo predecible de sustrato. Nadie conecta, predice ni cuantifica esta oportunidad. | Plataforma de IA que predice energía y CO₂ por residuo, optimiza la recolección, conecta generadores con plantas y utiliza un agente para redactar reportes ESG. | **"Tu residuo orgánico, convertido en energía medible y en un reporte de sostenibilidad, en un clic."** GreenSpark es una capa de inteligencia, no una máquina. | Dataset local propietario que aprende con cada operación, efecto de red, neutralidad de hardware y conocimiento local de economía circular. | **Cliente ancla:** grandes generadores urbanos, como restaurantes, supermercados, universidades, hoteles y mercados. **Oferta:** plantas de biogás y compost. **Beneficiario:** la ciudad y el medio ambiente. |
+| Santa Cruz genera aproximadamente 971 t/día de residuos orgánicos compostables, pero falta coordinar su segregación, trazabilidad y valorización. Los generadores y operadores necesitan datos para convertir ese flujo disperso en una oportunidad energética medible. | Plataforma de IA que predice energía y CO₂ por residuo, optimiza la recolección, conecta generadores con plantas y utiliza un agente para redactar reportes ESG. | **"Tu residuo orgánico, convertido en energía medible y en un reporte de sostenibilidad, en un clic."** GreenSpark es una capa de inteligencia, no una máquina. | Dataset local propietario que aprende con cada operación, efecto de red, neutralidad de hardware y conocimiento local de economía circular. | **Cliente ancla:** grandes generadores urbanos, como restaurantes, supermercados, universidades, hoteles y mercados. **Oferta:** plantas de biogás y compost. **Beneficiario:** la ciudad y el medio ambiente. |
 | **8. Métricas clave** |  |  | **5. Canales** |  |
 | Toneladas de residuos orgánicos desviadas, kWh generados, t CO₂e evitadas, generadores activos, MRR, LTV/CAC y error del modelo frente al baseline. |  |  | Venta directa B2B, alianzas con CAINCO, universidades y GDG, marketing de sostenibilidad, referidos y municipio en la fase 2. |  |
 | **7. Estructura de costos** |  |  | **6. Fuentes de ingresos** |  |
@@ -16,10 +16,10 @@
 
 ### 2.1 Problema
 
-- Miles de toneladas de residuos orgánicos urbanos se entierran o queman y emiten metano (~28× CO₂).
-- Los generadores **pagan** por desecharlos y no cuentan con trazabilidad ni reportes ESG.
-- Las plantas de biogás y compost no reciben un flujo predecible de sustrato.
-- Las alternativas actuales son llevar los residuos al relleno o recurrir a una recolección informal, sin datos ni optimización.
+- Santa Cruz genera aproximadamente **971 t/día de residuos orgánicos compostables** [DATO + CÁLCULO], pero su destino desagregado todavía debe validarse.
+- Los grandes generadores necesitan mecanismos simples de segregación, trazabilidad y derivación; su disposición a pagar debe validarse durante el piloto.
+- Las plantas de biogás y compost necesitan un flujo predecible de sustrato; su capacidad y sus requisitos de recepción deben confirmarse.
+- La información por generador, tipo de residuo, frecuencia y alternativa de valorización se encuentra fragmentada.
 
 ### 2.2 Segmentos de clientes
 
@@ -54,7 +54,7 @@
 - **Suscripción SaaS** por volumen en planes Básico, Pro y Enterprise. Incluye el reporte ESG.
 - **Tarifa por recolección y emparejamiento:** ~8% del valor del servicio.
 - **Analítica para plantas:** modelo freemium con opción de pago.
-- **Reportes ESG o de huella certificados** y, a futuro, **originación de créditos de carbono**.
+- **Reportes ESG o de huella trazables** y, a futuro, **originación de créditos de carbono** mediante metodologías de verificación aplicables.
 
 ### 2.7 Estructura de costos
 

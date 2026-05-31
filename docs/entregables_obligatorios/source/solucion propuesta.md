@@ -4,7 +4,7 @@
 
 ## 1. Qué es GreenSpark
 
-**GreenSpark es una plataforma de IA que convierte los residuos orgánicos urbanos en energía rentable y medible.** Conecta a grandes generadores de residuos, como restaurantes, supermercados, universidades, mercados y hoteles, con plantas de biogás o compost que pueden transformarlos. La plataforma **predice cuánta energía produce cada residuo, optimiza su recolección y certifica el impacto ambiental**.
+**GreenSpark es una plataforma de IA que convierte los residuos orgánicos urbanos en energía rentable y medible.** Conecta a grandes generadores de residuos, como restaurantes, supermercados, universidades, mercados y hoteles, con plantas de biogás o compost que pueden transformarlos. La plataforma **predice cuánta energía produce cada residuo, optimiza su recolección y documenta el impacto ambiental**.
 
 > **Propuesta de valor única:** *"Tu residuo orgánico, convertido en energía medible y en un reporte de sostenibilidad, en un clic."*
 
@@ -17,7 +17,7 @@ GreenSpark no vende una máquina. Ofrece la **capa de inteligencia y coordinaci�
 2. La IA predice su rendimiento       → m³ de biogás · kWh · compost · CO₂ evitado · valor en Bs
 3. La plataforma conecta y enruta     → planta más conveniente + ruta de recolección optimizada
 4. La planta recolecta y transforma   → energía o biogás + compost
-5. El generador recibe su reporte ESG → impacto certificado y trazable, redactado por el agente de IA
+5. El generador recibe su reporte ESG → impacto estimado y trazable, redactado por el agente de IA
 ```
 
 Los residuos dejan de ser un **costo y un pasivo ambiental** para convertirse en un **insumo energético trazable y un activo de sostenibilidad**.
@@ -48,9 +48,9 @@ La plataforma conecta a cada generador con una planta según su cercanía, capac
 
 | Actor | Beneficio |
 | --- | --- |
-| **Generador urbano: cliente que paga** | Reduce su costo de disposición, obtiene un reporte ESG verificable y convierte un pasivo en ahorro y reputación. |
+| **Generador urbano: cliente objetivo** | Puede reducir su costo de disposición, obtiene un reporte ESG trazable y convierte un pasivo en ahorro y reputación. |
 | **Planta de biogás o compost** | Recibe un flujo de sustrato predecible y trazable, y aprovecha mejor su capacidad. |
-| **Ciudad y medio ambiente** | Reduce las emisiones de metano y la saturación del relleno, y obtiene energía y compost locales. |
+| **Ciudad y medio ambiente** | Reduce las emisiones potenciales de metano y la presión sobre la disposición final, y obtiene energía y compost locales. |
 | **Agro cruceño** | Recibe compost de calidad que vuelve al suelo y cierra el ciclo. |
 
 ## 5. Ventaja difícil de copiar

@@ -5,7 +5,7 @@
 **Mención:** Energía
 **Fecha:** 30 de mayo de 2026
 
-> **En una frase:** GreenSpark es una plataforma de IA que convierte los residuos orgánicos urbanos de Santa Cruz en energía rentable. Conecta a quienes los generan con plantas que pueden transformarlos en biogás o compost, predice su rendimiento energético, optimiza su recolección y certifica su impacto ambiental.
+> **En una frase:** GreenSpark es una plataforma de IA que convierte los residuos orgánicos urbanos de Santa Cruz en energía rentable. Conecta a quienes los generan con plantas que pueden transformarlos en biogás o compost, predice su rendimiento energético, optimiza su recolección y documenta su impacto ambiental.
 
 ---
 
@@ -23,9 +23,9 @@ Todas las cifras de energía, CO₂ e ingresos parten de los coeficientes de la 
 
 ## 1. Resumen ejecutivo
 
-Santa Cruz de la Sierra es la capital agroindustrial de Bolivia y, al mismo tiempo, una ciudad que **entierra la mayor parte de sus residuos orgánicos** en el relleno sanitario de Normandía. Los restos de comida de restaurantes, supermercados, mercados, universidades y hoteles se descomponen sin control y **emiten metano (CH₄), un gas de efecto invernadero ~28 veces más potente que el CO₂** [DATO: IPCC AR5, GWP100 del metano]. La ciudad entierra energía y, además, contamina.
+Santa Cruz de la Sierra es la capital agroindustrial de Bolivia y genera **1.909,86 toneladas de residuos por día**. Según el PMGIRS 2023, el **50,84%** corresponde a residuos orgánicos compostables: aproximadamente **971 t/día** [DATO + CÁLCULO]. Cuando los residuos orgánicos terminan enterrados y se descomponen sin oxígeno, pueden generar metano (CH₄), un gas al menos **28 veces** más eficaz que el CO₂ para atrapar calor en un horizonte de 100 años [DATO TÉCNICO]. El porcentaje que actualmente termina en entierro sanitario debe validarse con EMACRUZ.
 
-En paralelo, el departamento **ya cuenta con tecnología que convierte biomasa en electricidad y la vende a la red**. El ingenio Guabirá, en Montero, cogenera energía con bagazo de caña y entrega excedentes al Sistema Interconectado Nacional (SIN) [DATO: Guabirá / ENDE]. La conversión de residuos en energía **ya ocurre localmente, pero solo en grandes ingenios y con sus propios residuos**. Los residuos orgánicos urbanos, dispersos entre miles de generadores, quedan fuera porque **nadie los conecta, predice ni cuantifica**.
+En paralelo, el departamento **ya cuenta con tecnología que convierte biomasa en electricidad**. La AETN registra a Guabirá Energía S.A., ubicada en Montero, Santa Cruz, como generadora del Sistema Interconectado Nacional (SIN) que utiliza biomasa [DATO]. La valorización energética de biomasa ya ocurre localmente, aunque no equivale a demostrar capacidad disponible para recibir residuos orgánicos urbanos. Estos residuos se encuentran dispersos entre múltiples generadores y todavía falta una capa que coordine su trazabilidad y valorización.
 
 **GreenSpark cubre esa brecha mediante software e IA.** Es una plataforma B2B que:
 
@@ -41,20 +41,20 @@ El MVP funciona **completamente mediante software, sin hardware**. Es demostrabl
 
 ### 2.1 El problema en una frase
 
-En Santa Cruz se entierran o queman residuos orgánicos urbanos con valor energético. Este proceso emite metano porque **no existe una capa de inteligencia que conecte, prediga y cuantifique** la oportunidad entre generadores y transformadores.
+En Santa Cruz existe un flujo relevante de residuos orgánicos compostables con potencial energético, pero todavía falta coordinar su segregación, trazabilidad y derivación hacia alternativas de valorización. GreenSpark aborda la brecha de información entre generadores y transformadores.
 
 ### 2.2 Evidencia y contexto local
 
-- **Composición del residuo:** en ciudades bolivianas la fracción orgánica de los residuos sólidos urbanos ronda el **55–60%** [DATO: estudios de caracterización de RSU en Bolivia / Ministerio de Medio Ambiente y Agua]. Es la fracción más grande y la que más metano genera en relleno.
-- **Volumen:** Santa Cruz de la Sierra, con una población metropolitana superior a 1,7 millones, genera del orden de **~1.200–1.800 t/día de residuos sólidos** [ESTIMACIÓN, a validar con EMACRUZ/GAMSC]. Aplicando 55% ⇒ **~700–900 t/día de residuo orgánico** [ESTIMACIÓN].
-- **Destino actual:** disposición final en el relleno de Normandía, con problemas conocidos de saturación y emisiones. La mayoría del orgánico **no se valoriza**.
-- **Prueba de que la conversión funciona localmente:** Guabirá cogenera con bagazo y vende excedentes al SIN [DATO]. Existen además biodigestores en el agro cruceño (granjas porcinas/avícolas). Falta la pieza urbana y la inteligencia que la articule.
+- **Composición y volumen:** el PMGIRS 2023 reporta **1.909,86 t/día** de residuos sólidos urbanos y **50,84%** de orgánicos compostables: aproximadamente **971 t/día** [DATO + CÁLCULO].
+- **Destino actual:** la disposición final continúa siendo una operación central para la ciudad. El sitio operativo se encuentra en **San Miguel de los Junos**; Normandía corresponde a un relleno anterior en proceso de post cierre técnico [DATO]. El destino desagregado de la fracción orgánica debe validarse con EMACRUZ.
+- **Oportunidad municipal reconocida:** el GAMSC proyectó una planta de tratamiento mecánico-biológico con aprovechamiento de orgánicos y generación de biogás en San Miguel de los Junos. En mayo de 2025 todavía fue descrita como infraestructura futura [DATO].
+- **Precedente energético regional:** la AETN registra a Guabirá Energía S.A. entre las generadoras que utilizaron biomasa en el SIN durante 2024 [DATO]. La valorización energética de biomasa ya tiene un antecedente regional, aunque no equivale a demostrar capacidad disponible para residuos urbanos.
 
 ### 2.3 Usuarios y beneficiarios
 
-- **Generadores urbanos: cliente que paga.** Incluye cadenas de restaurantes, supermercados, universidades, hoteles y mercados. Hoy *pagan* por desechar sus residuos orgánicos y enfrentan una presión creciente por reportar sostenibilidad.
-- **Plantas de biogás/compost y recicladores: lado de la oferta.** Necesitan un flujo constante y predecible de sustrato; actualmente lo consiguen de manera informal.
-- **Ciudad y medio ambiente:** menos metano, menos saturación del relleno, energía local.
+- **Generadores urbanos: cliente objetivo.** Incluye cadenas de restaurantes, supermercados, universidades, hoteles y mercados. Sus costos actuales y su disposición a pagar por trazabilidad y reportes ESG deben validarse.
+- **Plantas de biogás/compost y operadores: lado de la oferta.** Necesitan un flujo constante y predecible de sustrato. Su capacidad, ubicación y requisitos de recepción deben confirmarse.
+- **Ciudad y medio ambiente:** menor presión sobre la disposición final, valorización local y reducción potencial de metano.
 
 ---
 
@@ -83,7 +83,7 @@ En Santa Cruz se entierran o queman residuos orgánicos urbanos con valor energ�
 
 **Cadena de valor de 1 tonelada de residuo orgánico:**
 
-```text
+```
 1 t residuo orgánico
    → ~100 m³ biogás (60% CH₄)
        → ~200 kWh de electricidad   (≈ consumo de un hogar cruceño por ~1 mes)
@@ -93,11 +93,11 @@ En Santa Cruz se entierran o queman residuos orgánicos urbanos con valor energ�
 
 ### 4.1 Potencial para la ciudad
 
-Si GreenSpark capturara solo el **10%** de los residuos orgánicos urbanos, ~80 t/día [ESTIMACIÓN basada en la Sección 2.2]:
+Si GreenSpark capturara solo el **10%** de los aproximadamente 971 t/día de residuos orgánicos compostables, ~97 t/día [ESTIMACIÓN basada en la Sección 2.2]:
 
-- Energía: 80 t/día × 200 kWh = **16.000 kWh/día ≈ 5,8 GWh/año**.
-- CO₂ evitado: 80 t/día × 0,5 = **40 t CO₂e/día ≈ 14.600 t CO₂e/año**.
-- Compost: ~24 t/día de abono orgánico.
+- Energía: 97 t/día × 200 kWh = **~19.400 kWh/día ≈ 7,1 GWh/año**.
+- CO₂ evitado: 97 t/día × 0,5 = **~48,5 t CO₂e/día ≈ 17.700 t CO₂e/año**.
+- Compost: ~29 t/día de abono orgánico.
 
 ---
 
@@ -115,7 +115,7 @@ Si GreenSpark capturara solo el **10%** de los residuos orgánicos urbanos, ~80 
 
 ## 6. Solución recomendada
 
-Consulta el detalle en [solución propuesta](<./solucion propuesto.md>).
+Consulta el detalle en [solución propuesta](<./solucion propuesta.md>).
 
 Plataforma web B2B de dos lados:
 
@@ -151,7 +151,7 @@ El modelo se entrena con coeficientes BMP y variación sintética. La operación
 
 Consulta el detalle en [arquitectura tecnológica](<./arquitectura tecnologica.md>).
 
-```text
+```
 [ Generador urbano ]      [ Planta biogás/compost ]
         │                          │
         ▼                          ▼
@@ -171,7 +171,7 @@ Consulta el detalle en [arquitectura tecnológica](<./arquitectura tecnologica.m
         │ SQLite (datos) │   • DeepSeek (LLM)
         └────────────────┘   • Open-Meteo (clima/estacionalidad)
                              • OpenStreetMap/Leaflet (mapa)
-```text
+```
 
 La solución no requiere hardware ni GPU y funciona con planes gratuitos. El documento de arquitectura detalla su despliegue.
 
@@ -214,10 +214,9 @@ El residuo deja de ser un costo y un pasivo ambiental y se vuelve un insumo ener
 | Riesgo | Mitigación |
 | --- | --- |
 | Coeficientes referenciales ≠ realidad local | Piloto con mediciones primarias; el modelo se reentrena con datos reales |
-| Generadores no segregan en origen | Incorporación guiada, incentivo económico mediante ahorro y reporte ESG como argumento comercial |
+| Generadores no segregan en origen | Incorporación guiada, incentivo económico mediante ahorro y reporte ESG como argumento comercial; foco inicial B2B formal |
 | Oferta de plantas limitada | Empezar en zonas con planta/biodigestor cercano; sumar compostaje como salida |
 | Dependencia de API externa (DeepSeek) | El núcleo de predicción y ruteo no depende del LLM; el agente tiene una alternativa documentada |
-| Informalidad / cultura de reciclaje baja | Alianzas con cámaras (CAINCO), universidades y GAMSC; foco inicial B2B formal |
 
 ---
 
@@ -225,16 +224,16 @@ El residuo deja de ser un costo y un pasivo ambiental y se vuelve un insumo ener
 
 - **Nombre:** GreenSpark.
 - **Propuesta de valor:** *"Tu residuo orgánico, convertido en energía medible y en un reporte de sostenibilidad, en un clic."*
-- **Problema (1 oración):** Santa Cruz entierra energía orgánica y emite metano porque nadie conecta ni cuantifica el residuo urbano.
-- **Solución (1 oración):** Una plataforma de IA que predice cuánta energía rinde cada residuo, lo conecta con plantas y certifica el impacto.
+- **Problema (1 oración):** Santa Cruz desaprovecha residuos orgánicos con potencial energético porque todavía falta coordinar su segregación, trazabilidad y valorización.
+- **Solución (1 oración):** Una plataforma de IA que predice cuánta energía rinde cada residuo, lo conecta con plantas y documenta el impacto.
 - **Diferenciador:** GreenSpark es una **capa de inteligencia y coordinación** basada en datos, IA y red. No es una máquina, por lo que puede escalar como software.
 - **Evidencia en la demo:** predicción en vivo + ruta optimizada en mapa + reporte ESG generado por el agente.
 
 ### 13.1 Objeciones probables del jurado
 
-- *"¿Dónde está el hardware que genera energía?"* → No lo necesitamos: usamos la capacidad de transformación que **ya existe** (plantas/biodigestores). Nuestro valor es la inteligencia que la activa. El hardware propio es visión futura.
+- *"¿Dónde está el hardware que genera energía?"* → No lo construimos durante la hackathon: nuestro valor es la inteligencia que coordina generadores y alternativas de valorización. La capacidad real disponible se validará durante el piloto.
 - *"¿La IA no es solo una regla de tres?"* → No: el modelo ajusta por mezcla, humedad y estacionalidad y supera de forma medible al coeficiente fijo. La demo muestra esta métrica.
-- *"¿Hay comprador real?"* → Sí: el generador urbano ya paga por desechar y necesita reporte ESG; ese es el cliente ancla.
+- *"¿Hay comprador real?"* → El cliente objetivo es el gran generador urbano. Sus costos actuales y su disposición a pagar por trazabilidad y reportes ESG deben validarse mediante entrevistas.
 
 ---
 
@@ -254,7 +253,9 @@ El residuo deja de ser un costo y un pasivo ambiental y se vuelve un insumo ener
 - IPCC, *Fifth Assessment Report (AR5)* — potencial de calentamiento global del metano (GWP100 ≈ 28). [Internacional]
 - IEA Bioenergy / FAO — potencial bioquímico de metano (BMP) de residuos de alimentos y digestión anaerobia. [Internacional]
 - ENDE / Guabirá — cogeneración con bagazo y entrega de excedentes al SIN. [Local — verificar cifras exactas]
-- EMACRUZ / Gobierno Autónomo Municipal de Santa Cruz (GAMSC) — generación y composición de RSU, relleno de Normandía. [Local — verificar cifras exactas]
+- [GAMSC: campaña CompostArte y datos del PMGIRS 2023](https://www.gmsantacruz.gob.bo/Noticias/Detalle/?id=517) — generación y composición de residuos urbanos. [Local]
+- [GAMSC: proyecto de planta municipal de tratamiento](https://www.gmsantacruz.gob.bo/Noticias/Detalle/?id=337) — ubicación, tratamiento mecánico-biológico y biogás proyectado. [Local]
+- [GAMSC: relleno sanitario de San Miguel de los Junos](https://www.gmsantacruz.gob.bo/Noticias/Detalle/?id=437) — identificación del sitio operativo. [Local]
 - INE Bolivia — población del área metropolitana de Santa Cruz. [Nacional]
 - Ministerio de Medio Ambiente y Agua — caracterización de residuos sólidos en Bolivia. [Nacional]
 
@@ -263,7 +264,7 @@ El residuo deja de ser un costo y un pasivo ambiental y se vuelve un insumo ener
 ## 16. Decisión recomendada para la hackathon
 
 - **Qué construir:** la plataforma web GreenSpark con el portal del generador, el motor de predicción, el mapa con ruteo optimizado, el panel de impacto y el agente conversacional.
-- **Razón principal:** maximiza los 35 puntos de IA, es 100% demostrable sin hardware, replicable, escalable como SaaS y tiene un comprador que ya gasta dinero en el problema.
+- **Razón principal:** maximiza los 35 puntos de IA, es 100% demostrable sin hardware, replicable, escalable como SaaS y se enfoca en un cliente B2B cuya disposición a pagar puede validarse durante el piloto.
 - **Imprescindible para el MVP:** registro de residuo → predicción de IA en vivo → emparejamiento + ruta en mapa → reporte ESG redactado por el agente.
 - **Fuera del MVP:** hardware propio, créditos de carbono, aplicación ciudadana y despliegue en varias ciudades.
 - **Demostración más convincente:** que un juez registre los residuos de su restaurante o universidad de referencia y vea en segundos los kWh, el CO₂ evitado, la ruta óptima y un reporte ESG redactado por la IA.

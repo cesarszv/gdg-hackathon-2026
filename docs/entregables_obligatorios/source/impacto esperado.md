@@ -2,25 +2,25 @@
 
 **Equipo:** HackHeroes · **Mención:** Energía · **Lugar:** Santa Cruz de la Sierra, Bolivia
 
-> El impacto se calcula con los **coeficientes canónicos** de la Sección 4 del documento técnico. El escenario base considera la captura del **10%** de los residuos orgánicos urbanos de Santa Cruz: ~80 t/día [ESTIMACIÓN].
+> El impacto se calcula con los **coeficientes canónicos** de la Sección 4 del documento técnico. El escenario base considera la captura del **10%** de los aproximadamente **971 t/día** de residuos orgánicos compostables reportados para Santa Cruz: ~97 t/día [DATO + CÁLCULO].
 
 ## 1. Impacto ambiental
 
-| Indicador | Por tonelada | Escenario 10% ciudad (80 t/día) |
+| Indicador | Por tonelada | Escenario 10% de orgánicos compostables (~97 t/día) |
 | --- | ---: | ---: |
-| Residuos desviados del relleno | 1 t | **80 t/día ≈ 29.200 t/año** |
-| Biogás generable | ~100 m³ | ~8.000 m³/día ≈ **2,9 M m³/año** |
-| Electricidad equivalente | ~200 kWh | 16.000 kWh/día ≈ **5,8 GWh/año** |
-| **CO₂e evitado** | ~0,5 t | 40 t/día ≈ **14.600 t CO₂e/año** |
-| Compost producido | ~0,3 t | 24 t/día ≈ **8.760 t/año** |
+| Residuos desviados de disposición final | 1 t | **~97 t/día ≈ 35.400 t/año** |
+| Biogás generable | ~100 m³ | ~9.700 m³/día ≈ **3,5 M m³/año** |
+| Electricidad equivalente | ~200 kWh | ~19.400 kWh/día ≈ **7,1 GWh/año** |
+| **CO₂e evitado** | ~0,5 t | ~48,5 t/día ≈ **17.700 t CO₂e/año** |
+| Compost producido | ~0,3 t | ~29 t/día ≈ **10.600 t/año** |
 
 ### 1.1 Equivalencias útiles para el pitch
 
 En un escenario de captura del 10%:
 
-- **5,8 GWh/año** ≈ consumo eléctrico de **~4.800 hogares** cruceños [ESTIMACIÓN, a 100 kWh/mes].
-- **14.600 t CO₂e/año** ≈ sacar de circulación **~3.000 autos** por un año [ESTIMACIÓN, referencia internacional].
-- **8.760 t/año de compost** devueltas al suelo agrícola cruceño.
+- **7,1 GWh/año** ≈ consumo eléctrico de **~5.900 hogares** cruceños [ESTIMACIÓN, a 100 kWh/mes].
+- **17.700 t CO₂e/año** ≈ sacar de circulación **~3.600 autos** por un año [ESTIMACIÓN, referencia internacional].
+- **10.600 t/año de compost** devueltas al suelo agrícola cruceño.
 
 > Estas cifras representan el **potencial del sistema**. El impacto real dependerá de la adopción y se medirá con datos del piloto.
 
@@ -28,7 +28,7 @@ En un escenario de captura del 10%:
 
 - **Para el generador:** reduce el costo de disposición y comunica mejor su sostenibilidad mediante reportes ESG.
 - **Para las plantas:** aporta un flujo predecible de sustrato que permite vender más energía y compost.
-- **Para la ciudad:** reduce el gasto en disposición y prolonga la vida útil del relleno de Normandía.
+- **Para la ciudad:** reduce la presión sobre la disposición final en San Miguel de los Junos.
 - **Para el ecosistema:** crea empleos verdes en recolección, operación y datos, y fortalece la economía circular local.
 
 ## 3. Impacto social
@@ -64,6 +64,6 @@ En un escenario de captura del 10%:
 - **Local:** Santa Cruz de la Sierra (foco inicial).
 - **Regional:** otras ciudades de Bolivia con el mismo problema, utilizando el mismo software y con un costo marginal bajo.
 - **Sectorial:** extensión a los residuos **agroindustriales**, como gallinaza, estiércol y vinaza, cuyo potencial energético es mayor.
-- **Mercado de carbono:** los CO₂e evitados pueden convertirse en **créditos de carbono**, con ingresos e impacto verificables.
+- **Mercado de carbono:** los CO₂e evitados podrían convertirse en **créditos de carbono** en una etapa futura, mediante metodologías de verificación aplicables.
 
 > **Síntesis:** GreenSpark convierte un problema ambiental, el metano del relleno, en **energía, compost, ahorro y datos de sostenibilidad**. Su impacto es medible, escalable, alineado con los ODS y enfocado en Santa Cruz.

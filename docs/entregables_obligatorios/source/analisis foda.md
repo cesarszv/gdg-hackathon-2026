@@ -14,7 +14,7 @@
 ## 2. Fortalezas
 
 1. **IA real y demostrable sin hardware:** predicción, optimización y agente mediante software y APIs.
-2. **Un comprador que ya gasta en el problema:** el generador urbano paga por desechar sus residuos y necesita reportes ESG.
+2. **Un cliente B2B con una necesidad monetizable:** el gran generador urbano puede beneficiarse de reducir costos de disposición y documentar su sostenibilidad; su disposición a pagar debe validarse.
 3. **Modelo liviano en activos y escalable (`asset-light`):** funciona como SaaS, con márgenes altos y sin infraestructura física pesada.
 4. **Efecto de red y dataset propietario:** el sistema mejora con cada operación y se vuelve más difícil de copiar.
 5. **Neutralidad de hardware:** puede integrarse con cualquier planta o biodigestor existente.
@@ -31,9 +31,9 @@
 
 ## 4. Oportunidades
 
-1. **Entre 700 y 900 t/día de residuos orgánicos urbanos sin valorizar en Santa Cruz** [ESTIMACIÓN]: existe un mercado amplio.
-2. **Mayor presión ESG** sobre empresas e instituciones: aumenta la demanda de reportes.
-3. **Saturación del relleno de Normandía** y aumento de los costos de disposición.
+1. **Aproximadamente 971 t/día de residuos orgánicos compostables en Santa Cruz** [DATO + CÁLCULO a partir del PMGIRS 2023]: existe un flujo potencial relevante cuyo destino actual desagregado debe validarse.
+2. **Demanda potencial de reportes ESG** por parte de empresas e instituciones: es una hipótesis comercial que debe validarse mediante entrevistas.
+3. **Presión sobre la disposición final en San Miguel de los Junos** y necesidad municipal explícita de aumentar el aprovechamiento.
 4. **Precedente local exitoso:** Guabirá vende biomasa al SIN, lo que respalda la tesis.
 5. **Mercado de créditos de carbono:** puede convertirse en una fuente de ingresos futura.
 6. **Posibles alianzas institucionales:** GAMSC, CAINCO, universidades, GDG y cooperación internacional.
@@ -41,7 +41,7 @@
 
 ## 5. Amenazas
 
-1. **Baja cultura de segregación en origen** y alta informalidad.
+1. **Segregación insuficiente o inconsistente en origen:** su alcance real por tipo de generador todavía debe validarse.
 2. **Inestabilidad económica y cambiaria** en Bolivia: afecta la inversión y los costos de APIs en USD.
 3. **Vacíos o cambios regulatorios** en la gestión de residuos.
 4. **Entrada de competidores:** otras startups o el propio municipio podrían adoptar el modelo si funciona.
