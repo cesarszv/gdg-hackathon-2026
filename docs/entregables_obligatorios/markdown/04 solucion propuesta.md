@@ -32,7 +32,7 @@ Santa Cruz de la Sierra genera aproximadamente **971 t/día** de residuos orgán
 
 ## 4. Propuesta de valor
 
-Para instituciones privadas que necesitan convertir compromisos ambientales en acciones medibles, GreenSpark ofrece una ruta gradual de valorización bioenergética: comienza con investigación y simulación MFC, avanza hacia pilotos instrumentados y permite evaluar biodigestores cuando el volumen lo justifica. A diferencia de una promesa energética genérica, cada etapa distingue resultados simulados, metas exploratorias y datos medidos.
+Para instituciones privadas que necesitan convertir compromisos ambientales en acciones medibles, GreenSpark ofrece una ruta gradual de valorización bioenergética,primero ofrece una métrica de sostenibilidad a todo aquel negocio que opte por  nuestros servicios,segundo aprovechar el decreto supremo 4477 para proporcionar beneficio economico al usuario pot utilizar nuestras tecnologias sostenibles,y por último ahorrar hasta un 10 por ciento de energia al mes a través de nuestra propuesta de economía circular. A diferencia de una promesa energética genérica, cada etapa distingue resultados simulados, metas exploratorias y datos medidos.
 
 ## 5. Cómo funciona
 
@@ -128,8 +128,8 @@ El agente generativo explica los resultados, pero no calcula ni inventa cifras.
 | Actor | Beneficio |
 | --- | --- |
 | **Universidad** | Investigación visible, formación estudiantil, datos locales y reporte de sostenibilidad. |
-| **Colegio** | Educación ambiental mediante un piloto demostrativo. |
-| **Restaurante** | Registro de circularidad y ruta futura para valorizar residuos frecuentes. |
+| **Colegio** | Consumidor de nuestro servicio y proporcionar educación ambiental mediante un piloto demostrativo. |
+| **Restaurante** | Consumidor de nuestro servicio y proporcionar registro de circularidad y ruta futura para valorizar residuos frecuentes. |
 | **Agroindustria** | Comparación de escenarios antes de invertir en infraestructura de mayor capacidad. |
 | **Sector agropecuario** | Evaluación de un posible subproducto caracterizado y estabilizado. |
 
