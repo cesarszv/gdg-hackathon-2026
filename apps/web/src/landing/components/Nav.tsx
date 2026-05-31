@@ -21,7 +21,7 @@ export function Nav() {
   }, []);
 
   return (
-    <nav className={`nav nav--solid${visible ? " nav--visible" : ""}`}>
+    <nav className={`nav${visible ? " nav--visible" : ""}`}>
       <div className="container nav__inner">
         <a href="#hero" className="nav__brand">
           <span className="nav__spark" aria-hidden>&#9889;</span> GreenSpark
