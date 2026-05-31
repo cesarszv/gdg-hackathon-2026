@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useReducedMotion } from "../../lib/useReducedMotion";
@@ -12,9 +12,8 @@ export function HeroCinematic() {
   const root = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const reduced = useReducedMotion();
-  const [videoLoaded, setVideoLoaded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [muted, setMuted] = useState(false);
+  const [muted, setMuted] = useState(true);
 
   useLayoutEffect(() => {
     if (reduced || !root.current) return;
@@ -49,16 +48,11 @@ export function HeroCinematic() {
     return () => ctx.revert();
   }, [reduced]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
     const onEnded = () => {
-      gsap.to(".hero__video-wrap", {
-        opacity: 0,
-        scale: 0.96,
-        duration: 0.6,
-        overwrite: true,
-      });
+      gsap.to(".hero__video-wrap", { opacity: 0, scale: 0.96, duration: 0.6, overwrite: true });
       gsap.fromTo(
         ".hero__title-wrap",
         { opacity: 0, scale: 0.86, filter: "blur(8px)" },
@@ -90,6 +84,7 @@ export function HeroCinematic() {
       videoRef.current!.play();
     });
     setIsPlaying(true);
+    setMuted(false);
   };
 
   const toggleMute = () => {
@@ -114,19 +109,10 @@ export function HeroCinematic() {
             src={VIDEO_SRC}
             muted
             playsInline
-            preload="auto"
+            preload="metadata"
             loop={false}
-            onLoadedData={() => setVideoLoaded(true)}
           />
-          {!videoLoaded && (
-            <div className="hero__video-placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <polygon points="5 3 19 12 5 21 5 3" />
-              </svg>
-              <span>hero.mp4</span>
-            </div>
-          )}
-          {videoLoaded && !isPlaying && (
+          {!isPlaying && (
             <button
               type="button"
               className="hero__video-play"
@@ -138,7 +124,6 @@ export function HeroCinematic() {
                   <polygon points="6 3 20 12 6 21 6 3" />
                 </svg>
               </div>
-              <span className="hero__play-label">Click para reproducir con sonido</span>
             </button>
           )}
           {isPlaying && (
