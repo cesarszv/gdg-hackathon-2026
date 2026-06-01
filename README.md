@@ -5,8 +5,10 @@
 
 > [!IMPORTANT]
 > **Obtuvimos el segundo lugar en el hackathon `Build With AI 2026.` organizado por `Google Developer Group`**
+> El evento contó con la participación de [59 grupos y 270 participantes](docs/Participantes%20Hackathon%202026%20-%20Oficial.pdf).
 
-<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/6e7849bf-bb5d-4ac1-b95f-e0a33b9bdfdb" />
+
+> <img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/6e7849bf-bb5d-4ac1-b95f-e0a33b9bdfdb" />
 
 ---
 
