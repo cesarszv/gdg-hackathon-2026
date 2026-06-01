@@ -1,6 +1,10 @@
 # GreenSpark
 
-**Equipo:** HackHeroes &nbsp;·&nbsp; **Hackathon:** Build With AI 2026 &nbsp;·&nbsp; **Mención:** Energía &nbsp;·&nbsp; **Santa Cruz de la Sierra, Bolivia**
+**Equipo:** HackHeroes &nbsp;·&nbsp; **Mención:** Energía &nbsp;·&nbsp; **Santa Cruz de la Sierra, Bolivia**
+
+
+> [!IMPORTANT]
+> **Obtuvimos el segundo lugar en el hackathon `Build With AI 2026.` organizado por `Google Developer Group`**
 
 <img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/6e7849bf-bb5d-4ac1-b95f-e0a33b9bdfdb" />
 
