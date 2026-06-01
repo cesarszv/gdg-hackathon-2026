@@ -29,7 +29,7 @@ Santa Cruz de la Sierra genera aproximadamente **971 toneladas de residuos orgá
 
 El obstáculo no es solo la tecnología: es la falta de datos locales. Las instituciones que quieren ser más sostenibles no saben qué residuos funcionan mejor, cuánta energía podrían generar ni cuándo tiene sentido escalar. Sin esa información, cualquier inversión es un salto al vacío.
 
-[GreenSpark_documento_unificado_renderizado.pdf](https://github.com/user-attachments/files/28438540/GreenSpark_documento_unificado_renderizado.pdf)
+[GreenSpark_documento_unificado_renderizado.pdf](docs/entregables_obligatorios/GreenSpark_documento_unificado_renderizado.pdf)
 
 
 ---
