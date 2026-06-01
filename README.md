@@ -2,7 +2,6 @@
 
 **Equipo:** HackHeroes &nbsp;·&nbsp; **Hackathon:** Build With AI 2026 &nbsp;·&nbsp; **Mención:** Energía &nbsp;·&nbsp; **Santa Cruz de la Sierra, Bolivia**
 
-
 https://github.com/user-attachments/assets/2c433b2f-e7cf-4985-b9a2-fa3e3978e09a
 
 ---
@@ -48,6 +47,11 @@ GreenSpark resuelve eso con un simulador inteligente que sigue este flujo:
 ```
 
 Todo resultado está etiquetado claramente como `SIMULADO`, `MEDIDO` o `META EXPLORATORIA`. La IA no reemplaza mediciones físicas: ayuda a decidir cuál hacer primero.
+
+<video src="./docs/pitch/PITCH.MP4" controls width="100%">
+  Tu navegador no puede reproducir el video. Puedes verlo directamente desde
+  <a href="./docs/pitch/PITCH.MP4">este enlace</a>.
+</video>
 
 ---
 
