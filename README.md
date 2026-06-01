@@ -2,7 +2,6 @@
 
 **Equipo:** HackHeroes &nbsp;·&nbsp; **Hackathon:** Build With AI 2026 &nbsp;·&nbsp; **Mención:** Energía &nbsp;·&nbsp; **Santa Cruz de la Sierra, Bolivia**
 
-https://github.com/user-attachments/assets/2c433b2f-e7cf-4985-b9a2-fa3e3978e09a
 
 ---
 
@@ -12,7 +11,7 @@ GreenSpark es una plataforma de simulación asistida por IA que ayuda a universi
 
 El foco está en las celdas de combustible microbianas (MFC): reactores que generan electricidad directamente a partir de materia orgánica usando bacterias. GreenSpark simula distintas configuraciones, compara resultados y recomienda qué experimento conviene validar primero.
 
-[GreenSpark_documento_unificado_renderizado.pdf](https://github.com/user-attachments/files/28438540/GreenSpark_documento_unificado_renderizado.pdf)
+https://github.com/user-attachments/assets/2c433b2f-e7cf-4985-b9a2-fa3e3978e09a
 
 
 ---
@@ -22,6 +21,9 @@ El foco está en las celdas de combustible microbianas (MFC): reactores que gene
 Santa Cruz de la Sierra genera aproximadamente **971 toneladas de residuos orgánicos por día**. La mayoría termina en disposición final sin aprovecharse como recurso energético.
 
 El obstáculo no es solo la tecnología: es la falta de datos locales. Las instituciones que quieren ser más sostenibles no saben qué residuos funcionan mejor, cuánta energía podrían generar ni cuándo tiene sentido escalar. Sin esa información, cualquier inversión es un salto al vacío.
+
+[GreenSpark_documento_unificado_renderizado.pdf](https://github.com/user-attachments/files/28438540/GreenSpark_documento_unificado_renderizado.pdf)
+
 
 ---
 
@@ -47,6 +49,11 @@ GreenSpark resuelve eso con un simulador inteligente que sigue este flujo:
 ```
 
 Todo resultado está etiquetado claramente como `SIMULADO`, `MEDIDO` o `META EXPLORATORIA`. La IA no reemplaza mediciones físicas: ayuda a decidir cuál hacer primero.
+
+
+
+https://github.com/user-attachments/assets/47896bbd-2a4e-4e4a-9f20-2a9a6a4abf13
+
 
 <video src="./docs/pitch/PITCH.MP4" controls width="100%">
   Tu navegador no puede reproducir el video. Puedes verlo directamente desde
