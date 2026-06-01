@@ -3,7 +3,7 @@
 **Equipo:** HackHeroes &nbsp;·&nbsp; **Mención:** Energía &nbsp;·&nbsp; **Santa Cruz de la Sierra, Bolivia**
 
 
-> [!IMPORTANT]
+> [!NOTE]
 > **Obtuvimos el segundo lugar en el hackathon `Build With AI 2026.` organizado por `Google Developer Group`**.
 > El evento contó con la participación de [59 grupos y 270 participantes](docs/Participantes%20Hackathon%202026%20-%20Oficial.pdf).
 
