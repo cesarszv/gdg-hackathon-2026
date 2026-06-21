@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenSpark - Simulación de Biogeneración Eléctrica con IA</title>
+    <meta name="description" content="Plataforma de simulación asistida por IA para celdas de combustible microbianas (MFC) y generación de energía a partir de residuos bioorgánicos. Segundo lugar en Build With AI Hackathon 2026.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon / Tab Icon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">Green<span>Spark</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#problema">El Problema</a>
+                <a href="#solucion">La Solución</a>
+                <a href="#arquitectura">Arquitectura</a>
+                <a href="#stack">Tecnologías</a>
+                <a href="#equipo">Equipo</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://github.com/cesarszv/gdg-hackathon-2026" target="_blank" class="btn btn-secondary btn-nav">
+                    <i data-lucide="github"></i> Repositorio
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <nav class="mobile-nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#problema">El Problema</a>
+            <a href="#solucion">La Solución</a>
+            <a href="#arquitectura">Arquitectura</a>
+            <a href="#stack">Tecnologías</a>
+            <a href="#equipo">Equipo</a>
+            <a href="https://github.com/cesarszv/gdg-hackathon-2026" target="_blank" class="btn btn-secondary">
+                <i data-lucide="github"></i> Repositorio
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Container -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-bg-canvas-container">
+                <canvas id="hero-canvas"></canvas>
+            </div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge-award">
+                        <span class="badge-icon">🏆</span>
+                        <span class="badge-text">2º Lugar - Build With AI Hackathon 2026</span>
+                    </div>
+                    <h1>Simulación Inteligente de Bioelectricidad</h1>
+                    <p class="hero-tagline">
+                        Plataforma asistida por IA para investigar cómo convertir residuos bioorgánicos en electricidad usando Celdas de Combustible Microbianas (MFC).
+                    </p>
+                    <div class="hero-meta">
+                        <span><strong>Equipo:</strong> HackHeroes</span>
+                        <span class="separator">·</span>
+                        <span><strong>Mención:</strong> Energía</span>
+                        <span class="separator">·</span>
+                        <span>Santa Cruz, Bolivia</span>
+                    </div>
+                    <div class="hero-ctas">
+                        <a href="#pitch-video" class="btn btn-primary">
+                            <i data-lucide="play-circle"></i> Ver Pitch Video
+                        </a>
+                        <a href="../../docs/entregables_obligatorios/GreenSpark_documento_unificado_renderizado.pdf" target="_blank" class="btn btn-secondary">
+                            <i data-lucide="file-text"></i> Documento Técnico
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interactive 3D/Dashboard Widget -->
+                <div class="hero-visual">
+                    <div class="bioreactor-card">
+                        <div class="card-header">
+                            <div class="status-indicator">
+                                <span class="pulse-dot"></span>
+                                <span class="status-text">SIMULACIÓN MFC ACTIVA</span>
+                            </div>
+                            <span class="card-tag">Reactor #1-A</span>
+                        </div>
+                        <div class="canvas-3d-wrapper">
+                            <div class="canvas-instructions">Haz click y arrastra para rotar el reactor</div>
+                            <canvas id="mfc-canvas"></canvas>
+                            <!-- UI Overlay Inside Canvas -->
+                            <div class="canvas-metrics-overlay">
+                                <div class="metric-mini">
+                                    <span class="label">Voltaje</span>
+                                    <span class="value" id="live-voltage">0.824 V</span>
+                                </div>
+                                <div class="metric-mini">
+                                    <span class="label">Bacteria</span>
+                                    <span class="value">G. sulfurreducens</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-metrics">
+                            <div class="metric-col">
+                                <span class="metric-label">Humedad</span>
+                                <span class="metric-val">82.5%</span>
+                            </div>
+                            <div class="metric-col">
+                                <span class="metric-label">pH</span>
+                                <span class="metric-val">6.8</span>
+                            </div>
+                            <div class="metric-col">
+                                <span class="metric-label">Dens. Corriente</span>
+                                <span class="metric-val">415 mA/m²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-wave">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,8.75,57.05,18.3,84.4,25.88,172.93,50.18,251.58,69.58,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- What is GreenSpark (About) -->
+        <section class="section-about">
+            <div class="container grid-2">
+                <div class="about-text-content">
+                    <h2 class="section-title">¿Qué es GreenSpark?</h2>
+                    <p class="lead-text">
+                        Una plataforma de simulación avanzada que ayuda a universidades, colegios y empresas a investigar la generación de electricidad a partir de materia orgánica antes de invertir en infraestructura física.
+                    </p>
+                    <p>
+                        El foco del proyecto está en las <strong>Celdas de Combustible Microbianas (MFC)</strong>: reactores bio-electroquímicos que aprovechan el metabolismo de bacterias anaeróbicas para oxidar materia orgánica y generar electrones libres, produciendo una corriente eléctrica directa.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🤖</div>
+                            <div class="highlight-body">
+                                <h3>Simulación con Machine Learning</h3>
+                                <p>Evalúa el rendimiento de potencia y estabilidad según humedad, temperatura y pH sin experimentos físicos costosos.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🔬</div>
+                            <div class="highlight-body">
+                                <h3>Priorización Científica</h3>
+                                <p>Recomienda de forma inteligente qué configuración de residuo y reactor tiene la mayor probabilidad de éxito.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="concept-card">
+                        <div class="concept-head">
+                            <span class="concept-title">Funcionamiento de una Celda MFC</span>
+                        </div>
+                        <div class="mfc-diagram-svg">
+                            <!-- Custom CSS-Animated SVG representing MFC process -->
+                            <svg viewBox="0 0 400 300" width="100%" height="100%">
+                                <defs>
+                                    <linearGradient id="anodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#243b55" />
+                                        <stop offset="100%" stop-color="#141e30" />
+                                    </linearGradient>
+                                    <linearGradient id="cathodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#0f2027" />
+                                        <stop offset="100%" stop-color="#203a43" />
+                                    </linearGradient>
+                                    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#00ff73" />
+                                        <stop offset="100%" stop-color="#0ea5e9" />
+                                    </linearGradient>
+                                </defs>
+                                
+                                <!-- Anode Chamber -->
+                                <rect x="30" y="50" width="140" height="200" rx="10" fill="url(#anodeGrad)" stroke="#10b981" stroke-width="2" />
+                                <text x="100" y="40" fill="#10b981" font-size="12" font-weight="bold" text-anchor="middle">CÁMARA ANÓDICA</text>
+                                <text x="100" y="80" fill="#a0aec0" font-size="10" text-anchor="middle">Residuos + Bacterias</text>
+                                
+                                <!-- Cathode Chamber -->
+                                <rect x="230" y="50" width="140" height="200" rx="10" fill="url(#cathodeGrad)" stroke="#0ea5e9" stroke-width="2" />
+                                <text x="300" y="40" fill="#0ea5e9" font-size="12" font-weight="bold" text-anchor="middle">CÁMARA CATÓDICA</text>
+                                <text x="300" y="80" fill="#a0aec0" font-size="10" text-anchor="middle">Oxígeno / Aceptor</text>
+                                
+                                <!-- Proton Exchange Membrane (PEM) -->
+                                <rect x="185" y="70" width="30" height="160" rx="5" fill="#f59e0b" opacity="0.8" />
+                                <text x="200" y="155" fill="#1a202c" font-size="10" font-weight="bold" text-anchor="middle" transform="rotate(-90, 200, 155)">MEMBRANA (PEM)</text>
+                                
+                                <!-- Wire and Bulb -->
+                                <path d="M100,50 L100,20 L160,20 M240,20 L300,20 L300,50" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5 5" class="wire-flow" />
+                                <circle cx="200" cy="20" r="15" fill="#1a202c" stroke="#f59e0b" stroke-width="2" />
+                                <text x="200" y="24" fill="#f59e0b" font-size="14" text-anchor="middle">💡</text>
+                                
+                                <!-- Animated Protons (H+) and Electrons (e-) -->
+                                <g class="proton-group">
+                                    <circle cx="120" cy="140" r="8" fill="#f59e0b" />
+                                    <text x="120" y="143" fill="#fff" font-size="8" text-anchor="middle" font-weight="bold">H+</text>
+                                </g>
+                                <g class="electron-group">
+                                    <circle cx="100" cy="40" r="6" fill="#00ff73" />
+                                    <text x="100" y="43" fill="#1a202c" font-size="8" text-anchor="middle" font-weight="bold">e-</text>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="concept-foot">
+                            <span class="desc">La materia orgánica se oxida en el ánodo liberando electrones (energía) y protones (que cruzan la membrana).</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Problem Section -->
+        <section id="problema" class="section-problem">
+            <div class="container">
+                <div class="problem-header text-center">
+                    <h2 class="section-title">El Problema de los Residuos</h2>
+                    <p class="section-subtitle">Una enorme cantidad de energía potencial se desperdicia diariamente por la falta de viabilidad y datos locales.</p>
+                </div>
+                
+                <div class="grid-2 problem-layout">
+                    <!-- Big Stat Counter Card -->
+                    <div class="stat-container">
+                        <div class="stat-card">
+                            <div class="stat-glow"></div>
+                            <div class="stat-number-wrapper">
+                                <span class="stat-number" id="waste-counter">0</span>
+                                <span class="stat-unit">Tons</span>
+                            </div>
+                            <h3 class="stat-title">De residuos orgánicos al día</h3>
+                            <p class="stat-desc">Es la alarmante cantidad generada en la ciudad de <strong>Santa Cruz de la Sierra</strong>, Bolivia.</p>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill" id="waste-progress"></div>
+                            </div>
+                            <span class="stat-footer-text">Equivale a llenar aproximadamente 65 camiones de basura al día.</span>
+                        </div>
+                    </div>
+
+                    <!-- Text block and PDF download -->
+                    <div class="problem-text">
+                        <h3>El obstáculo de la incertidumbre</h3>
+                        <p>
+                            La mayor parte de los residuos biológicos termina en vertederos (como el de Normandía o San Miguel de los Junos) sin ningún tipo de aprovechamiento energético. Las instituciones, industrias y universidades interesadas en la sostenibilidad ambiental enfrentan barreras críticas:
+                        </p>
+                        <ul class="problem-list">
+                            <li>
+                                <i data-lucide="alert-triangle" class="icon-danger"></i>
+                                <span><strong>Falta de datos locales:</strong> No se sabe con certeza qué residuos nativos (cáscaras de frutas, restos de comida, lodos) son óptimos para generar electricidad.</span>
+                            </li>
+                            <li>
+                                <i data-lucide="dollar-sign" class="icon-danger"></i>
+                                <span><strong>Inversión de alto riesgo:</strong> Implementar reactores físicos sin saber su producción eléctrica estimada es económicamente inviable.</span>
+                            </li>
+                            <li>
+                                <i data-lucide="trending-down" class="icon-danger"></i>
+                                <span><strong>Complejidad bioquímica:</strong> Variables críticas como la temperatura, el pH, la humedad y el tipo de inóculo bacteriano interactúan de forma no lineal, haciendo difícil la predicción manual.</span>
+                            </li>
+                        </ul>
+
+                        <!-- PDF Preview Box -->
+                        <div class="document-preview-card">
+                            <div class="doc-icon">
+                                <i data-lucide="file-text"></i>
+                            </div>
+                            <div class="doc-details">
+                                <h4>GreenSpark: Documento Técnico Unificado</h4>
+                                <p>Análisis PESTEL, FODA, financiero, desarrollo de IA y arquitectura de hardware del proyecto.</p>
+                                <div class="doc-actions">
+                                    <a href="../../docs/entregables_obligatorios/GreenSpark_documento_unificado_renderizado.pdf" target="_blank" class="btn btn-sm btn-primary">
+                                        <i data-lucide="external-link"></i> Leer PDF
+                                    </a>
+                                    <a href="../../docs/entregables_obligatorios/GreenSpark_documento_unificado_renderizado.pdf" download class="btn btn-sm btn-secondary">
+                                        <i data-lucide="download"></i> Descargar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Solution (Simulator Steps) -->
+        <section id="solucion" class="section-solution">
+            <div class="container">
+                <div class="solution-header text-center">
+                    <h2 class="section-title">La Solución: Simulación Asistida</h2>
+                    <p class="section-subtitle">GreenSpark optimiza la investigación de bioelectricidad reduciendo costos y acelerando hallazgos mediante un flujo de 5 etapas.</p>
+                </div>
+
+                <!-- Interactive flow timeline and mock terminal -->
+                <div class="flow-layout">
+                    <!-- Flow Navigation -->
+                    <div class="flow-steps">
+                        <div class="flow-step-item active" data-step="1">
+                            <div class="step-num">01</div>
+                            <div class="step-content">
+                                <h4>Registro de Escenario</h4>
+                                <p>Configuración física y química del residuo.</p>
+                            </div>
+                        </div>
+                        <div class="flow-step-item" data-step="2">
+                            <div class="step-num">02</div>
+                            <div class="step-content">
+                                <h4>Comparación Inteligente</h4>
+                                <p>Predicción de potencia y estabilidad con IA.</p>
+                            </div>
+                        </div>
+                        <div class="flow-step-item" data-step="3">
+                            <div class="step-num">03</div>
+                            <div class="step-content">
+                                <h4>Recomendación de Experimento</h4>
+                                <p>Orden de experimentación científica óptimo.</p>
+                            </div>
+                        </div>
+                        <div class="flow-step-item" data-step="4">
+                            <div class="step-num">04</div>
+                            <div class="step-content">
+                                <h4>Traducción de Resultados</h4>
+                                <p>Cálculo de impacto ambiental y CO2 ahorrado.</p>
+                            </div>
+                        </div>
+                        <div class="flow-step-item" data-step="5">
+                            <div class="step-num">05</div>
+                            <div class="step-content">
+                                <h4>Generación de Reportes</h4>
+                                <p>Explicación por IA basada en datos reales.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flow Display Console (Visual Output Mockup) -->
+                    <div class="flow-console">
+                        <div class="console-header">
+                            <div class="console-dots">
+                                <span class="dot-red"></span>
+                                <span class="dot-yellow"></span>
+                                <span class="dot-green"></span>
+                            </div>
+                            <span class="console-title">greenspark-simulator-console</span>
+                            <span class="console-status">ONLINE</span>
+                        </div>
+                        <div class="console-body" id="console-display">
+                            <!-- Content injected via JS based on selected step -->
+                            <div class="console-loader">Iniciando vista...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Label Classification Cards -->
+                <div class="tag-classification-container">
+                    <h3 class="text-center tag-section-title">Trazabilidad y Calidad de Datos</h3>
+                    <p class="text-center tag-section-subtitle">Cada resultado en la plataforma se etiqueta explícitamente para evitar alucinaciones y asegurar rigor científico:</p>
+                    <div class="grid-3 tag-cards">
+                        <div class="tag-card orange">
+                            <span class="tag-badge badge-simulado">SIMULADO</span>
+                            <p>Datos inferidos mediante modelos de Machine Learning (Random Forest, Gradient Boosting). Tienen un margen de error estadístico reportado por el sistema.</p>
+                        </div>
+                        <div class="tag-card green">
+                            <span class="tag-badge badge-medido">MEDIDO</span>
+                            <p>Resultados procedentes de validaciones físicas previas en laboratorio o de sensores en tiempo real de celdas activas.</p>
+                        </div>
+                        <div class="tag-card blue">
+                            <span class="tag-badge badge-meta">META EXPLORATORIA</span>
+                            <p>Modelos y estimaciones a largo plazo para evaluar el escalamiento industrial potencial a partir del volumen de residuos analizados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pitch Video Section -->
+        <section id="pitch-video" class="section-pitch">
+            <div class="container text-center">
+                <h2 class="section-title">Video Presentación (Pitch)</h2>
+                <p class="section-subtitle">Conoce el proyecto en detalle y observa el prototipo funcional presentado en el hackathon.</p>
+                
+                <div class="video-container-wrapper">
+                    <div class="video-frame-glow"></div>
+                    <div class="video-player-container">
+                        <video id="pitch-mp4" controls preload="metadata">
+                            <source src="../../docs/pitch/PITCH.MP4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video HTML5. Puedes 
+                            <a href="../../docs/pitch/PITCH.MP4" class="inline-link">descargarlo aquí</a>.
+                        </video>
+                    </div>
+                </div>
+                
+                <div class="pitch-meta-info text-center">
+                    <p>
+                        <strong>Duración:</strong> 3 minutos &nbsp;·&nbsp; <strong>Proyecto:</strong> GreenSpark &nbsp;·&nbsp; <strong>Presentado por:</strong> HackHeroes
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Section -->
+        <section id="arquitectura" class="section-architecture">
+            <div class="container">
+                <div class="architecture-header text-center">
+                    <h2 class="section-title">Arquitectura del Sistema</h2>
+                    <p class="section-subtitle">Un flujo modular que desacopla la validación física, el modelado matemático y la explicación semántica.</p>
+                </div>
+
+                <div class="architecture-layout">
+                    <!-- Interactive SVG Architecture -->
+                    <div class="architecture-svg-container">
+                        <svg viewBox="0 0 800 500" width="100%" height="100%" id="architecture-svg">
+                            <!-- Define Defs & Gradients -->
+                            <defs>
+                                <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#1e3a8a" />
+                                    <stop offset="100%" stop-color="#0f172a" />
+                                </linearGradient>
+                                <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#064e3b" />
+                                    <stop offset="100%" stop-color="#022c22" />
+                                </linearGradient>
+                                <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#581c87" />
+                                    <stop offset="100%" stop-color="#3b0764" />
+                                </linearGradient>
+                                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="8" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                            </defs>
+
+                            <!-- Connecting arrows / paths -->
+                            <!-- Browser to React -->
+                            <path d="M120,250 L200,250" stroke="#a0aec0" stroke-width="2" marker-end="url(#arrow)" />
+                            <!-- React to FastAPI -->
+                            <path d="M360,250 L440,250" stroke="#00ff73" stroke-width="3" id="main-flow-line" />
+                            <!-- FastAPI to Validation -->
+                            <path d="M500,210 L500,100 L560,100" stroke="#a0aec0" stroke-width="2" />
+                            <!-- FastAPI to ML -->
+                            <path d="M560,250 L440,250" stroke="#a0aec0" stroke-dasharray="5 5" /> <!-- Bidirectional or single -->
+                            <path d="M540,250 L560,250" stroke="#a0aec0" stroke-width="2" />
+                            <!-- FastAPI to Recommender -->
+                            <path d="M500,290 L500,400 L560,400" stroke="#a0aec0" stroke-width="2" />
+                            <!-- FastAPI to DB -->
+                            <path d="M470,290 L400,420 L300,420" stroke="#a0aec0" stroke-dasharray="3 3" />
+                            <!-- FastAPI to LLM -->
+                            <path d="M520,290 L600,470" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 4" />
+
+                            <!-- Browser Block -->
+                            <g class="arch-node" id="node-browser" data-info="browser">
+                                <rect x="20" y="200" width="100" height="100" rx="8" fill="url(#blueGrad)" stroke="#3b82f6" stroke-width="2" />
+                                <text x="70" y="245" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">Navegador</text>
+                                <text x="70" y="265" fill="#93c5fd" font-size="10" text-anchor="middle">Cliente Web</text>
+                            </g>
+
+                            <!-- React Frontend Block -->
+                            <g class="arch-node" id="node-frontend" data-info="frontend">
+                                <rect x="200" y="190" width="160" height="120" rx="8" fill="url(#blueGrad)" stroke="#60a5fa" stroke-width="2" />
+                                <text x="280" y="235" fill="#fff" font-size="13" font-weight="bold" text-anchor="middle">Frontend React</text>
+                                <text x="280" y="255" fill="#93c5fd" font-size="10" text-anchor="middle">Vite + React 18 + TS</text>
+                                <text x="280" y="275" fill="#a0aec0" font-size="9" text-anchor="middle">Landing y Consola</text>
+                            </g>
+
+                            <!-- FastAPI API Block -->
+                            <g class="arch-node" id="node-api" data-info="api">
+                                <rect x="440" y="190" width="120" height="100" rx="8" fill="url(#emeraldGrad)" stroke="#10b981" stroke-width="2" />
+                                <text x="500" y="235" fill="#fff" font-size="13" font-weight="bold" text-anchor="middle">API FastAPI</text>
+                                <text x="500" y="255" fill="#34d399" font-size="10" text-anchor="middle">Python Backend</text>
+                            </g>
+
+                            <!-- Sub-modules of backend -->
+                            <!-- physical validation -->
+                            <g class="arch-node" id="node-validation" data-info="validation">
+                                <rect x="560" y="60" width="180" height="70" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+                                <text x="650" y="95" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Validación Física</text>
+                                <text x="650" y="112" fill="#94a3b8" font-size="9" text-anchor="middle">Rechazo de datos incoherentes</text>
+                            </g>
+
+                            <!-- Baseline + ML -->
+                            <g class="arch-node" id="node-ml" data-info="ml">
+                                <rect x="560" y="150" width="180" height="80" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+                                <text x="650" y="185" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Modelos Predictivos (ML)</text>
+                                <text x="650" y="202" fill="#94a3b8" font-size="9" text-anchor="middle">Regresión, Random Forest</text>
+                                <text x="650" y="215" fill="#94a3b8" font-size="9" text-anchor="middle">Gradient Boosting</text>
+                            </g>
+
+                            <!-- Recommender -->
+                            <g class="arch-node" id="node-recommender" data-info="recommender">
+                                <rect x="560" y="360" width="180" height="70" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+                                <text x="650" y="395" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Recomendador Inteligente</text>
+                                <text x="650" y="412" fill="#94a3b8" font-size="9" text-anchor="middle">Priorización de experimentos</text>
+                            </g>
+
+                            <!-- SQLite DB -->
+                            <g class="arch-node" id="node-sqlite" data-info="sqlite">
+                                <rect x="180" y="390" width="120" height="60" rx="6" fill="#111827" stroke="#4b5563" stroke-width="1.5" />
+                                <text x="240" y="420" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Base de Datos</text>
+                                <text x="240" y="435" fill="#94a3b8" font-size="9" text-anchor="middle">SQLite + SQLAlchemy</text>
+                            </g>
+
+                            <!-- Optional LLM API -->
+                            <g class="arch-node" id="node-llm" data-info="llm">
+                                <rect x="560" y="445" width="180" height="50" rx="6" fill="url(#purpleGrad)" stroke="#a855f7" stroke-width="1.5" />
+                                <text x="650" y="470" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">LLM API (Explicador)</text>
+                                <text x="650" y="483" fill="#d8b4fe" font-size="8" text-anchor="middle">Solo explica, nunca calcula</text>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <!-- Panel showing details about the hovered/clicked component -->
+                    <div class="architecture-details-panel">
+                        <div class="panel-placeholder" id="arch-panel-default">
+                            <i data-lucide="info" class="pulse-icon"></i>
+                            <p>Haz clic en cualquier nodo del diagrama de arquitectura para explorar su función técnica, archivos relacionados y flujo de datos.</p>
+                        </div>
+                        <div class="panel-content hidden" id="arch-panel-content">
+                            <h4 id="arch-title">Component Title</h4>
+                            <span class="tech-tag" id="arch-tech">Technology</span>
+                            <p id="arch-desc">Component description here...</p>
+                            <div class="panel-meta-info">
+                                <strong>Rol principal:</strong> <span id="arch-role">Principal function</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Stack Section -->
+        <section id="stack" class="section-stack">
+            <div class="container">
+                <div class="stack-header text-center">
+                    <h2 class="section-title">Stack Tecnológico</h2>
+                    <p class="section-subtitle">Herramientas y tecnologías modernas para garantizar estabilidad, escalabilidad y precisión científica.</p>
+                </div>
+
+                <div class="grid-3 stack-grid">
+                    <!-- Layer 1: Frontend -->
+                    <div class="stack-card">
+                        <div class="stack-card-icon front-icon">💻</div>
+                        <h3>Frontend</h3>
+                        <ul class="stack-list">
+                            <li>
+                                <strong>React 18 + TS:</strong> Interfaz ágil e interactiva que valida parámetros en el cliente.
+                            </li>
+                            <li>
+                                <strong>Vite:</strong> Compilador ultra-rápido para un desarrollo óptimo.
+                            </li>
+                            <li>
+                                <strong>React Router v6:</strong> Gestión fluida de navegación en la consola del simulador.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Layer 2: Backend & DB -->
+                    <div class="stack-card">
+                        <div class="stack-card-icon back-icon">⚙️</div>
+                        <h3>Backend & DB</h3>
+                        <ul class="stack-list">
+                            <li>
+                                <strong>FastAPI (Python):</strong> Backend de alto rendimiento con validación automática vía Pydantic.
+                            </li>
+                            <li>
+                                <strong>SQLite:</strong> Base de datos ligera e integrada, ideal para pilotos y hackatones.
+                            </li>
+                            <li>
+                                <strong>SQLAlchemy:</strong> Mapeo ORM para gestionar la persistencia y trazabilidad de escenarios.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Layer 3: Data, ML & AI -->
+                    <div class="stack-card">
+                        <div class="stack-card-icon ai-icon">🧠</div>
+                        <h3>Datos, ML & IA</h3>
+                        <ul class="stack-list">
+                            <li>
+                                <strong>pandas & scikit-learn:</strong> Análisis de datos y modelos predictivos (Random Forest, Gradient Boosting).
+                            </li>
+                            <li>
+                                <strong>LLM API (Opcional):</strong> Generación semántica de reportes en lenguaje natural para toma de decisiones.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="equipo" class="section-team">
+            <div class="container">
+                <div class="team-header text-center">
+                    <h2 class="section-title">Integrantes - HackHeroes</h2>
+                    <p class="section-subtitle">El equipo multidisciplinario detrás del desarrollo y validación de GreenSpark.</p>
+                </div>
+
+                <div class="grid-3 team-grid">
+                    <div class="team-card">
+                        <div class="avatar"><img src="../../assets/profile_cesar.jpg" alt="Cesar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div>
+                        <h3>Cesar Sebastian Zambrana Ventura</h3>
+                        <p class="role">Software Engineer & Frontend Dev</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar"><img src="../../assets/profile_emanuel.jpeg" alt="Emanuel" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div>
+                        <h3>Emanuel Justiniano Peralta</h3>
+                        <p class="role">Data Scientist & ML Engineer</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar"><img src="../../assets/profile_fabian.jpg" alt="Fabian" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div>
+                        <h3>Fabian Serrano Catari</h3>
+                        <p class="role">Backend Developer & API Architect</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar"><img src="../../assets/profile_juan.jpg" alt="Juan" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div>
+                        <h3>Juan David Mercado Montenegro</h3>
+                        <p class="role">QA Specialist & Researcher</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar"><img src="../../assets/profile_raquel.jpeg" alt="Raquel" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div>
+                        <h3>Raquel Sahonero Salas</h3>
+                        <p class="role">UI/UX Designer & Product Lead</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar"><img src="../../assets/profile_thiago.jpg" alt="Thiago" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div>
+                        <h3>Thiago Andre Moreno Velasco</h3>
+                        <p class="role">Research & Bio-Electricity Expert</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="#" class="logo">
+                    <span class="logo-icon">🌿</span>
+                    <span class="logo-text">Green<span>Spark</span></span>
+                </a>
+                <p>Simulador inteligente para la generación de bioelectricidad a partir de residuos orgánicos.</p>
+                <p class="hackathon-credit">Desarrollado para el Hackathon <strong>Build With AI 2026</strong> - Santa Cruz de la Sierra, Bolivia.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <a href="#inicio">Inicio</a>
+                <a href="#problema">El Problema</a>
+                <a href="#solucion">La Solución</a>
+                <a href="#arquitectura">Arquitectura</a>
+            </div>
+            <div class="footer-actions">
+                <h4>Repositorio</h4>
+                <a href="https://github.com/cesarszv/gdg-hackathon-2026" target="_blank" class="btn btn-secondary btn-sm">
+                    <i data-lucide="github"></i> Github
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 HackHeroes. Todos los derechos reservados. Licencia MIT.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Three.js and GSAP via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Optional: OrbitControls for Three.js so user can rotate reactor -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom JS script -->
+    <script src="app.js"></script>
+</body>
+</html>
