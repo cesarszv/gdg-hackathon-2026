@@ -1,1 +1,1 @@
-C:/Users/Emanuel Justiniano/gdg-hackathon-2026/AGENTS.md
+AGENTS.md
