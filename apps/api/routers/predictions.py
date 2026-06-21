@@ -10,7 +10,7 @@ from apps.api.database import get_db
 from apps.api.rules.baseline import predict_baseline
 from apps.api.schemas import PredictRequest
 from apps.api.services import gather_scenario_inputs
-from database.models import Prediction, Scenario
+from apps.api.database.models import Prediction, Scenario
 
 router = APIRouter(tags=["prediccion"])
 

@@ -12,7 +12,7 @@ from apps.api.rules.validation import validate_physical_ranges
 from apps.api.schemas import ScenarioCreate
 from apps.api.serializers import scenario_detail, scenario_summary
 from apps.api.services import latest_prediction
-from database.models import Scenario
+from apps.api.database.models import Scenario
 
 router = APIRouter(prefix="/escenarios", tags=["escenarios"])
 

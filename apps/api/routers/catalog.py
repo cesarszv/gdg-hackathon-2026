@@ -9,7 +9,7 @@ from apps.api.database import get_db
 from apps.api.serializers import (
     mfc_configuration_to_dict, row_to_dict, substrate_to_dict,
 )
-from database.models import (
+from apps.api.database.models import (
     ElectrodeMaterial, Institution, MfcConfiguration, Substrate, SubstrateType,
 )
 

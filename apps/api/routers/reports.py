@@ -12,7 +12,7 @@ from apps.api.schemas import ReportCreate
 from apps.api.database import get_db
 from apps.api.serializers import report_to_dict
 from apps.api.services import predict_for_scenario
-from database.models import Report, ReportScenario, Scenario
+from apps.api.database.models import Report, ReportScenario, Scenario
 
 router = APIRouter(prefix="/reportes", tags=["reportes"])
 

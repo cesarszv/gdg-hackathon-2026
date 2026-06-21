@@ -9,7 +9,7 @@ from apps.api.database import get_db
 from apps.api.recommender import rank_scenarios
 from apps.api.schemas import CompareRequest
 from apps.api.services import predict_for_scenario
-from database.models import Scenario
+from apps.api.database.models import Scenario
 
 router = APIRouter(tags=["comparacion"])
 

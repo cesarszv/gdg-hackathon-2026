@@ -3,19 +3,9 @@
 		{
 			"name": "Raiz",
 			"path": "."
-		},
-		{
-			"name": "Documentation",
-			"path": "docs"
-		},
-		{
-			"name": "Database",
-			"path": "database"
-		},
-		{
-			"name": "Obligatorio",
-			"path": "docs/entregables_obligatorios"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Raiz"
+	}
 }

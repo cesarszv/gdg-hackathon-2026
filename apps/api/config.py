@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     )
 
     app_env: str = "development"
-    database_url: str = "sqlite:///./database/greenspark.db"
+    database_url: str = "sqlite:///./apps/api/database/greenspark.db"
 
     # Optional OpenAI advisor. Without a key, the deterministic fallback stays active.
     openai_api_key: str | None = None

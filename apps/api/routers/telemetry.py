@@ -14,7 +14,7 @@ from apps.api.clock import utcnow
 from apps.api.database import get_db
 from apps.api.schemas import TelemetryCreate
 from apps.api.serializers import row_to_dict
-from database.models import Scenario, SensorReading
+from apps.api.database.models import Scenario, SensorReading
 
 router = APIRouter(prefix="/telemetria", tags=["telemetria"])
 

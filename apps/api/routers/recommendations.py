@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from apps.api.database import get_db
 from apps.api.recommender import rank_scenarios
 from apps.api.services import ranking_item
-from database.models import Scenario
+from apps.api.database.models import Scenario
 
 router = APIRouter(tags=["recomendacion"])
 

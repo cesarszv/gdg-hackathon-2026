@@ -7,7 +7,7 @@ from typing import Any
 from sqlalchemy.orm import Session
 
 from apps.api.rules.baseline import predict_baseline
-from database.models import Prediction, Scenario
+from apps.api.database.models import Prediction, Scenario
 
 
 def gather_scenario_inputs(scenario: Scenario) -> dict[str, Any]:

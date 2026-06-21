@@ -18,7 +18,7 @@ from apps.api.routers import (
     agent, catalog, comparison, predictions, recommendations, reports,
     scenarios, telemetry,
 )
-from database.models import (
+from apps.api.database.models import (
     Institution, Prediction, Recommendation, Report, Scenario, SensorReading,
     Substrate,
 )

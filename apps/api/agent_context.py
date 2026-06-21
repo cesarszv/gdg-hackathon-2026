@@ -11,7 +11,7 @@ from typing import Any
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
-from database.models import (
+from apps.api.database.models import (
     Institution,
     Prediction,
     Recommendation,

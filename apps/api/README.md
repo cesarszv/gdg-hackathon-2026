@@ -2,22 +2,30 @@
 
 FastAPI backend for the GreenSpark research/simulation MVP. It runs deterministic
 validation and the baseline predictor over the seeded SQLite database
-(`database/greenspark.db`), ranks experiments, and exposes a read-only
+(`apps/api/database/greenspark.db`), ranks experiments, and exposes a read-only
 sustainability advisor backed by OpenAI `gpt-5.4-mini`. The advisor **never
 invents numbers** and degrades to a deterministic SQLite fallback.
 
 > Every prediction is labeled `SIMULADO` and carries confidence, assumptions and
 > warnings. Simulations are never presented as measurements.
 
-## Setup (Windows, Python 3.14)
+## Setup (Python 3.14)
 
+**Windows:**
 ```powershell
-py -m venv .venv
-./.venv/Scripts/python.exe -m pip install -r requirements.txt
-Copy-Item .env.example .env
+py -m venv apps/api/.venv
+./apps/api/.venv/Scripts/python.exe -m pip install -r apps/api/requirements.txt
+Copy-Item apps/api/.env.example apps/api/.env
 ```
 
-To enable OpenAI, edit `.env` and paste the local secret:
+**Linux:**
+```bash
+python3 -m venv apps/api/.venv
+./apps/api/.venv/bin/python -m pip install -r apps/api/requirements.txt
+cp apps/api/.env.example apps/api/.env
+```
+
+To enable OpenAI, edit `apps/api/.env` (or set the environment variables) and paste the local secret:
 
 ```env
 OPENAI_API_KEY=
@@ -32,8 +40,14 @@ frontend.
 
 ## Run
 
+**Windows:**
 ```powershell
-./.venv/Scripts/python.exe -m uvicorn apps.api.main:app --reload --port 8000
+./apps/api/.venv/Scripts/python.exe -m uvicorn apps.api.main:app --reload --port 8000
+```
+
+**Linux:**
+```bash
+./apps/api/.venv/bin/python -m uvicorn apps.api.main:app --reload --port 8000
 ```
 
 - Interactive docs: http://127.0.0.1:8000/docs
@@ -41,12 +55,18 @@ frontend.
 
 ## Test
 
+**Windows:**
 ```powershell
-./.venv/Scripts/python.exe -m pytest
+./apps/api/.venv/Scripts/python.exe -m pytest apps/api
+```
+
+**Linux:**
+```bash
+./apps/api/.venv/bin/pytest apps/api
 ```
 
 Tests run against a temporary, seeded copy of the database and never touch
-`database/greenspark.db`.
+`apps/api/database/greenspark.db`.
 
 ## Endpoints
 
