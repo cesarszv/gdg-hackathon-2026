@@ -70,29 +70,18 @@ code { font-family: var(--font-mono); font-size: 0.85em; color: var(--accent-bri
 .site-header {
   padding-block: max(env(safe-area-inset-top), 18px) 14px;
   border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+.header-info {
+  display: flex;
+  flex-direction: column;
 }
 .kicker { margin: 0; font-size: 0.78rem; color: var(--accent-bright); text-transform: uppercase; letter-spacing: 0.08em; }
 .award { margin: 4px 0 0; font-size: 0.82rem; color: var(--text-mute); font-family: var(--font-mono); }
 
-main { padding-block: 28px 58px; }
-.site-foot {
-  padding-block: 20px max(env(safe-area-inset-bottom), 20px);
-  border-top: 1px solid var(--line);
-  font-size: 0.78rem;
-  color: var(--text-mute);
-  font-family: var(--font-mono);
-}
-.site-foot-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  text-align: center;
-}
-.site-foot-text {
-  margin: 0;
-  line-height: 1.4;
-}
 .github-btn {
   display: inline-flex;
   align-items: center;
@@ -124,14 +113,17 @@ main { padding-block: 28px 58px; }
   flex-shrink: 0;
 }
 
-@media (min-width: 560px) {
-  .site-foot-content {
+@media (min-width: 768px) {
+  .site-header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    text-align: left;
   }
 }
+
+main { padding-block: 28px 58px; }
+.site-foot { padding-block: 18px max(env(safe-area-inset-bottom), 18px); border-top: 1px solid var(--line); font-size: 0.78rem; color: var(--text-mute); font-family: var(--font-mono); }
+
 
 
 /* --- Skip link --- */
