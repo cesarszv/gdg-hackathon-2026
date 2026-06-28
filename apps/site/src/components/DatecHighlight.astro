@@ -1,14 +1,18 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
 const baseUrl = import.meta.env.BASE_URL;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <aside class="datec-card" aria-label="Agradecimiento y video de la visita a Datec">
   <p class="datec-title">
-    Gracias <a href="https://www.datec.com.bo/" target="_blank" rel="noopener noreferrer">Datec</a> por la invitación a conocer sus oficinas
+    {t('datec.title_prefix')}<a href="https://www.datec.com.bo/" target="_blank" rel="noopener noreferrer">Datec</a>{t('datec.title_suffix')}
   </p>
   <div class="datec-video-container">
-    <video src={`${baseUrl}assets/datec.mp4`} controls preload="metadata" playsinline aria-label="Video de la visita a las oficinas de Datec">
-      Tu navegador no soporta el reproductor de video.
+    <video src={`${baseUrl}assets/datec.mp4`} controls preload="metadata" playsinline aria-label={t('datec.video_aria')}>
+      {t('datec.video_fallback')}
     </video>
   </div>
 </aside>

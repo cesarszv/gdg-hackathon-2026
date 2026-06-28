@@ -1,0 +1,198 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Team from './Team.astro';
+import DatecHighlight from './DatecHighlight.astro';
+import WinnersHighlight from './WinnersHighlight.astro';
+import PitchDocs from './PitchDocs.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const teamMembers = [
+  { name: "Cesar Sebastian Zambrana Ventura", jpg: "cesar.jpg", webp: "cesar.webp", url: "https://github.com/cesarszv/" },
+  { name: "Emanuel Justiniano Peralta", jpg: "emanuel.jpeg", webp: "emanuel.webp", url: "https://github.com/Emanuel667Jp" },
+  { name: "Fabian Serrano Catari", jpg: "fabian.jpg", webp: "fabian.webp" },
+  { name: "Juan David Mercado Montenegro", jpg: "juan.jpg", webp: "juan.webp" },
+  { name: "Raquel Sahonero Salas", jpg: "raquel.jpeg", webp: "raquel.webp" },
+  { name: "Thiago Andre Moreno Velasco", jpg: "thiago.jpg", webp: "thiago.webp" }
+];
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout 
+  title={t('meta.title')}
+  description={t('meta.description')}
+>
+  <!-- 1. HERO + EQUIPO PRIMERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title">GreenSpark</h1>
+    <p class="tagline">{t('hero.tagline')}</p>
+
+    <div class="hero-showcase-grid">
+      <Team members={teamMembers} />
+      <DatecHighlight />
+    </div>
+  </section>
+
+  <!-- FOTO GANADORES (después de Gracias Datec y antes de Qué es GreenSpark) -->
+  <WinnersHighlight />
+
+  <!-- 2. QUÉ ES -->
+  <section aria-labelledby="que-es">
+    <h2 id="que-es">{t('que_es.title')}</h2>
+    <div class="que-es-grid">
+      <div class="que-es-content">
+        <p class="lede">{t('que_es.lede_prefix')}<em>{t('que_es.lede_em')}</em>{t('que_es.lede_suffix')}</p>
+      </div>
+      <PitchDocs />
+    </div>
+  </section>
+
+  <!-- 3. PROBLEMA -->
+  <section aria-labelledby="problema">
+    <h2 id="problema">{t('problema.title')}</h2>
+    <p>{t('problema.p1')}</p>
+
+    <ul class="metrics">
+      <li class="metric" data-mark="01">
+        <p class="metric-k">{t('metric.1.k')}</p>
+        <p class="metric-value">{t('metric.1.val')}<span class="unit">{t('metric.1.unit')}</span></p>
+        <p class="metric-label">{t('metric.1.label')}</p>
+        <p class="metric-ctx">{t('metric.1.ctx')}</p>
+      </li>
+      <li class="metric" data-mark="02">
+        <p class="metric-k">{t('metric.2.k')}</p>
+        <p class="metric-value">{t('metric.2.val')}<span class="unit">{t('metric.2.unit')}</span></p>
+        <p class="metric-label">{t('metric.2.label')}</p>
+        <p class="metric-ctx">{t('metric.2.ctx')}</p>
+      </li>
+      <li class="metric" data-mark="03">
+        <p class="metric-k">{t('metric.3.k')}</p>
+        <p class="metric-value">{t('metric.3.val')}<span class="unit">{t('metric.3.unit')}</span></p>
+        <p class="metric-label">{t('metric.3.label')}</p>
+        <p class="metric-ctx">{t('metric.3.ctx')}</p>
+      </li>
+      <li class="metric" data-mark="04">
+        <p class="metric-k">{t('metric.4.k')}</p>
+        <p class="metric-value">{t('metric.4.val')}<span class="unit">{t('metric.4.unit')}</span></p>
+        <p class="metric-label">{t('metric.4.label')}</p>
+        <p class="metric-ctx">{t('metric.4.ctx')}</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 4. SOLUCIÓN -->
+  <section aria-labelledby="solucion">
+    <h2 id="solucion">{t('solucion.title')}</h2>
+    <p>{t('solucion.intro')}</p>
+    <ol class="flow">
+      <li>
+        <p class="step-h">{t('solucion.step1.h')}</p>
+        <p class="step-d">{t('solucion.step1.d')}</p>
+      </li>
+      <li>
+        <p class="step-h">{t('solucion.step2.h')}</p>
+        <p class="step-d">{t('solucion.step2.d')}</p>
+      </li>
+      <li>
+        <p class="step-h">{t('solucion.step3.h')}</p>
+        <p class="step-d">{t('solucion.step3.d')}</p>
+      </li>
+      <li>
+        <p class="step-h">{t('solucion.step4.h')}</p>
+        <p class="step-d">{t('solucion.step4.d')}</p>
+      </li>
+      <li>
+        <p class="step-h">{t('solucion.step5.h')}</p>
+        <p class="step-d">{t('solucion.step5.d')}</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 5. HONESTIDAD TÉCNICA -->
+  <section aria-labelledby="honestidad">
+    <h2 id="honestidad">{t('honestidad.title')}</h2>
+    <p>{t('honestidad.p1')}</p>
+    <dl class="badges">
+      <div>
+        <dt><span class="tag tag-sim"><span aria-hidden="true">S</span> {t('badge.sim.tag')}</span></dt>
+        <dd><strong>{t('badge.sim.strong')}</strong> {t('badge.sim.desc')}</dd>
+      </div>
+      <div>
+        <dt><span class="tag tag-med"><span aria-hidden="true">M</span> {t('badge.med.tag')}</span></dt>
+        <dd><strong>{t('badge.med.strong')}</strong> {t('badge.med.desc')}</dd>
+      </div>
+      <div>
+        <dt><span class="tag tag-meta"><span aria-hidden="true">?</span> {t('badge.meta.tag')}</span></dt>
+        <dd><strong>{t('badge.meta.strong')}</strong> {t('badge.meta.desc')}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- 6. IA APLICADA -->
+  <section aria-labelledby="ia">
+    <h2 id="ia">{t('ia.title')}</h2>
+    <p>{t('ia.p1_prefix')}<strong>{t('ia.p1_strong')}</strong>{t('ia.p1_suffix')}</p>
+
+    <div class="ai-pipeline">
+      <article class="card ai-node" data-node="01">
+        <h3>{t('ia.card1.h')}</h3>
+        <p>{t('ia.card1.d')}</p>
+      </article>
+      <article class="card ai-node" data-node="02">
+        <h3>{t('ia.card2.h')}</h3>
+        <p>{t('ia.card2.d')}</p>
+      </article>
+      <article class="card ai-node" data-node="03">
+        <h3>{t('ia.card3.h')}</h3>
+        <p>{t('ia.card3.d')}</p>
+      </article>
+      <article class="card card-warn ai-node" data-node="04">
+        <h3>{t('ia.card4.h')}</h3>
+        <p>{t('ia.card4.d')}</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 7. ARQUITECTURA -->
+  <section aria-labelledby="arquitectura">
+    <h2 id="arquitectura">{t('arquitectura.title')}</h2>
+    <p>{t('arquitectura.p1')}</p>
+
+    <div class="diagram" role="img" aria-label={t('arquitectura.aria_label')}>
+      <div class="box box-edge">{t('diagram.browser')}</div>
+      <span class="arrow" aria-hidden="true">▼</span>
+      <div class="box">{t('diagram.frontend')} <span class="box-sub">{t('diagram.frontend_sub')}</span></div>
+      <span class="arrow" aria-hidden="true">▼ HTTPS / JSON</span>
+      <div class="box box-api">{t('diagram.api')} <span class="box-sub">{t('diagram.api_sub')}</span></div>
+      <ul class="branches">
+        <li class="box">{t('diagram.b1')} <span class="box-sub">{t('diagram.b1_sub')}</span></li>
+        <li class="box">{t('diagram.b2')} <span class="box-sub">{t('diagram.b2_sub')}</span></li>
+        <li class="box">{t('diagram.b3')} <span class="box-sub">{t('diagram.b3_sub')}</span></li>
+        <li class="box">{t('diagram.b4')} <span class="box-sub">{t('diagram.b4_sub')}</span></li>
+        <li class="box box-optional">{t('diagram.b5')} <span class="box-sub">{t('diagram.b5_sub')}</span></li>
+      </ul>
+    </div>
+    <p class="note">{t('arquitectura.note')}</p>
+  </section>
+
+  <!-- 8. STACK PROPUESTO -->
+  <section aria-labelledby="stack">
+    <h2 id="stack">{t('stack.title')}</h2>
+    <p class="note">{t('stack.note_prefix')}<strong>{t('stack.note_strong')}</strong>{t('stack.note_suffix')}</p>
+    <table class="stack">
+      <caption class="visually-hidden">{t('stack.caption')}</caption>
+      <thead>
+        <tr><th scope="col">{t('stack.th_layer')}</th><th scope="col">{t('stack.th_tech')}</th><th scope="col">{t('stack.th_purpose')}</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Frontend</td><td>React 18 + TypeScript + Vite</td><td>{t('stack.r1_purpose')}</td></tr>
+        <tr><td>Routing</td><td>React Router v6</td><td>{t('stack.r2_purpose')}</td></tr>
+        <tr><td>Backend</td><td>Python + FastAPI</td><td>{t('stack.r3_purpose')}</td></tr>
+        <tr><td>Base de datos</td><td>SQLite + SQLAlchemy</td><td>{t('stack.r4_purpose')}</td></tr>
+        <tr><td>Datos y ML</td><td>pandas + scikit-learn</td><td>{t('stack.r5_purpose')}</td></tr>
+        <tr><td>IA explicativa</td><td>LLM vía API (opcional)</td><td>{t('stack.r6_purpose')}</td></tr>
+      </tbody>
+    </table>
+  </section>
+</Layout>

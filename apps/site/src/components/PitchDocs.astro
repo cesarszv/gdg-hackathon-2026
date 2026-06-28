@@ -1,17 +1,21 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
 const baseUrl = import.meta.env.BASE_URL;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="pitch-card-container">
-  <h3 style="margin-top: 0;">Pitch y documentos</h3>
-  <p>El repositorio incluye el documento unificado y el video del pitch.</p>
+  <h3 style="margin-top: 0;">{t('pitch.title')}</h3>
+  <p>{t('pitch.desc')}</p>
   <ul class="docs-list">
-    <li><a href={`${baseUrl}docs/entregables_obligatorios/GreenSpark_documento_unificado_renderizado.pdf`}>Documento unificado (PDF)</a></li>
+    <li><a href={`${baseUrl}docs/entregables_obligatorios/GreenSpark_documento_unificado_renderizado.pdf`}>{t('pitch.doc_link')}</a></li>
   </ul>
   <figure class="video" style="margin-top: 0.8em;">
     <video src={`${baseUrl}docs/pitch/PITCH.MP4`} controls preload="metadata" playsinline width="640" height="360" aria-labelledby="pitch-cap">
-      Tu navegador no puede reproducir el video. Puedes ver el pitch en MP4.
+      {t('pitch.video_fallback')}
     </video>
-    <figcaption id="pitch-cap">Pitch del equipo HackHeroes — GreenSpark.</figcaption>
+    <figcaption id="pitch-cap">{t('pitch.video_cap')}</figcaption>
   </figure>
 </div>

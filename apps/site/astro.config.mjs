@@ -5,5 +5,12 @@ export default defineConfig({
   base: '/gdg-hackathon-2026/',
   build: {
     assets: '_astro'
+  },
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en'],
+    routing: {
+      prefixDefaultLocale: false
+    }
   }
 });

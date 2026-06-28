@@ -1,4 +1,6 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
 const baseUrl = import.meta.env.BASE_URL;
 
 export interface TeamMember {
@@ -13,10 +15,12 @@ interface Props {
 }
 
 const { members } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="team" aria-labelledby="team-title">
-  <h2 id="team-title">Equipo</h2>
+  <h2 id="team-title">{t('team.title')}</h2>
   <ul class="team-grid">
     {members.map((member) => (
       <li class="member">
@@ -26,12 +30,12 @@ const { members } = Astro.props;
             target="_blank" 
             rel="noopener noreferrer" 
             class="member-link" 
-            aria-label={`Perfil de ${member.name}`}
+            aria-label={t('team.member_link_aria').replace('{name}', member.name)}
           >
             <div class="member-img-wrapper">
               <picture>
                 <source srcset={`${baseUrl}assets/profiles/${member.webp}`} type="image/webp" />
-                <img src={`${baseUrl}assets/profiles/${member.jpg}`} alt={`Retrato de ${member.name}`} width="160" height="160" loading="lazy" />
+                <img src={`${baseUrl}assets/profiles/${member.jpg}`} alt={t('team.member_img_alt').replace('{name}', member.name)} width="160" height="160" loading="lazy" />
               </picture>
               <span class="member-badge" aria-hidden="true">↗</span>
             </div>
@@ -42,7 +46,7 @@ const { members } = Astro.props;
             <div class="member-img-wrapper">
               <picture>
                 <source srcset={`${baseUrl}assets/profiles/${member.webp}`} type="image/webp" />
-                <img src={`${baseUrl}assets/profiles/${member.jpg}`} alt={`Retrato de ${member.name}`} width="160" height="160" loading="lazy" />
+                <img src={`${baseUrl}assets/profiles/${member.jpg}`} alt={t('team.member_img_alt').replace('{name}', member.name)} width="160" height="160" loading="lazy" />
               </picture>
             </div>
             <p class="member-name">{member.name}</p>
