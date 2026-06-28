@@ -23,18 +23,6 @@ const team = [
     <p class="tagline">Dossier técnico — laboratorio bioeléctrico asistido por IA.</p>
     <p class="value-phrase">“Convertimos residuos bioorgánicos en decisiones energéticas medibles: investigamos con MFC, validamos con datos y escalamos cuando la evidencia lo justifica.”</p>
 
-    <!-- Mención y Video de la visita a Datec -->
-    <div class="card datec-highlight" style="margin-bottom: 2em; border-color: var(--accent); background: var(--accent-dim);">
-      <p style="margin: 0 0 0.8em; font-size: 0.95rem; font-weight: 600; color: var(--accent-bright);">
-        Gracias <a href="https://www.datec.com.bo/" target="_blank" rel="noopener noreferrer">Datec</a> por la invitación a conocer sus oficinas
-      </p>
-      <figure class="video" style="margin-top: 0;">
-        <video src={`${baseUrl}assets/datec.mp4`} controls preload="metadata" width="100%" style="max-height: 480px; object-fit: contain; background: #000; border-radius: var(--radius-sm);">
-          Tu navegador no soporta el reproductor de video.
-        </video>
-      </figure>
-    </div>
-
     <section class="team" aria-labelledby="team-title">
       <h2 id="team-title">Equipo</h2>
       <ul class="team-grid">
@@ -49,6 +37,18 @@ const team = [
         ))}
       </ul>
     </section>
+
+    <!-- Mención y Video de la visita a Datec -->
+    <div class="card datec-highlight" style="margin-top: 2em; margin-bottom: 2em; border-color: var(--accent); background: var(--accent-dim);">
+      <p style="margin: 0 0 0.8em; font-size: 0.95rem; font-weight: 600; color: var(--accent-bright);">
+        Gracias <a href="https://www.datec.com.bo/" target="_blank" rel="noopener noreferrer">Datec</a> por la invitación a conocer sus oficinas
+      </p>
+      <figure class="video" style="margin-top: 0;">
+        <video src={`${baseUrl}assets/datec.mp4`} controls preload="metadata" width="100%" style="max-height: 480px; object-fit: contain; background: #000; border-radius: var(--radius-sm);">
+          Tu navegador no soporta el reproductor de video.
+        </video>
+      </figure>
+    </div>
   </section>
 
   <!-- 2. QUÉ ES -->
