@@ -421,6 +421,44 @@ thead th {
 .video video { width: 100%; max-width: 640px; height: auto; border-radius: var(--radius); outline: 1px solid rgba(255,255,255,0.1); outline-offset: -1px; display: block; }
 .video figcaption { margin-top: 6px; font-size: 0.78rem; color: var(--text-mute); font-family: var(--font-mono); }
 
+/* --- Datec Highlight Card --- */
+.datec-card {
+  margin-block: 2.2em;
+  padding: 20px;
+  background: linear-gradient(180deg, var(--accent-dim), var(--bg-elev));
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.datec-title {
+  margin: 0 0 14px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--accent-bright);
+  line-height: 1.4;
+}
+.datec-video-container {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  outline: 1px solid var(--line-strong);
+}
+.datec-video-container video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  display: block;
+  object-fit: cover;
+}
+
 /* --- A11y utils --- */
 .visually-hidden {
   position: absolute;

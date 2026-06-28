@@ -38,16 +38,16 @@ const team = [
     </section>
 
     <!-- Mención y Video de la visita a Datec -->
-    <div class="card datec-highlight" style="margin-top: 2em; margin-bottom: 2em; border-color: var(--accent); background: var(--accent-dim);">
-      <p style="margin: 0 0 0.8em; font-size: 0.95rem; font-weight: 600; color: var(--accent-bright);">
+    <aside class="datec-card" aria-label="Agradecimiento y video de la visita a Datec">
+      <p class="datec-title">
         Gracias <a href="https://www.datec.com.bo/" target="_blank" rel="noopener noreferrer">Datec</a> por la invitación a conocer sus oficinas
       </p>
-      <figure class="video" style="margin-top: 0;">
-        <video src={`${baseUrl}assets/datec.mp4`} controls preload="metadata" width="100%" style="max-height: 480px; object-fit: contain; background: #000; border-radius: var(--radius-sm);">
+      <div class="datec-video-container">
+        <video src={`${baseUrl}assets/datec.mp4`} controls preload="metadata" playsinline aria-label="Video de la visita a las oficinas de Datec">
           Tu navegador no soporta el reproductor de video.
         </video>
-      </figure>
-    </div>
+      </div>
+    </aside>
   </section>
 
   <!-- 2. QUÉ ES -->
