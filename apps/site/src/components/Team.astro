@@ -1,0 +1,30 @@
+---
+const baseUrl = import.meta.env.BASE_URL;
+
+export interface TeamMember {
+  name: string;
+  jpg: string;
+  webp: string;
+}
+
+interface Props {
+  members: TeamMember[];
+}
+
+const { members } = Astro.props;
+---
+
+<section class="team" aria-labelledby="team-title">
+  <h2 id="team-title">Equipo</h2>
+  <ul class="team-grid">
+    {members.map((member) => (
+      <li class="member">
+        <picture>
+          <source srcset={`${baseUrl}assets/profiles/${member.webp}`} type="image/webp" />
+          <img src={`${baseUrl}assets/profiles/${member.jpg}`} alt={`Retrato de ${member.name}`} width="160" height="160" loading="lazy" />
+        </picture>
+        <p class="member-name">{member.name}</p>
+      </li>
+    ))}
+  </ul>
+</section>

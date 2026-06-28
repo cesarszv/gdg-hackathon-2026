@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Team from '../components/Team.astro';
+import DatecHighlight from '../components/DatecHighlight.astro';
+import PitchDocs from '../components/PitchDocs.astro';
 
-const baseUrl = import.meta.env.BASE_URL;
-
-const team = [
+const teamMembers = [
   { name: "Cesar Sebastian Zambrana Ventura", jpg: "cesar.jpg", webp: "cesar.webp" },
   { name: "Emanuel Justiniano Peralta", jpg: "emanuel.jpeg", webp: "emanuel.webp" },
   { name: "Fabian Serrano Catari", jpg: "fabian.jpg", webp: "fabian.webp" },
@@ -23,32 +24,8 @@ const team = [
     <p class="tagline">Dossier técnico — laboratorio bioeléctrico asistido por IA.</p>
 
     <div class="hero-showcase-grid">
-      <section class="team" aria-labelledby="team-title">
-        <h2 id="team-title">Equipo</h2>
-        <ul class="team-grid">
-          {team.map((member) => (
-            <li class="member">
-              <picture>
-                <source srcset={`${baseUrl}assets/profiles/${member.webp}`} type="image/webp" />
-                <img src={`${baseUrl}assets/profiles/${member.jpg}`} alt={`Retrato de ${member.name}`} width="160" height="160" loading="lazy" />
-              </picture>
-              <p class="member-name">{member.name}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <!-- Mención y Video de la visita a Datec -->
-      <aside class="datec-card" aria-label="Agradecimiento y video de la visita a Datec">
-        <p class="datec-title">
-          Gracias <a href="https://www.datec.com.bo/" target="_blank" rel="noopener noreferrer">Datec</a> por la invitación a conocer sus oficinas
-        </p>
-        <div class="datec-video-container">
-          <video src={`${baseUrl}assets/datec.mp4`} controls preload="metadata" playsinline aria-label="Video de la visita a las oficinas de Datec">
-            Tu navegador no soporta el reproductor de video.
-          </video>
-        </div>
-      </aside>
+      <Team members={teamMembers} />
+      <DatecHighlight />
     </div>
   </section>
 
@@ -59,20 +36,7 @@ const team = [
       <div class="que-es-content">
         <p class="lede">Plataforma de simulación asistida por IA que ayuda a universidades, colegios y empresas a investigar cómo convertir residuos bioorgánicos en electricidad mediante celdas de combustible microbianas (MFC) <em>antes de invertir en infraestructura física</em>.</p>
       </div>
-      
-      <div class="pitch-card-container">
-        <h3 style="margin-top: 0;">Pitch y documentos</h3>
-        <p>El repositorio incluye el documento unificado y el video del pitch.</p>
-        <ul class="docs-list">
-          <li><a href={`${baseUrl}docs/entregables_obligatorios/GreenSpark_documento_unificado_renderizado.pdf`}>Documento unificado (PDF)</a></li>
-        </ul>
-        <figure class="video" style="margin-top: 0.8em;">
-          <video src={`${baseUrl}docs/pitch/PITCH.MP4`} controls preload="metadata" width="640" height="360" aria-labelledby="pitch-cap">
-            Tu navegador no puede reproducir el video. Puedes ver el pitch en MP4.
-          </video>
-          <figcaption id="pitch-cap">Pitch del equipo HackHeroes — GreenSpark.</figcaption>
-        </figure>
-      </div>
+      <PitchDocs />
     </div>
   </section>
 
@@ -223,5 +187,4 @@ const team = [
       </tbody>
     </table>
   </section>
-
 </Layout>
