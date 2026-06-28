@@ -22,51 +22,57 @@ const team = [
     <h1 id="hero-title">GreenSpark</h1>
     <p class="tagline">Dossier técnico — laboratorio bioeléctrico asistido por IA.</p>
 
-    <section class="team" aria-labelledby="team-title">
-      <h2 id="team-title">Equipo</h2>
-      <ul class="team-grid">
-        {team.map((member) => (
-          <li class="member">
-            <picture>
-              <source srcset={`${baseUrl}assets/profiles/${member.webp}`} type="image/webp" />
-              <img src={`${baseUrl}assets/profiles/${member.jpg}`} alt={`Retrato de ${member.name}`} width="160" height="160" loading="lazy" />
-            </picture>
-            <p class="member-name">{member.name}</p>
-          </li>
-        ))}
-      </ul>
-    </section>
+    <div class="hero-showcase-grid">
+      <section class="team" aria-labelledby="team-title">
+        <h2 id="team-title">Equipo</h2>
+        <ul class="team-grid">
+          {team.map((member) => (
+            <li class="member">
+              <picture>
+                <source srcset={`${baseUrl}assets/profiles/${member.webp}`} type="image/webp" />
+                <img src={`${baseUrl}assets/profiles/${member.jpg}`} alt={`Retrato de ${member.name}`} width="160" height="160" loading="lazy" />
+              </picture>
+              <p class="member-name">{member.name}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
 
-    <!-- Mención y Video de la visita a Datec -->
-    <aside class="datec-card" aria-label="Agradecimiento y video de la visita a Datec">
-      <p class="datec-title">
-        Gracias <a href="https://www.datec.com.bo/" target="_blank" rel="noopener noreferrer">Datec</a> por la invitación a conocer sus oficinas
-      </p>
-      <div class="datec-video-container">
-        <video src={`${baseUrl}assets/datec.mp4`} controls preload="metadata" playsinline aria-label="Video de la visita a las oficinas de Datec">
-          Tu navegador no soporta el reproductor de video.
-        </video>
-      </div>
-    </aside>
+      <!-- Mención y Video de la visita a Datec -->
+      <aside class="datec-card" aria-label="Agradecimiento y video de la visita a Datec">
+        <p class="datec-title">
+          Gracias <a href="https://www.datec.com.bo/" target="_blank" rel="noopener noreferrer">Datec</a> por la invitación a conocer sus oficinas
+        </p>
+        <div class="datec-video-container">
+          <video src={`${baseUrl}assets/datec.mp4`} controls preload="metadata" playsinline aria-label="Video de la visita a las oficinas de Datec">
+            Tu navegador no soporta el reproductor de video.
+          </video>
+        </div>
+      </aside>
+    </div>
   </section>
 
   <!-- 2. QUÉ ES -->
   <section aria-labelledby="que-es">
     <h2 id="que-es">¿Qué es GreenSpark?</h2>
-    <p class="lede">Plataforma de simulación asistida por IA que ayuda a universidades, colegios y empresas a investigar cómo convertir residuos bioorgánicos en electricidad mediante celdas de combustible microbianas (MFC) <em>antes de invertir en infraestructura física</em>.</p>
-    
-    <div style="margin-top: 1.5em;">
-      <h3 style="margin-top: 1em;">Pitch y documentos</h3>
-      <p>El repositorio incluye el documento unificado y el video del pitch.</p>
-      <ul class="docs-list">
-        <li><a href={`${baseUrl}docs/entregables_obligatorios/GreenSpark_documento_unificado_renderizado.pdf`}>Documento unificado (PDF)</a></li>
-      </ul>
-      <figure class="video">
-        <video src={`${baseUrl}docs/pitch/PITCH.MP4`} controls preload="metadata" width="640" height="360" aria-labelledby="pitch-cap">
-          Tu navegador no puede reproducir el video. Puedes ver el pitch en MP4.
-        </video>
-        <figcaption id="pitch-cap">Pitch del equipo HackHeroes — GreenSpark.</figcaption>
-      </figure>
+    <div class="que-es-grid">
+      <div class="que-es-content">
+        <p class="lede">Plataforma de simulación asistida por IA que ayuda a universidades, colegios y empresas a investigar cómo convertir residuos bioorgánicos en electricidad mediante celdas de combustible microbianas (MFC) <em>antes de invertir en infraestructura física</em>.</p>
+      </div>
+      
+      <div class="pitch-card-container">
+        <h3 style="margin-top: 0;">Pitch y documentos</h3>
+        <p>El repositorio incluye el documento unificado y el video del pitch.</p>
+        <ul class="docs-list">
+          <li><a href={`${baseUrl}docs/entregables_obligatorios/GreenSpark_documento_unificado_renderizado.pdf`}>Documento unificado (PDF)</a></li>
+        </ul>
+        <figure class="video" style="margin-top: 0.8em;">
+          <video src={`${baseUrl}docs/pitch/PITCH.MP4`} controls preload="metadata" width="640" height="360" aria-labelledby="pitch-cap">
+            Tu navegador no puede reproducir el video. Puedes ver el pitch en MP4.
+          </video>
+          <figcaption id="pitch-cap">Pitch del equipo HackHeroes — GreenSpark.</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 

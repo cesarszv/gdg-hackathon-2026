@@ -509,6 +509,88 @@ thead th {
   th, td { padding-inline: 8px; }
 }
 
+/* --- Desktop Enhancements (>= 992px & >= 1200px) --- */
+@media (min-width: 992px) {
+  :root {
+    --max: 1060px;
+    --pad: 36px;
+  }
+
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .award { margin-top: 0; }
+
+  /* Hero Showcase dual-column grid */
+  .hero-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 28px;
+    align-items: start;
+    margin-top: 1.5em;
+  }
+  .hero-showcase-grid .team {
+    margin: 0;
+  }
+  .hero-showcase-grid .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .hero-showcase-grid .datec-card {
+    margin-block: 0;
+    height: 100%;
+    justify-content: center;
+  }
+
+  /* ¿Qué es GreenSpark? dual-column grid */
+  .que-es-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 28px;
+    align-items: start;
+    margin-top: 1em;
+  }
+  .pitch-card-container {
+    background: var(--bg-elev);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  /* Metrics 4-column layout */
+  .metrics {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Desktop Micro-interactions & Hover polish */
+  .metric, .card, .datec-card, .pitch-card-container, .member img {
+    transition: transform 220ms ease-out, border-color 220ms ease-out, box-shadow 220ms ease-out;
+  }
+  .metric:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 16px 40px rgba(0, 0, 0, 0.35);
+  }
+  .member:hover img {
+    transform: translateY(-4px) scale(1.02);
+    outline-color: var(--accent);
+    box-shadow: 0 14px 36px rgba(143, 216, 189, 0.2);
+  }
+  .datec-card:hover, .pitch-card-container:hover {
+    border-color: var(--accent-bright);
+    box-shadow: 0 16px 44px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --max: 1160px;
+  }
+}
+
 /* --- Motion: micro only, transform/opacity, <300ms --- */
 @media (prefers-reduced-motion: no-preference) {
   a { transition-property: color; transition-duration: 150ms; transition-timing-function: ease-out; }
