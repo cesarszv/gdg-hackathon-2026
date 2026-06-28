@@ -158,38 +158,48 @@ main { padding-block: 28px 58px; }
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
   transition: transform 220ms ease-out, outline-color 220ms ease-out, box-shadow 220ms ease-out;
 }
+.member-link img {
+  outline: 1px solid var(--line-strong);
+}
 .member-badge {
   position: absolute;
   top: 6px;
   right: 6px;
-  background: rgba(8, 17, 15, 0.88);
+  background: rgba(8, 17, 15, 0.75);
   backdrop-filter: blur(4px);
-  border: 1px solid var(--accent);
+  border: 1px solid rgba(143, 216, 189, 0.4);
   color: var(--accent-bright);
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: bold;
-  opacity: 0;
-  transform: translateY(-4px);
-  transition: opacity 200ms ease-out, transform 200ms ease-out;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  opacity: 0.65;
+  transition: opacity 200ms ease-out, transform 200ms ease-out, background-color 200ms ease-out, color 200ms ease-out, border-color 200ms ease-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 .member-link:hover img, .member-link:focus-visible img {
-  transform: scale(1.05);
+  transform: scale(1.04);
   outline: 1.5px solid var(--accent-bright);
   box-shadow: 0 14px 36px rgba(143, 216, 189, 0.25);
 }
 .member-link:hover .member-badge, .member-link:focus-visible .member-badge {
   opacity: 1;
-  transform: translateY(0);
+  background: var(--accent-bright);
+  color: #06110e;
+  border-color: var(--accent-bright);
+  transform: scale(1.1);
+}
+.member-link .member-name {
+  color: var(--accent-bright);
 }
 .member-link:hover .member-name, .member-link:focus-visible .member-name {
-  color: var(--accent-bright);
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .member-name { margin: 0; font-size: 0.76rem; line-height: 1.25; color: var(--text); transition: color 150ms ease-out; }
 
