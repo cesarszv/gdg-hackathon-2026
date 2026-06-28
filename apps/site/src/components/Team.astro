@@ -5,6 +5,7 @@ export interface TeamMember {
   name: string;
   jpg: string;
   webp: string;
+  url?: string;
 }
 
 interface Props {
@@ -19,11 +20,34 @@ const { members } = Astro.props;
   <ul class="team-grid">
     {members.map((member) => (
       <li class="member">
-        <picture>
-          <source srcset={`${baseUrl}assets/profiles/${member.webp}`} type="image/webp" />
-          <img src={`${baseUrl}assets/profiles/${member.jpg}`} alt={`Retrato de ${member.name}`} width="160" height="160" loading="lazy" />
-        </picture>
-        <p class="member-name">{member.name}</p>
+        {member.url ? (
+          <a 
+            href={member.url} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="member-link" 
+            aria-label={`Perfil de ${member.name}`}
+          >
+            <div class="member-img-wrapper">
+              <picture>
+                <source srcset={`${baseUrl}assets/profiles/${member.webp}`} type="image/webp" />
+                <img src={`${baseUrl}assets/profiles/${member.jpg}`} alt={`Retrato de ${member.name}`} width="160" height="160" loading="lazy" />
+              </picture>
+              <span class="member-badge" aria-hidden="true">↗</span>
+            </div>
+            <p class="member-name">{member.name}</p>
+          </a>
+        ) : (
+          <div class="member-static">
+            <div class="member-img-wrapper">
+              <picture>
+                <source srcset={`${baseUrl}assets/profiles/${member.webp}`} type="image/webp" />
+                <img src={`${baseUrl}assets/profiles/${member.jpg}`} alt={`Retrato de ${member.name}`} width="160" height="160" loading="lazy" />
+              </picture>
+            </div>
+            <p class="member-name">{member.name}</p>
+          </div>
+        )}
       </li>
     ))}
   </ul>
