@@ -21,7 +21,6 @@ const team = [
   <section class="hero" aria-labelledby="hero-title">
     <h1 id="hero-title">GreenSpark</h1>
     <p class="tagline">Dossier técnico — laboratorio bioeléctrico asistido por IA.</p>
-    <p class="value-phrase">“Convertimos residuos bioorgánicos en decisiones energéticas medibles: investigamos con MFC, validamos con datos y escalamos cuando la evidencia lo justifica.”</p>
 
     <section class="team" aria-labelledby="team-title">
       <h2 id="team-title">Equipo</h2>
@@ -55,6 +54,20 @@ const team = [
   <section aria-labelledby="que-es">
     <h2 id="que-es">¿Qué es GreenSpark?</h2>
     <p class="lede">Plataforma de simulación asistida por IA que ayuda a universidades, colegios y empresas a investigar cómo convertir residuos bioorgánicos en electricidad mediante celdas de combustible microbianas (MFC) <em>antes de invertir en infraestructura física</em>.</p>
+    
+    <div style="margin-top: 1.5em;">
+      <h3 style="margin-top: 1em;">Pitch y documentos</h3>
+      <p>El repositorio incluye el documento unificado y el video del pitch.</p>
+      <ul class="docs-list">
+        <li><a href={`${baseUrl}docs/entregables_obligatorios/GreenSpark_documento_unificado_renderizado.pdf`}>Documento unificado (PDF)</a></li>
+      </ul>
+      <figure class="video">
+        <video src={`${baseUrl}docs/pitch/PITCH.MP4`} controls preload="metadata" width="640" height="360" aria-labelledby="pitch-cap">
+          Tu navegador no puede reproducir el video. Puedes ver el pitch en MP4.
+        </video>
+        <figcaption id="pitch-cap">Pitch del equipo HackHeroes — GreenSpark.</figcaption>
+      </figure>
+    </div>
   </section>
 
   <!-- 3. PROBLEMA -->
@@ -205,18 +218,4 @@ const team = [
     </table>
   </section>
 
-  <!-- 9. PITCH Y DOCUMENTOS -->
-  <section aria-labelledby="docs">
-    <h2 id="docs">Pitch y documentos</h2>
-    <p>El repositorio incluye el documento unificado y el video del pitch.</p>
-    <ul class="docs-list">
-      <li><a href={`${baseUrl}docs/entregables_obligatorios/GreenSpark_documento_unificado_renderizado.pdf`}>Documento unificado (PDF)</a></li>
-    </ul>
-    <figure class="video">
-      <video src={`${baseUrl}docs/pitch/PITCH.MP4`} controls preload="metadata" width="640" height="360" aria-labelledby="pitch-cap">
-        Tu navegador no puede reproducir el video. Puedes ver el pitch en MP4.
-      </video>
-      <figcaption id="pitch-cap">Pitch del equipo HackHeroes — GreenSpark.</figcaption>
-    </figure>
-  </section>
 </Layout>
