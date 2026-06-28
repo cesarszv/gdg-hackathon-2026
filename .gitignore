@@ -31,3 +31,7 @@ GEMINI.md
 apps/site/node_modules/
 apps/site/.astro/
 apps/site/dist/
+
+# Playwright artifacts
+.playwright-cli/
+

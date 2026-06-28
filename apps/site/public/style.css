@@ -514,6 +514,25 @@ thead th {
   display: block;
   object-fit: cover;
 }
+.datec-video-container video:fullscreen {
+  object-fit: contain !important;
+  aspect-ratio: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.datec-video-container video:-webkit-full-screen {
+  object-fit: contain !important;
+  aspect-ratio: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.datec-video-container video:-moz-full-screen {
+  object-fit: contain !important;
+  aspect-ratio: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 
 /* --- A11y utils --- */
 .visually-hidden {
