@@ -1,0 +1,225 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const team = [
+  { name: "Cesar Sebastian Zambrana Ventura", jpg: "cesar.jpg", webp: "cesar.webp" },
+  { name: "Emanuel Justiniano Peralta", jpg: "emanuel.jpeg", webp: "emanuel.webp" },
+  { name: "Fabian Serrano Catari", jpg: "fabian.jpg", webp: "fabian.webp" },
+  { name: "Juan David Mercado Montenegro", jpg: "juan.jpg", webp: "juan.webp" },
+  { name: "Raquel Sahonero Salas", jpg: "raquel.jpeg", webp: "raquel.webp" },
+  { name: "Thiago Andre Moreno Velasco", jpg: "thiago.jpg", webp: "thiago.webp" }
+];
+---
+
+<Layout 
+  title="GreenSpark — Dossier técnico · MFC + IA"
+  description="GreenSpark: simulador asistido por IA de celdas de combustible microbianas (MFC) para convertir residuos bioorgánicos de Santa Cruz de la Sierra en decisiones energéticas medibles. Segundo lugar, Build With AI 2026 (GDG)."
+>
+  <!-- 1. HERO + EQUIPO PRIMERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title">GreenSpark</h1>
+    <p class="tagline">Dossier técnico — laboratorio bioeléctrico asistido por IA.</p>
+    <p class="value-phrase">“Convertimos residuos bioorgánicos en decisiones energéticas medibles: investigamos con MFC, validamos con datos y escalamos cuando la evidencia lo justifica.”</p>
+
+    <!-- Mención y Video de la visita a Datec -->
+    <div class="card datec-highlight" style="margin-bottom: 2em; border-color: var(--accent); background: var(--accent-dim);">
+      <p style="margin: 0 0 0.5em; font-size: 0.9rem; font-weight: 600; color: var(--accent-bright);">
+        🏢 <a href="https://www.datec.com.bo/" target="_blank" rel="noopener noreferrer">Visita a Datec</a> — Experiencia del equipo ganador en la sede corporativa de Datec en Santa Cruz
+      </p>
+      <p style="font-size: 0.82rem; color: var(--text-dim); margin-bottom: 0.8em;">
+        Conoce el recorrido del equipo HackHeroes intercambiando visión tecnológica, inteligencia artificial y gobernanza de datos junto al equipo directivo de Datec.
+      </p>
+      <figure class="video" style="margin-top: 0;">
+        <video src={`${baseUrl}assets/datec.mp4`} controls preload="metadata" width="100%" style="max-height: 480px; object-fit: contain; background: #000; border-radius: var(--radius-sm);">
+          Tu navegador no soporta el reproductor de video.
+        </video>
+      </figure>
+    </div>
+
+    <section class="team" aria-labelledby="team-title">
+      <h2 id="team-title">Equipo</h2>
+      <ul class="team-grid">
+        {team.map((member) => (
+          <li class="member">
+            <picture>
+              <source srcset={`${baseUrl}assets/profiles/${member.webp}`} type="image/webp" />
+              <img src={`${baseUrl}assets/profiles/${member.jpg}`} alt={`Retrato de ${member.name}`} width="160" height="160" loading="lazy" />
+            </picture>
+            <p class="member-name">{member.name}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </section>
+
+  <!-- 2. QUÉ ES -->
+  <section aria-labelledby="que-es">
+    <h2 id="que-es">¿Qué es GreenSpark?</h2>
+    <p class="lede">Plataforma de simulación asistida por IA que ayuda a universidades, colegios y empresas a investigar cómo convertir residuos bioorgánicos en electricidad mediante celdas de combustible microbianas (MFC) <em>antes de invertir en infraestructura física</em>.</p>
+  </section>
+
+  <!-- 3. PROBLEMA -->
+  <section aria-labelledby="problema">
+    <h2 id="problema">El problema</h2>
+    <p>El obstáculo no es solo la tecnología: es la falta de datos locales. Las instituciones que quieren ser sostenibles no saben qué residuos funcionan mejor, cuánta energía podrían generar ni cuándo tiene sentido escalar. Sin esa información, cualquier inversión es un salto al vacío.</p>
+
+    <ul class="metrics">
+      <li class="metric" data-mark="01">
+        <p class="metric-k">Contexto municipal</p>
+        <p class="metric-value">971<span class="unit">t/día</span></p>
+        <p class="metric-label">Residuos orgánicos compostables en Santa Cruz</p>
+        <p class="metric-ctx">Cálculo: 1.909,86 t/día × 50,84% = 970,97 (PMGIRS 2023, GAMSC). Es contexto municipal, no residuo capturable automáticamente.</p>
+      </li>
+      <li class="metric" data-mark="02">
+        <p class="metric-k">Composición</p>
+        <p class="metric-value">50,84<span class="unit">%</span></p>
+        <p class="metric-label">Fracción orgánica compostable del flujo total</p>
+        <p class="metric-ctx">Dato publicado por el GAMSC. Justifica investigar valorización, no atribuir automáticamente un rendimiento.</p>
+      </li>
+      <li class="metric" data-mark="03">
+        <p class="metric-k">Infraestructura actual</p>
+        <p class="metric-value">7<span class="unit">t/día</span></p>
+        <p class="metric-label">Capacidad de la planta municipal de compostaje</p>
+        <p class="metric-ctx">Inaugurada mayo 2026 (Swisscontact). Demuestra avance, pero deja rutas complementarias por explorar.</p>
+      </li>
+      <li class="metric" data-mark="04">
+        <p class="metric-k">Piloto concentrado</p>
+        <p class="metric-value">20<span class="unit">t/día</span></p>
+        <p class="metric-label">Residuos bioorgánicos en el Mercado Nuevo Abasto</p>
+        <p class="metric-ctx">Swisscontact. Existencia de generadores concentrados facilita pilotos; cada piloto debe pesar su propio sustrato.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 4. SOLUCIÓN -->
+  <section aria-labelledby="solucion">
+    <h2 id="solucion">La solución</h2>
+    <p>Simulador inteligente que sigue este flujo:</p>
+    <ol class="flow">
+      <li>
+        <p class="step-h">La institución registra un escenario</p>
+        <p class="step-d">tipo de residuo · humedad · pH · temperatura · configuración del reactor</p>
+      </li>
+      <li>
+        <p class="step-h">La IA compara configuraciones</p>
+        <p class="step-d">potencia proyectada · estabilidad esperada · nivel de confianza</p>
+      </li>
+      <li>
+        <p class="step-h">El sistema recomienda el siguiente experimento</p>
+        <p class="step-d">qué mezcla probar primero · variables críticas · qué medir</p>
+      </li>
+      <li>
+        <p class="step-h">El panel traduce los resultados</p>
+        <p class="step-d">residuo aprovechado · energía proyectada · avance de sostenibilidad</p>
+      </li>
+      <li>
+        <p class="step-h">El agente explicativo redacta el reporte</p>
+        <p class="step-d">lenguaje comprensible · sin inventar cifras · trazable</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 5. HONESTIDAD TÉCNICA -->
+  <section aria-labelledby="honestidad">
+    <h2 id="honestidad">Honestidad técnica</h2>
+    <p>Cada resultado se etiqueta. La IA no reemplaza mediciones físicas: ayuda a decidir cuál hacer primero.</p>
+    <dl class="badges">
+      <div>
+        <dt><span class="tag tag-sim"><span aria-hidden="true">S</span> SIMULADO</span></dt>
+        <dd><strong>Proyección:</strong> modelo sobre escenarios de literatura. No es evidencia física.</dd>
+      </div>
+      <div>
+        <dt><span class="tag tag-med"><span aria-hidden="true">M</span> MEDIDO</span></dt>
+        <dd><strong>Evidencia:</strong> telemetría del reactor físico (fase piloto). Reemplaza supuestos gradualmente.</dd>
+      </div>
+      <div>
+        <dt><span class="tag tag-meta"><span aria-hidden="true">?</span> META EXPLORATORIA</span></dt>
+        <dd><strong>Hipótesis:</strong> objetivo a validar. No es ahorro garantizado ni resultado observado.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- 6. IA APLICADA -->
+  <section aria-labelledby="ia">
+    <h2 id="ia">IA aplicada</h2>
+    <p>Estrategia: <strong>baseline primero, complejidad después</strong>. La IA se justifica solo si mejora la priorización frente a una regla simple.</p>
+
+    <div class="ai-pipeline">
+      <article class="card ai-node" data-node="01">
+        <h3>Baseline</h3>
+        <p>Regresión lineal interpretable. Referencia para comparar candidatos.</p>
+      </article>
+      <article class="card ai-node" data-node="02">
+        <h3>Modelos candidatos</h3>
+        <p>Random Forest y Gradient Boosting (<code>scikit-learn</code>). Selección solo si reducen el error de forma consistente (MAE, RMSE, R² con validación cruzada).</p>
+      </article>
+      <article class="card ai-node" data-node="03">
+        <h3>Recomendador</h3>
+        <p>Ordena experimentos con criterios explícitos y audibles: potencia, estabilidad, disponibilidad local, costo, incertidumbre y calidad del dato. La institución decide.</p>
+      </article>
+      <article class="card card-warn ai-node" data-node="04">
+        <h3>LLM opcional (API)</h3>
+        <p>Traduce resultados estructurados a lenguaje institucional. <strong>No calcula impacto crítico</strong>: recibe cifras ya procesadas por el backend. Si falta un dato, lo declara. Fallback determinístico si falla.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 7. ARQUITECTURA -->
+  <section aria-labelledby="arquitectura">
+    <h2 id="arquitectura">Arquitectura</h2>
+    <p>Los cálculos críticos viven en el backend. El LLM recibe resultados ya procesados y los traduce. Si falla, el sistema responde igual con datos determinísticos.</p>
+
+    <div class="diagram" role="img" aria-label="Diagrama de arquitectura: navegador, frontend React, API FastAPI con validación, baseline y ML, recomendador, SQLite y LLM opcional.">
+      <div class="box box-edge">Navegador</div>
+      <span class="arrow" aria-hidden="true">▼</span>
+      <div class="box">Frontend React <span class="box-sub">landing + consola de simulación</span></div>
+      <span class="arrow" aria-hidden="true">▼ HTTPS / JSON</span>
+      <div class="box box-api">API FastAPI <span class="box-sub">validación · orquestación · endpoints</span></div>
+      <ul class="branches">
+        <li class="box">Validación física <span class="box-sub">rechaza datos fuera de rango</span></li>
+        <li class="box">Baseline + ML <span class="box-sub">regresión lineal · Random Forest · Gradient Boosting</span></li>
+        <li class="box">Recomendador <span class="box-sub">ordena experimentos con criterios visibles</span></li>
+        <li class="box">SQLite <span class="box-sub">escenarios · predicciones · trazabilidad</span></li>
+        <li class="box box-optional">LLM opcional (API) <span class="box-sub">solo explica, nunca calcula</span></li>
+      </ul>
+    </div>
+    <p class="note">En una fase posterior, sensores físicos en el reactor alimentarán datos reales al mismo pipeline, reemplazando gradualmente los escenarios simulados.</p>
+  </section>
+
+  <!-- 8. STACK PROPUESTO -->
+  <section aria-labelledby="stack">
+    <h2 id="stack">Stack propuesto</h2>
+    <p class="note">Stack del <strong>producto</strong> (simulador), no de este sitio estático. Versión a fijar al implementar.</p>
+    <table class="stack">
+      <caption class="visually-hidden">Stack tecnológico propuesto para el simulador GreenSpark</caption>
+      <thead>
+        <tr><th scope="col">Capa</th><th scope="col">Tecnología</th><th scope="col">Para qué</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Frontend</td><td>React 18 + TypeScript + Vite</td><td>Interfaz de simulación y landing</td></tr>
+        <tr><td>Routing</td><td>React Router v6</td><td>Navegación entre vistas</td></tr>
+        <tr><td>Backend</td><td>Python + FastAPI</td><td>API REST, validación y orquestación</td></tr>
+        <tr><td>Base de datos</td><td>SQLite + SQLAlchemy</td><td>Escenarios, predicciones y trazabilidad</td></tr>
+        <tr><td>Datos y ML</td><td>pandas + scikit-learn</td><td>Preparación de datos y modelos predictivos</td></tr>
+        <tr><td>IA explicativa</td><td>LLM vía API (opcional)</td><td>Reportes institucionales en lenguaje natural</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 9. PITCH Y DOCUMENTOS -->
+  <section aria-labelledby="docs">
+    <h2 id="docs">Pitch y documentos</h2>
+    <p>El repositorio incluye el documento unificado y el video del pitch.</p>
+    <ul class="docs-list">
+      <li><a href={`${baseUrl}docs/entregables_obligatorios/GreenSpark_documento_unificado_renderizado.pdf`}>Documento unificado (PDF)</a></li>
+    </ul>
+    <figure class="video">
+      <video src={`${baseUrl}docs/pitch/PITCH.MP4`} controls preload="metadata" width="640" height="360" aria-labelledby="pitch-cap">
+        Tu navegador no puede reproducir el video. Puedes ver el pitch en MP4.
+      </video>
+      <figcaption id="pitch-cap">Pitch del equipo HackHeroes — GreenSpark.</figcaption>
+    </figure>
+  </section>
+</Layout>

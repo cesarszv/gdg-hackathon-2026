@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#08110f">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="stylesheet" href={`${baseUrl}style.css`}>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%2308110f%22/><path d=%22M16 6 L23 20 L16 16 L9 20 Z%22 fill=%22%238fd8bd%22/></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="site-header">
+    <p class="kicker">HackHeroes · Mención Energía · Santa Cruz de la Sierra, Bolivia</p>
+    <p class="award">2.º lugar · Build With AI 2026 · Google Developer Group · 59 grupos / 270 participantes</p>
+  </header>
+
+  <main id="main">
+    <slot />
+  </main>
+
+  <footer class="site-foot">
+    <p>GreenSpark · HackHeroes · Santa Cruz de la Sierra, Bolivia · 2026.</p>
+  </footer>
+</body>
+</html>

@@ -26,3 +26,8 @@ Thumbs.db
 
 CLAUDE.md 
 GEMINI.md 
+
+# Astro builds
+apps/site/node_modules/
+apps/site/.astro/
+apps/site/dist/
